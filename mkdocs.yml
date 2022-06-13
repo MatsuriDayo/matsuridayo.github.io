@@ -1,0 +1,17 @@
+site_name: Matsuri & NekoRay
+site_url: https://matsuridayo.github.io/
+repo_url: https://github.com/MatsuriDayo/Matsuri
+edit_uri: ""
+repo_name: Matsuri
+copyright: CC BY-SA 4.0
+theme:
+  name: material
+  logo: assets/images/matsuri1.jpg
+nav:
+  - 首页: index.md
+  - 下载: download.md
+  - Matsuri-配置: m-configuration.md
+  - Matsuri-分组: m-group.md
+  - Matsuri-路由: m-route.md
+  - Matsuri-插件: plugin.md
+  - Nekoray-配置: n-configuration.md
