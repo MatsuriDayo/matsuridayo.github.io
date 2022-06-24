@@ -17,6 +17,18 @@ Ctrl+F 进入搜索， Esc 退出。
 - 暂不支持识别“小火箭”等格式
 - 推荐使用 clash 格式导入
 
+## VPN 设置
+
+VPN 模式可以代理整个系统的流量，适合某些软件“不听话”的情况。
+
+Nekoray 目前没有正式 VPN 支持。
+
+在 Windows 平台，可以尝试配合 [TunMax](https://github.com/TunMax/tun2socks_gui_for_windows) 使用。
+
+在 Linux 平台，可以尝试 examples 目录下面的脚本。
+
+VPN 模式下建议开启「流量探测」，设置为「探测结果用于 DNS」，有助于域名规则的的匹配。
+
 ## 基本设置
 
 ### 入站 & 系统代理
@@ -92,13 +104,13 @@ Ctrl+F 进入搜索， Esc 退出。
 
 ## 自定义配置
 
-可以管理许多提供 socks5 代理的软件，这里以 Hysteria 为例
+可以管理许多提供 socks5 代理的软件，这里以 [Hysteria](https://github.com/HyNetwork/hysteria) 为例
 
 ### 核心
 
 核心名称为 `hysteria`
 
-下载对应的核心程序后，请在 `基本设置-核心-其他核心/自定义` 处填写核心的路径。
+下载对应的核心程序（这里是 `hysteria.exe`）后，请在 `基本设置-核心-其他核心/自定义` 处填写核心的路径。
 
 ### 命令
 

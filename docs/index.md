@@ -8,7 +8,7 @@
 
 [下载](/download/)
 
-[配置](/m-configuration/)
+[配置说明](/m-configuration/)
 
 # NekoRay （猫猫ray
 
@@ -16,7 +16,7 @@
 
 [下载](/download/)
 
-[配置](/n-configuration/)
+[配置说明](/n-configuration/)
 
 ## 更改记录和发布频道
 
