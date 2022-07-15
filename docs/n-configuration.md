@@ -21,11 +21,11 @@ Ctrl+F 进入搜索， Esc 退出。
 
 VPN 模式可以代理整个系统的流量，适合某些软件“不听话”的情况。
 
-Nekoray 目前没有正式 VPN 支持。
+Nekoray 目前没有 VPN (Tun/Tap) 接口管理、路由管理、自动设置等功能。
 
-在 Windows 平台，可以尝试配合 [TunMax](https://github.com/TunMax/tun2socks_gui_for_windows) 使用。
+在 Windows 平台，可以尝试配合 [TunMax](https://github.com/TunMax/tun2socks_gui_for_windows) 使用。也可以直接用 [Netch](https://github.com/netchx/netch)
 
-在 Linux 平台，可以尝试 examples 目录下面的脚本。
+在 Linux 平台，可以尝试 examples 目录下面的脚本：基于 tun2socks，目前有 netns 和 全局 两种模式，分别适用不同的情况。
 
 VPN 模式下建议开启「流量探测」，设置为「探测结果用于 DNS」，有助于域名规则的的匹配。
 
@@ -110,7 +110,7 @@ VPN 模式下建议开启「流量探测」，设置为「探测结果用于 DNS
 
 核心名称为 `hysteria`
 
-下载对应的核心程序（这里是 `hysteria.exe`）后，请在 `基本设置-核心-其他核心/自定义` 处填写核心的路径。
+下载对应的核心程序（这里是 `hysteria.exe`）后，请在 `基本设置-核心-其他核心` 处填写核心的路径。
 
 ### 命令
 
@@ -121,6 +121,8 @@ VPN 模式下建议开启「流量探测」，设置为「探测结果用于 DNS
 目前只支持简单的字符串替换。
 
 运行起来相当于这个命令： `/path/to/hysteria -c /path/to/temporary/config`
+
+程序工作目录： config 目录
 
 ### 配置文件
 
