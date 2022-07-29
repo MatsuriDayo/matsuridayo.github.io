@@ -21,11 +21,11 @@
 
 #### 原始
 
-常见的格式，如 base64、原始配置文件、clash yml 配置、任何包含代理链接的文本。
+常见的格式，如 base64 shadowsocks v2rayN clash yml 配置、任何包含代理链接的文本。
 
 部分格式（如某些 iOS 应用自创的格式）由于本身没有文档且标准混乱，其他应用经常无法识别或者识别后信息丢失。遇到此类链接可以尝试用专门的订阅转换器转为 clash 格式再导入。
 
-(0.3.10+) 支持 "Subscription-Userinfo" 流量显示，如果遇到 CFA 可以显示而这里不能显示的，请设置 User-Agent: `ClashForAndroid/2.5.9.premium`
+(0.3.10+) 支持 "Subscription-Userinfo" 流量显示，由于「某些机场面板」只给特定的客户端返回流量信息，遇到 Clash 可以显示而本软件不能显示的，请设置 User-Agent: `ClashForAndroid/2.5.9.premium`
 
 #### OOCv1
 

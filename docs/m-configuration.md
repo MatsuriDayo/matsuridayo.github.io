@@ -2,18 +2,12 @@
 
 ## 协议说明
 
-#### Trojan
-
-* 本质为 "Simple Socks with UDP over TCP" 详见官方文档
-* 当服务端为 v2ray 时，可以使用 mux.cool，详见 mux 说明
-
 #### Shadowsocks
 
+2021 年 11 月开始，在热门线路如 Vultr DigitalOcean 部署有**针对随机 TCP 流量的封锁**，Shadowsocks（包括2022）以及 VMess TCP 等协议变得难以使用。
+
 * [Shadowsocks是如何被检测和封锁的](https://gfw.report/talks/imc20/zh/)
-
-Shadowsocks 流式密码 可以被准确地主动探测、在不需要密码的情况下被审查者解密流量, 且服务端开启 IV 重放过滤器也无法缓解.
-
-了解更多: https://github.com/net4people/bbs/issues/24
+* Shadowsocks 流式密码 可以被准确地主动探测、在不需要密码的情况下被审查者解密流量, 且服务端开启 IV 重放过滤器也无法缓解. 了解更多: https://github.com/net4people/bbs/issues/24
 
 #### ShadowsocksR
 
@@ -27,11 +21,10 @@ Shadowsocks 流式密码 可以被准确地主动探测、在不需要密码的�
 * WebSocket浏览器转发不支持自定义 HTTP 域名或 TLS 设置，请保证在「地址」处填写正确的域名，并且服务器证书有效。
 * Packet Encoding: 支持 FullCone Nat （需要服务器支持）
 
-#### VLESS
+#### Trojan
 
-* RPRX 出品，但是 RPRX 已经回归虚无了。 目前 Xray 由 v2rayN 维护。
-* 和 Trojan 一样，是简单协议。
-* XTLS 纯属玩具。
+* 本质为 "Simple Socks with UDP over TCP" 详见官方文档
+* 当服务端为 v2ray 时，可以使用 mux.cool，详见 mux 说明
 
 #### (TLS) 安全设置
 
@@ -64,9 +57,9 @@ Matsuri 格式为程序内部的存储格式，包含的信息最完全，部分
 
 ### 日志
 
-汇报问题时， **必须先打开日志** 。
+汇报问题时， **必须先在 设置-启用日志 中打开日志** 。
  
-汇报问题时，建议增大日志缓冲区：长按「启用日志」，建议设置为 100~200 kb。（默认为 50 kb）
+汇报较为复杂问题时，建议增大日志缓冲区：长按「启用日志」，建议设置为 100~200 kb。（默认为 50 kb）
 
 ### 代理链
 

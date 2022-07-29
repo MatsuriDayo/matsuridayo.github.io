@@ -49,6 +49,4 @@ https://www.v2fly.org/config/reverse.html#reverseobject
 
 * 如果知道对应 geosite ，可以改为添加域名规则，如 `geosite:tiktok`。
 
-使用「Google Play Store」时，建议「顺其自然」。如果被送中，下载 Google Play 资源似乎必须走中国的网络，我也没有办法。
-
-规则的优先度似乎有点问题。
+使用「Google Play Store」时，建议「顺其自然」。由于 Google 服务器奇怪的行为，如果节点被送中，下载 Google Play 资源可能必须使用中国网络。
