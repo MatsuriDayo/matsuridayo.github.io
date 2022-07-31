@@ -21,11 +21,4 @@
 
 ## （安卓）下载高级插件
 
-此处列出由本团队维护的高级插件
-
-- Xray Plugin
-- Brook Plugin
-
-下载请在 Telegram 频道内搜索 #PLUGIN
-
 [Github Plugin 仓库](https://github.com/MatsuriDayo/plugins)

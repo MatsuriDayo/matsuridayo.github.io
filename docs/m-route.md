@@ -28,7 +28,7 @@ https://www.v2fly.org/config/reverse.html#reverseobject
 
 以下 DNS 请求会被发到「直连DNS」进行解析。
 
-- 路由规则中 outbound 为 「绕过」 的域名 （如默认规则中的 geosites:cn） 
+- 路由规则中 outbound 为 「绕过」 的域名 （如默认规则中的 geosite:cn） 
 - 路由规则中 outbound 为 「绕过」 的应用 
 
 以下 DNS 请求会被发到「远程DNS」进行解析。

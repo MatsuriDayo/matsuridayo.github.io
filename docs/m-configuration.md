@@ -19,12 +19,13 @@
 * VMESS MD5 身份验证（非 AEAD）已被弃用，并且对于具有 alterId 的此类配置文件大于0，分享时会使用旧式链接
 * 对于像 ALPN 这样的列表选项，格式是每行一个
 * WebSocket浏览器转发不支持自定义 HTTP 域名或 TLS 设置，请保证在「地址」处填写正确的域名，并且服务器证书有效。
-* Packet Encoding: 支持 FullCone Nat （需要服务器支持）
+* Packet Encoding / XUDP: 支持 FullCone Nat （需要服务器支持）
 
 #### Trojan
 
 * 本质为 "Simple Socks with UDP over TCP" 详见官方文档
 * 当服务端为 v2ray 时，可以使用 mux.cool，详见 mux 说明
+* 支持 v2ray 功能，如 WS+TLS。与 Trojan-Go 不完全兼容。
 
 #### (TLS) 安全设置
 
@@ -35,7 +36,7 @@
 
 ### 导入导出节点
 
-另见 [分组和订阅](/group/)
+另见 [分组和订阅](/m-group/)
 
 #### 导入
 
@@ -49,9 +50,9 @@ Wireguard .conf 配置文件可以导入。
 
 #### 导出/分享
 
-目前有以下导出格式：标准 / Matsuri / 配置，不同节点分享格式以分享菜单为准。
+导出配置：导出软件生成的 v2ray config.json 等配置文件。
 
-对于 VMESS 节点，另外支持 V2rayN 格式。
+分享链接：标准 / Matsuri，不同节点分享格式以分享菜单为准。
 
 Matsuri 格式为程序内部的存储格式，包含的信息最完全，部分与 SagerNet 通用，但跨版本兼容性没有保证。链接为 `sn://xxxxx`
 
@@ -67,10 +68,9 @@ Matsuri 格式为程序内部的存储格式，包含的信息最完全，部分
 * 流量顺序是从上到下（最后一个配置为流量的出口）
 * 列表中的配置可以长按拖动，向左滑动删除
 
-
 ### FakeDns
 
-减少打开应用时 DNS 查询走代理而造成的延迟，但会有一定副作用。
+减少打开应用时 DNS 查询走代理而造成的延迟，但会有一定副作用，比如开关 VPN 造成域名解析失效，某些应用不兼容等。
 
 ### 多路复用（mux）
 
@@ -78,9 +78,7 @@ Matsuri 格式为程序内部的存储格式，包含的信息最完全，部分
 
 - 目前可以为 vmess trojan trojan-go 等协议启用 mux
 
-- 是否能用取决于服务端，请以节点实际为准
-
-- 对于 vmess 和 trojan，若服务端不支持 mux.cool（约等于不是 v2ray），则无法上网。
+- 是否能用取决于服务端，请以节点实际为准。对于 vmess 和 trojan，若服务端不支持 mux.cool（约等于不是 v2ray），则开启 mux 后无法上网。
 
 ### 分应用代理
 
@@ -90,17 +88,17 @@ Matsuri 格式为程序内部的存储格式，包含的信息最完全，部分
 
 Matsuri 本身的流量是会经过 VPN 处理的。
 
-目前在 SYSTEM NAT 等情况下，会自动绕过 root 用户，代价是新安装的应用必须重启 VPN 服务才能被代理。
+目前在 `Tun 使用 System Nat` 等情况下，会自动绕过 root 用户，代价是新安装的应用必须重启 VPN 服务才能被代理。
 
 ### Tun 实现
 
 * gVisor 兼容性较好，比较耗费 CPU 资源。
 
-* System Nat 在处理 TCP 时使用内核的 TCP 实现，比较节省 CPU 资源，但是可能会造成 Android 统计的流量变成实际使用的两倍。
+* System Nat 在处理 TCP 流量时利用了内核的 TCP 实现，比较节省 CPU 资源。然而，这可能会导致安卓系统的流量和速度成为实际使用的两倍或以上。
 
 * Tun2Socket 借鉴自 Clash For Andorid，原理和 System 差不多，一般比 System 快一些。
 
-一般 100M 以上网络推荐使用 Tun2Socket
+推荐使用 Tun2Socket
 
 ### MTU
 
@@ -115,6 +113,8 @@ Matsuri 本身的流量是会经过 VPN 处理的。
 原理：同时使用数个境外常用 DoH 服务器解析服务器域名，取第一个返回的结果。
 
 小声喵喵：如果把 DoH 服务器全墙了，或者把 Go TLS 指纹墙了，死一大片，这种方法自然就失效了。
+
+如果不是节点不可用，不建议启用。
 
 ### UDP 行为
 
