@@ -16,24 +16,26 @@ Ctrl+V 从剪辑版导入。(0.14+)
 
 ## 订阅说明
 
+请打开 `首选项 - 分组`
+
+### 支持的格式
+
 - 「Clash格式」一般带有流量信息，本项目支持解析其节点（推荐使用）
 - 「V2rayN格式」一般不带流量信息，本项目支持解析
 - 「某些苹果应用格式」带有流量信息，本项目不支持
 - 「SSR格式」本项目不支持
 
-## VPN 设置
+## VPN 设置 (1.1+)
 
 VPN 模式可以代理整个系统的流量，适合某些软件“不听话”不走代理的情况。
 
-Nekoray 目前没有 VPN (Tun/Tap) 接口管理、路由管理、自动设置等功能。
+Nekoray 目前支持在 Windows / Linux 自动配置 VPN
 
-在 Windows 平台，可以尝试配合 [TunMax](https://github.com/TunMax/tun2socks_gui_for_windows) 使用。也可以直接用 [Netch](https://github.com/netchx/netch)
-
-在 Linux 平台，可以尝试 examples 目录下面的脚本：基于 tun2socks，目前有 netns 和 全局 两种模式，分别适用不同的情况。
-
-VPN 模式下建议开启「流量探测」，设置为「探测结果用于路由判断」，有助于域名规则的的匹配。
-
-VPN 模式下也可以开启「FakeDNS」
+* Windows 平台上由 sing-box 提供 VPN 支持。
+* Linux 需要安装以下命令（一般桌面发行版自带） `bash pkexec iptables iproute2`
+* Linux 可启用 Tun2Socket VPN 实现，比较节省 CPU 资源。
+* VPN 模式下建议开启「流量探测」，设置为「探测结果用于路由判断」，有助于匹配域名规则。
+* VPN 模式下可以开启「FakeDNS」加速 DNS 查询
 
 ## 基本设置
 
