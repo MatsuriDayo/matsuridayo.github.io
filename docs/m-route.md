@@ -39,9 +39,9 @@ https://www.v2fly.org/config/reverse.html#reverseobject
 
 #### 例外
 
-当代理节点的地址为域名时，该域名的 DNS 请求会被发到「直连DNS」进行解析。
-
-不支持的 DNS 查询，会被当作 UDP 流量经过代理发送至 1.0.0.1:53
+* 当代理节点的地址为域名时，该域名的 DNS 请求会被发到「直连DNS」进行解析。
+* 不支持的 DNS 查询，会被当作 UDP 流量经过代理发送至 8.8.8.8:53
+* 进行 Ping / URL Test 时，始终使用系统 DNS 解析节点的域名。
 
 #### 提示
 

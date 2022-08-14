@@ -8,7 +8,7 @@
 
 Ctrl+F 进入搜索， Esc 退出。
 
-Ctrl+V 从剪辑版导入。(0.14+)
+其他快捷键右键菜单已标明。
 
 ## 协议说明
 
@@ -25,9 +25,9 @@ Ctrl+V 从剪辑版导入。(0.14+)
 - 「某些苹果应用格式」带有流量信息，本项目不支持
 - 「SSR格式」本项目不支持
 
-## VPN 设置 (1.1+)
+## VPN / TUN 设置 (1.1+)
 
-VPN 模式可以代理整个系统的流量，适合某些软件“不听话”不走代理的情况。
+VPN / TUN 模式可以代理整个系统的流量，适合某些软件“不听话”不走代理的情况。
 
 Nekoray 目前支持在 Windows / Linux 自动配置 VPN
 
@@ -60,7 +60,7 @@ Nekoray 目前支持在 Windows / Linux 自动配置 VPN
 
 示例 (dokodemo-door)
 
-```
+```json
 {
     "inbounds": [
         {
@@ -92,13 +92,14 @@ Nekoray 目前支持在 Windows / Linux 自动配置 VPN
 * 以 # 开头的行不生效
 * 不支持 `多节点分流` `负载均衡` 这类用法，若有需求请换其他软件或自寻办法。
 
-### 自定义路由
 
-[语法规则](https://www.v2fly.org/config/routing.html#ruleobject)
+### 详细路由规则
 
-示例 (block QUIC)
+有关路由规则的语法，以及自定义路由，请看[v2ray语法规则](https://www.v2fly.org/config/routing.html#ruleobject)
 
-```
+自定义路由示例 (block QUIC)
+
+```json
 {
     "rules": [
         {
@@ -110,6 +111,10 @@ Nekoray 目前支持在 Windows / Linux 自动配置 VPN
     ]
 }
 ```
+
+### DNS
+
+DNS 行为与 [Matsuri](/m-route/) 一致。
 
 ## 自定义配置
 
@@ -135,7 +140,7 @@ Nekoray 目前支持在 Windows / Linux 自动配置 VPN
 
 ### 配置文件
 
-```
+```json
 {
   "server": "127.0.0.1:%mapping_port%",
   "obfs": "fuck me till the daylight",
