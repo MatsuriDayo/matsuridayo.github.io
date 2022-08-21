@@ -8,6 +8,8 @@
 
 [配置说明](/m-configuration/)
 
+[FAQ](/m-faq/)
+
 ## NekoRay
 
 基于 Qt/C++ 的跨平台代理配置管理器（ 使用 Matsuri 定制版 v2ray-core ）
@@ -17,6 +19,8 @@
 [下载](/download/)
 
 [配置说明](/n-configuration/)
+
+[FAQ](/n-faq/)
 
 ## 更改记录 & 发布频道
 

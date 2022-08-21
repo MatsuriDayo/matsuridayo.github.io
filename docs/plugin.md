@@ -27,9 +27,7 @@ Github Plugin 仓库
 
 目前以下协议可以使用 Matsuri 版插件，请以应用内为准。
 
-- [Hysteria Plugin](https://github.com/MatsuriDayo/plugins/releases?q=Hysteria)
-
-区别：去掉了dokodemo转发，改为由hy直连服务器，保证性能发挥。息屏后恢复的问题应该也有改善。
+- [Hysteria Plugin](https://github.com/MatsuriDayo/plugins/releases?q=Hysteria) (区别请看FAQ)
 
 ## 高级插件
 

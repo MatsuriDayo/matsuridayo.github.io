@@ -92,13 +92,13 @@ Matsuri 本身的流量是会经过 VPN 处理的。
 
 ### Tun 实现
 
-* gVisor 兼容性较好，比较耗费 CPU 资源。
-
-* System Nat 在处理 TCP 流量时利用了内核的 TCP 实现，比较节省 CPU 资源。然而，这可能会导致安卓系统的流量和速度成为实际使用的两倍或以上。
-
+* gVisor 纯用户空间实现。兼容性较好，比较耗费 CPU 资源。对性能较强的手机更友好。
+* System Nat 在处理 TCP 流量时利用了内核的 TCP 实现，比较节省 CPU 资源。
 * Tun2Socket 借鉴自 Clash For Andorid，原理和 System 差不多，一般比 System 快一些。
 
-推荐使用 Tun2Socket
+推荐使用 Tun2Socket，如果速度遇到瓶颈（通常是300M以上），可以尝试更换。
+
+对于能使用 Socks / HTTP 的代理应用，建议手动设置代理，不走 Tun 更省电。
 
 ### MTU
 
