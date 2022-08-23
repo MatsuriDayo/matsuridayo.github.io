@@ -13,7 +13,7 @@ nav:
   - Matsuri-配置: m-configuration.md
   - Matsuri-分组: m-group.md
   - Matsuri-路由: m-route.md
-  - Matsuri-插件: plugin.md
+  - Matsuri-插件: m-plugin.md
   - Matsuri-FAQ: m-faq.md
   - Nekoray-配置: n-configuration.md
   - Nekoray-FAQ: n-faq.md
