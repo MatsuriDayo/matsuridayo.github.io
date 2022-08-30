@@ -4,6 +4,8 @@
 
 [下载 Matsuri](https://github.com/MatsuriDayo/Matsuri/releases)
 
+[Google Play](https://play.google.com/store/apps/details?id=moe.matsuri.lite)
+
 ## 电脑
 
 Linux Windows

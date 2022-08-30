@@ -45,8 +45,6 @@ https://www.v2fly.org/config/reverse.html#reverseobject
 
 #### 提示
 
-使用「国际版 app」 如 tiktok 时，如果打不开，可以尝试为其添加「代理」的规则。
-
-* 如果知道对应 geosite ，可以改为添加域名规则，如 `geosite:tiktok`。
-
-使用「Google Play Store」时，建议「顺其自然」。由于 Google 服务器奇怪的行为，如果节点被送中，下载 Google Play 资源可能必须使用中国网络。
+* 建议在 `设置 - 分应用代理` 绕过「中国产 app」，而不是使用路由规则。
+* 使用「国际版 app」 如 tiktok 时，如果打不开，可以尝试为其添加「代理」的规则。
+* 由于 Google 服务器奇怪的行为，如果节点被 Google 标识为「中国」，可能导致无法下载 Google Play 资源。

@@ -7,6 +7,8 @@ copyright: CC BY-SA 4.0
 theme:
   name: material
   logo: assets/images/matsuri1.jpg
+markdown_extensions:
+  - pymdownx.magiclink
 nav:
   - 首页: index.md
   - 下载: download.md

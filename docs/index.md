@@ -24,10 +24,26 @@
 
 ## 更改记录 & 发布频道
 
-[https://t.me/Matsuridayo](https://t.me/Matsuridayo)
+https://t.me/Matsuridayo
 
-## 赞助开发者
+## 联系
 
-TRC20
+> **问题反馈请到 GitHub issue 区。**
+
+### 赞助开发者
+
+USDT TRC20
 
 TRhnA7SXE5Sap5gSG3ijxRmdYFiD4KRhPs
+
+### Telegram Group
+
+使用交流
+
+https://t.me/nekoray_group
+
+### Email
+
+接广告，接合作
+
+nekoha_matsuri(at)protonmail(dot)com
