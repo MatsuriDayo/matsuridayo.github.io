@@ -33,7 +33,6 @@ Nekoray 目前支持在 Windows / Linux 自动配置 VPN
 
 * Windows 平台上由 sing-box 提供 VPN 支持。
 * Linux 需要安装以下命令（一般桌面发行版自带） `bash pkexec iptables iproute2`
-* Linux 可启用 Tun2Socket VPN 实现，比较节省 CPU 资源。
 * VPN 模式下建议开启「流量探测」，设置为「探测结果用于路由判断」，有助于匹配域名规则。
 * VPN 模式下可以开启「FakeDNS」加速 DNS 查询
 
@@ -91,7 +90,6 @@ Nekoray 目前支持在 Windows / Linux 自动配置 VPN
 * 内置了 `全局` `绕过局域网和大陆` 两种规则
 * 以 # 开头的行不生效
 * 不支持 `多节点分流` `负载均衡` 这类用法，若有需求请换其他软件或自寻办法。
-
 
 ### 详细路由规则
 

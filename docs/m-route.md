@@ -42,6 +42,7 @@ https://www.v2fly.org/config/reverse.html#reverseobject
 * 当代理节点的地址为域名时，该域名的 DNS 请求会被发到「直连DNS」进行解析。
 * 不支持的 DNS 查询，会被当作 UDP 流量经过代理发送至 8.8.8.8:53
 * 进行 Ping / URL Test 时，始终使用系统 DNS 解析节点的域名。
+* 若启用 FakeDNS 则 远程 DNS 被 FakeDNS 代替，此时不能使用“白名单”等分流方式。
 
 #### 提示
 
