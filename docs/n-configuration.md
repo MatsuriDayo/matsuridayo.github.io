@@ -31,8 +31,7 @@ VPN / TUN 模式可以代理整个系统的流量，适合某些软件“不听�
 
 Nekoray 目前支持在 Windows / Linux 自动配置 VPN
 
-* Windows 平台上由 sing-box 提供 VPN 支持。
-* Linux 需要安装以下命令（一般桌面发行版自带） `bash pkexec iptables iproute2`
+* sing-box 提供 VPN 转 socks 支持。
 * VPN 模式下建议开启「流量探测」，设置为「探测结果用于路由判断」，有助于匹配域名规则。
 * VPN 模式下可以开启「FakeDNS」加速 DNS 查询
 
@@ -55,9 +54,11 @@ Nekoray 目前支持在 Windows / Linux 自动配置 VPN
 
 ### 自定义入站
 
-[语法规则](https://www.v2fly.org/config/inbounds.html#inbounds)
+[v2ray入站语法](https://www.v2fly.org/config/inbounds.html#inbounds)
 
-示例 (dokodemo-door)
+[sing-box入站语法](https://sing-box.sagernet.org/configuration/inbound/)
+
+示例 (v2ray dokodemo-door)
 
 ```json
 {
@@ -91,11 +92,11 @@ Nekoray 目前支持在 Windows / Linux 自动配置 VPN
 * 以 # 开头的行不生效
 * 不支持 `多节点分流` `负载均衡` 这类用法，若有需求请换其他软件或自寻办法。
 
-### 详细路由规则
+### 自定义路由规则
 
-有关路由规则的语法，以及自定义路由，请看[v2ray语法规则](https://www.v2fly.org/config/routing.html#ruleobject)
+路由规则的语法请看 [v2ray路由语法](https://www.v2fly.org/config/routing.html#ruleobject) 或 [sing-box路由语法](https://sing-box.sagernet.org/configuration/route/rule/)
 
-自定义路由示例 (block QUIC)
+自定义路由示例 (v2ray block QUIC)
 
 ```json
 {
@@ -110,9 +111,52 @@ Nekoray 目前支持在 Windows / Linux 自动配置 VPN
 }
 ```
 
-### DNS
+## 出站
 
-DNS 行为与 [Matsuri](/m-route/) 一致。
+一般情况下，GUI显示的一个服务器配置对应后端的一个出站。
+
+### 自定义 JSON 配置
+
+[v2ray出站语法](https://www.v2fly.org/config/outbounds.html) 目前 v2ray JSON 配置使用的是 v4 版本。
+
+[sing-box出站语法](https://sing-box.sagernet.org/configuration/outbound/)
+
+JSON 对象会被合并。
+
+示例：NekoBox新建一个socks服务器，填写服务器地址端口，填写自定义 JSON 配置（配置1），实际运行的出站是wireguard（配置2）
+
+```json
+// 配置1
+{
+    "type": "wireguard",
+    "system_interface": false,
+    "interface_name": "wg0",
+    "local_address": [
+        "10.0.0.2/32"
+    ],
+    "private_key": "YNXtAzepDqRv9H52osJVDQnznT5AM11eCK3ESpwSt04=",
+    "peer_public_key": "Z1XXLsKYkYxuiYjJIkRvtIKFepCYHTgON+GwPq7SOV4=",
+    "pre_shared_key": "31aIhAPwktDGpH4JDhA8GNvjFXEf/a6+UaQRyOAiyfM=",
+    "mtu": 1408
+}
+// 配置2
+{
+    "domain_strategy": "",
+    "interface_name": "wg0",
+    "local_address": [
+        "10.0.0.2/32"
+    ],
+    "mtu": 1408,
+    "peer_public_key": "Z1XXLsKYkYxuiYjJIkRvtIKFepCYHTgON+GwPq7SOV4=",
+    "pre_shared_key": "31aIhAPwktDGpH4JDhA8GNvjFXEf/a6+UaQRyOAiyfM=",
+    "private_key": "YNXtAzepDqRv9H52osJVDQnznT5AM11eCK3ESpwSt04=",
+    "server": "服务器地址",
+    "server_port": 12345,
+    "system_interface": false,
+    "tag": "proxy",
+    "type": "wireguard"
+}
+```
 
 ## 自定义配置
 
