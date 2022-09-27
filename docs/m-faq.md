@@ -44,9 +44,9 @@
 * 过于复杂难以维护
 * 已有更好的替代方案
 
-### VLESS
+#### VLESS
 
-* 使用 Trojan 可以达到相同或更好的效果
+* VLESS 已被弃用并且可能被移除。请考虑使用 Trojan 作为替代品。[link](https://www.v2fly.org/v5/config/proxy/vless.html)
 
 ### Shadowsocks 2022
 

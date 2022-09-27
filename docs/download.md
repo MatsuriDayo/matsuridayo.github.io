@@ -31,11 +31,4 @@ Linux Windows
 
 ## （安卓）下载插件
 
-- [Trojan-Go Plugin](https://sagernet.org/download/#trojan-go-plugin)
-- [NaïveProxy Plugin](https://sagernet.org/download/#naiveproxy-plugin)
-- [Hysteria Plugin](https://github.com/MatsuriDayo/plugins/releases?q=Hysteria)
-- [Wireguard Plugin](https://github.com/SagerNet/SagerNet/releases/tag/wireguard-plugin-20210424-5)
-
-## （安卓）下载高级插件
-
-[Github Plugin 仓库](https://github.com/MatsuriDayo/plugins)
+请看 [插件说明](/m-plugin/)

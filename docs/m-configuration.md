@@ -27,6 +27,10 @@
 * 当服务端为 v2ray 时，可以使用 mux.cool，详见 mux 说明
 * 支持 v2ray 功能，如 WS+TLS。与 Trojan-Go 不完全兼容。
 
+#### VLESS
+
+* VLESS 已被弃用并且可能被移除。请考虑使用 Trojan 作为替代品。[link](https://www.v2fly.org/v5/config/proxy/vless.html)
+
 #### (TLS) 安全设置
 
 * 允许不安全连接：启用后安全性相当于明文。有些节点不开这个无法使用，原因是服务器证书配置有误。
