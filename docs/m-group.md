@@ -29,7 +29,7 @@ https://github.com/Shadowsocks-NET/OpenOnlineConfig
 
 * 显示用户名和流量使用情况
 * 强制 TLS1.3 支持固定证书
-*按组和标签过滤配置文件
+* 按组和标签过滤配置文件
 
 #### SIP008
 

@@ -37,7 +37,9 @@
 
 升级包使用方法：把下载到的 zip 包命名为 `nekoray.zip` 放在 `nekoray` 目录下，关闭主程序，运行 `updater` 即可完成升级。
 
-## 更新 / 替换内核 
+## 更新 / 替换内核
+
+对于内置的 v2ray(nekoray_core) 和 sing-box(nekobox_core):
 
 考虑到兼容性和体验一致性问题，本软件架构设计上不允许手动更新 / 替换内核。
 

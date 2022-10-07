@@ -4,7 +4,9 @@
 
 #### Shadowsocks
 
-2021 年 11 月开始，在热门线路如 Vultr DigitalOcean 部署有**针对随机 TCP 流量的封锁**，Shadowsocks（包括2022）以及 VMess TCP 等协议变得难以使用。
+!!! warning "注意"
+
+    2021 年 11 月开始，在热门线路如 Vultr DigitalOcean 部署有**针对随机 TCP 流量的封锁**，Shadowsocks（包括2022）以及 VMess TCP 等协议变得难以使用。
 
 * [Shadowsocks是如何被检测和封锁的](https://gfw.report/talks/imc20/zh/)
 * Shadowsocks 流式密码 可以被准确地主动探测、在不需要密码的情况下被审查者解密流量, 且服务端开启 IV 重放过滤器也无法缓解. 了解更多: https://github.com/net4people/bbs/issues/24
@@ -24,14 +26,36 @@
 #### Trojan
 
 * 本质为 "Simple Socks with UDP over TCP" 详见官方文档
-* 当服务端为 v2ray 时，可以使用 mux.cool，详见 mux 说明
-* 支持 v2ray 功能，如 WS+TLS。与 Trojan-Go 不完全兼容。
+* 支持 v2ray "专有协议"，如 `WS+TLS` `mux.cool`，与 Trojan-Go 不完全兼容。
 
 #### VLESS
 
 * VLESS 已被弃用并且可能被移除。请考虑使用 Trojan 作为替代品。[link](https://www.v2fly.org/v5/config/proxy/vless.html)
 
+#### 专有协议
+
+!!! warning "注意"
+
+    * 这是一些专有的协议，通常随 VMess Trojan 等协议使用。
+    * 如果服务端与客户端不同，则可能导致无法上网。
+
+传输层:
+
+* v2ray: `streamSettings` ( 显示为 ws grpc 等 )
+* sing-box: `V2Ray Transport`
+
+应用层:
+
+* v2ray: `mux.cool`(详见 mux 说明) `PacketAddr`
+* xray: `xudp`
+* trojan-go: `smux`
+* sing-box: `uot` `multiplex`
+
 #### (TLS) 安全设置
+
+!!! note "封锁提示"
+
+    2022 年 10 月开始，TLS Tunnel 易受封锁。详细信息和对策请看 https://github.com/net4people/bbs/issues/129
 
 * 允许不安全连接：启用后安全性相当于明文。有些节点不开这个无法使用，原因是服务器证书配置有误。
 * 证书（链）：应填入证书内容，通常是 PEM 格式。
@@ -110,7 +134,7 @@ Matsuri 本身的流量是会经过 VPN 处理的。
 
 原理：同时使用数个境外常用 DoH 服务器解析服务器域名，取第一个返回的结果。
 
-**有副作用，仅作为备用选项，如果不是全部被 DNS 污染等极端情况，不建议启用。**
+有副作用，仅作为备用选项，如果不是全部被 DNS 污染等极端情况，不建议启用。
 
 ### UDP 行为
 

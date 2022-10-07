@@ -7,8 +7,20 @@ copyright: CC BY-SA 4.0
 theme:
   name: material
   logo: assets/images/matsuri1.jpg
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
 markdown_extensions:
   - pymdownx.magiclink
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 nav:
   - 首页: index.md
   - 下载: download.md
