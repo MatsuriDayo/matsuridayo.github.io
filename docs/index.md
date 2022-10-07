@@ -28,7 +28,9 @@ https://t.me/Matsuridayo
 
 ## 联系
 
-> **问题反馈请到 GitHub issue 区。**
+!!! warning
+
+    问题反馈请到 GitHub issue 区。
 
 ### 赞助开发者
 

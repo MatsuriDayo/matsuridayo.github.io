@@ -1,10 +1,12 @@
 # 插件
 
-**由于插件需要执行代码，所以建议从信任的渠道下载任何插件（包括插件和高级插件）**
-
 Github Plugin 仓库
 
 [MatsuriDayo/plugins](https://github.com/MatsuriDayo/plugins)
+
+!!! warning ""
+
+    **由于插件需要执行代码，所以建议从信任的渠道下载任何插件（包括插件和高级插件）**
 
 ## 插件
 
