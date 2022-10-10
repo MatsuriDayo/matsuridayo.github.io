@@ -49,3 +49,13 @@ https://t.me/nekoray_group
 接广告，接合作
 
 nekoha_matsuri(at)protonmail(dot)com
+
+### 推广页
+
+包含机场推荐。
+
+!!! warning ""
+
+    所有广告与项目无关，请自行甄别。
+
+https://matsuricom.github.io/
