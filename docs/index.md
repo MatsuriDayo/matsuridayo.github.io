@@ -2,7 +2,7 @@
 
 ## Matsuri 茉莉
 
-适用于 Android 的代理工具链，用 Kotlin 编写。
+适用于 Android 的 V2Ray 通用代理工具链。
 
 [下载](/download/)
 
