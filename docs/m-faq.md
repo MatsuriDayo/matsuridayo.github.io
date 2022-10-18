@@ -44,7 +44,7 @@
 * 过于复杂难以维护
 * 已有更好的替代方案
 
-#### VLESS
+### VLESS
 
 * VLESS 已被弃用并且可能被移除。请考虑使用 Trojan 作为替代品。[link](https://www.v2fly.org/v5/config/proxy/vless.html)
 
@@ -52,6 +52,20 @@
 
 * v2fly 没有 Shadowsocks 2022 支持。
 * 对于网络中间人，ss 2022 和 ss aead 的 tcp 流没有区别，照封不误。
+
+## 无法启动代理
+
+### 提示 ... pattern string does not conform to Letter-Digit-Hyphen (LDH) subset
+
+请检查域名规则中是否包含特殊字符、不可见字符。
+
+### 提示 ... geosite.dat: no such file
+
+这是因为缺少路由资源，可能是被非标准系统或“手机管家”删除。
+
+应用会在后台自动解压 geosite，请等待一段时间。
+
+如果问题持续，建议「更新路由资源」或重装应用。
 
 ## 特色功能
 
