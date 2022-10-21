@@ -48,7 +48,7 @@ https://t.me/nekoray_group
 
 接广告，接合作
 
-[nekoha_matsuri@protonmail.com](nekoha_matsuri@protonmail.com)
+nekoha_matsuri@protonmail.com
 
 ### 推广页
 
