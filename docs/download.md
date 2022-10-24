@@ -12,7 +12,7 @@
 
 ## 电脑
 
-Linux Windows
+Linux Windows macOS
 
 [下载 Nekoray](https://github.com/MatsuriDayo/nekoray/releases)
 

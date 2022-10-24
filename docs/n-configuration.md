@@ -10,28 +10,35 @@ Ctrl+F 进入搜索， Esc 退出。
 
 其他快捷键右键菜单已标明。
 
+## NekoBox
+
+(1.11+) NekoBox 是试制的 sing-box GUI 客户端。
+
+在 `基本设置 - 内核` 切换到 sing-box 以启用。切换前后变化大，不建议来回切换。
+
 ## 协议说明
 
 同 [Matsuri 协议说明](/m-configuration/)
 
 ## 订阅说明
 
-### 支持的格式
+支持的格式:
 
 - 「Clash格式」一般带有流量信息，本项目支持解析其节点（推荐使用）
 - 「V2rayN格式」一般不带流量信息，本项目支持解析
 - 「某些苹果应用格式」带有流量信息，本项目不支持
 - 「SSR格式」本项目不支持
 
-## VPN / TUN 设置 (1.1+)
+## VPN / TUN 设置
 
-VPN / TUN 模式可以代理整个系统的流量，适合某些软件“不听话”不走代理的情况。
+(1.1+) VPN / TUN 模式可以代理整个系统的流量，适合某些软件“不听话”不走代理的情况。
 
-Nekoray 目前支持在 Windows / Linux 自动配置 VPN
+Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
 
 * sing-box 提供 VPN 转 socks 支持。
 * VPN 模式下建议开启「流量探测」，设置为「探测结果用于路由判断」，有助于匹配域名规则。
 * VPN 模式下可以开启「FakeDNS」加速 DNS 查询
+* 由于上游问题，vpn 模式有可能启动失败。 请再试一次。
 
 ## 基本设置
 
@@ -109,17 +116,37 @@ Nekoray 目前支持在 Windows / Linux 自动配置 VPN
 }
 ```
 
-## 出站
+## 出站 / 服务器
 
 一般情况下，GUI显示的一个服务器配置对应后端的一个出站。
 
-### 自定义 JSON 配置
+### 自定义出站
+
+(2.1+) 通过编写出站 JSON，可以在 sing-box 中使用 wireguard ssh shadowtls 和在 v2ray 中使用 mKCP 等配置。
 
 [v2ray出站语法](https://www.v2fly.org/config/outbounds.html) 目前 v2ray JSON 配置使用的是 v4 版本。
 
 [sing-box出站语法](https://sing-box.sagernet.org/configuration/outbound/)
 
-JSON 对象会被合并。
+示例： 在 NekoBox 中使用 SSH 服务器。
+
+```json
+{
+  "type": "ssh",
+  "server": "127.0.0.1",
+  "server_port": 22,
+  "user": "root",
+  "password": "admin"
+}
+```
+
+### 自定义 JSON 配置
+
+适用于普通出站。
+
+!!! note "提示"
+
+    JSON 对象会被合并。
 
 示例：NekoBox新建一个socks服务器，填写服务器地址端口，填写自定义 JSON 配置（配置1），实际运行的出站是wireguard（配置2）
 
@@ -156,7 +183,7 @@ JSON 对象会被合并。
 }
 ```
 
-## 自定义配置
+## 自定义（其他核心）
 
 可以管理许多提供 socks5 代理的软件，这里以 [Hysteria](https://github.com/HyNetwork/hysteria) 为例
 
@@ -202,9 +229,3 @@ JSON 对象会被合并。
 !!! note "提示"
 
     不要在自定义核心内配置分流，这不是推荐的用法。如果确实需要，说明你用错软件了。
-
-## NekoBox
-
-(1.11+) NekoBox 是试制的 sing-box GUI 客户端。
-
-在 `基本设置 - 内核` 切换到 sing-box 以启用。切换前后变化大，不建议来回切换。

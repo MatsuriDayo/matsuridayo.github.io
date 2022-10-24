@@ -12,9 +12,9 @@
 
 ## NekoRay
 
-基于 Qt/C++ 的跨平台代理配置管理器（ 使用 Matsuri 定制版 v2ray-core ）
+基于 Qt 的跨平台代理配置管理器 (后端 v2ray / sing-box)
 
-目前支持 Windows / Linux amd64 开箱即用
+目前支持 Windows / Linux / macOS amd64 开箱即用
 
 [下载](/download/)
 
