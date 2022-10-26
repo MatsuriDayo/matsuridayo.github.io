@@ -4,9 +4,11 @@
 
 适用于 Android 的 V2Ray 通用代理工具链。
 
-[下载](/download/)
+V2Ray / universal proxy toolchain for Android.
 
-[配置说明](/m-configuration/)
+[下载 / Download](/download/)
+
+[配置说明 / Configuration](/m-configuration/)
 
 [FAQ](/m-faq/)
 
@@ -16,23 +18,30 @@
 
 目前支持 Windows / Linux / macOS amd64 开箱即用
 
-[下载](/download/)
+Qt based cross-platform GUI proxy configuration manager (backend: v2ray / sing-box)
 
-[配置说明](/n-configuration/)
+Support Windows / Linux / macOS amd64 out of the box now.
+
+[下载 / Download](/download/)
+
+[配置说明 / Configuration](/n-configuration/)
 
 [FAQ](/n-faq/)
 
 ## 更改记录 & 发布频道
 
+Changelog & Telegram channel
+
 https://t.me/Matsuridayo
 
-## 联系
+## 联系 / Get in touch
 
 !!! warning
 
     问题反馈请到 GitHub issue 区。
+    For feedback, please go to the GitHub issue.
 
-### 赞助开发者
+### 赞助开发者 / Donate
 
 USDT TRC20
 
