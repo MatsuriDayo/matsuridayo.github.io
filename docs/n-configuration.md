@@ -80,7 +80,7 @@ Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
 }
 ```
 
-## v2ray 资源文件路径
+### v2ray 资源文件路径
 
 允许设置 v2ray 资源文件夹。便于使用额外的规则文件，以及自动更新和管理 geo 资源文件（如使用v2rayN、软件包管理器或升级脚本）。
 
@@ -113,7 +113,7 @@ Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
 
 ## 出站 / 服务器
 
-一般情况下，GUI显示的一个服务器配置对应后端的一个出站。
+一般情况下， GUI 显示的一个服务器配置对应后端的一个出站 (Outbound Object)
 
 ### 自定义出站
 
@@ -123,17 +123,30 @@ Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
 
 [sing-box出站语法](https://sing-box.sagernet.org/configuration/outbound/)
 
-示例： 在 NekoBox 中使用 SSH 服务器。
+!!! warning "注意"
+
+    应填写一个 Outbound Object，而非整个配置文件。直接复制已有的 config.json 是错误的。
+
+示例： 在 NekoBox 中使用 ShadowTLS 服务器。
+
+1. 新建一个自定义出站（配置1）
 
 ```json
 {
-  "type": "ssh",
+  "type": "shadowtls",
+  "tag": "shadowtls-out",
   "server": "127.0.0.1",
-  "server_port": 22,
-  "user": "root",
-  "password": "admin"
+  "server_port": 4443,
+  "tls": {
+    "enabled": true,
+    "server_name": "google.com"
+  }
 }
 ```
+
+2. 新建一个 Shadowsocks 出站（配置2）
+
+3. 按 配置1 配置2 顺序组成链式代理
 
 ### 自定义 JSON 配置
 

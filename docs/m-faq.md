@@ -16,8 +16,9 @@
 4. 请看 [路由/提示](/m-route/)
 5. FakeDNS 等设置改变后，建议关闭相关应用的后台，然后再打开，避免造成玄学问题。
 6. 尝试调整「IPv6路由」
+7. 请看 [配置/专有协议](/m-configuration/)
 
-## 汇报问题
+## 如何正确反馈问题
 
 如果遇到问题，请通过 GitHub issue 提交完整日志。
 
@@ -47,6 +48,7 @@
 
 ### VLESS
 
+* 特性与 v2ray Trojan 重叠，Trojan 的实现和兼容性更好。
 * VLESS 已被弃用并且可能被移除。请考虑使用 Trojan 作为替代品。[link](https://www.v2fly.org/v5/config/proxy/vless.html)
 
 ### Shadowsocks 2022
@@ -58,7 +60,11 @@
 
 ### 提示 ... pattern string does not conform to Letter-Digit-Hyphen (LDH) subset
 
-请检查域名规则中是否包含特殊字符、不可见字符。
+请逐条检查路由规则：域名规则中是否包含特殊字符、不可见字符。
+
+### 提示 失败:: invalid rule
+
+请逐条检查路由规则：是否有使用了已删除的服务器。
 
 ### 提示 ... geosite.dat: no such file
 

@@ -4,7 +4,7 @@
 
 #### Shadowsocks
 
-!!! warning "注意"
+!!! note "封锁提示"
 
     2021 年 11 月开始，在热门线路如 Vultr DigitalOcean 部署有**针对随机 TCP 流量的封锁**，Shadowsocks（包括2022）以及 VMess TCP 等协议变得难以使用。
 
@@ -30,7 +30,12 @@
 
 #### VLESS
 
+* 特性与 v2ray Trojan 重叠，Trojan 的实现和兼容性更好。
 * VLESS 已被弃用并且可能被移除。请考虑使用 Trojan 作为替代品。[link](https://www.v2fly.org/v5/config/proxy/vless.html)
+
+#### Wireguard
+
+经过转发的 Wiregurad 性能很差。建议直接使用 Wireguard 官方 App。
 
 #### 专有协议
 
@@ -41,7 +46,7 @@
 
 传输层:
 
-* v2ray: `streamSettings` ( 显示为 ws grpc 等 )
+* v2ray: `streamSettings` (显示为 ws grpc 等)
 * sing-box: `V2Ray Transport`
 
 应用层:

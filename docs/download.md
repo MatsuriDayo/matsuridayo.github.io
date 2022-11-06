@@ -8,7 +8,7 @@
 
 [配置说明](/m-configuration/)
 
-[FAQ](/m-faq/)
+[常见问题 / FAQ](/m-faq/)
 
 ## 电脑
 
@@ -18,7 +18,7 @@ Linux Windows macOS
 
 [配置说明](/n-configuration/)
 
-[FAQ](/n-faq/)
+[常见问题 / FAQ](/n-faq/)
 
 ## Windows 系统兼容性
 

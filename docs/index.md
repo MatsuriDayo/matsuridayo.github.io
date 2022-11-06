@@ -10,7 +10,7 @@ V2Ray / universal proxy toolchain for Android.
 
 [配置说明 / Configuration](/m-configuration/)
 
-[FAQ](/m-faq/)
+[常见问题 / FAQ](/m-faq/)
 
 ## NekoRay
 
@@ -26,7 +26,7 @@ Support Windows / Linux / macOS amd64 out of the box now.
 
 [配置说明 / Configuration](/n-configuration/)
 
-[FAQ](/n-faq/)
+[常见问题 / FAQ](/n-faq/)
 
 ## 更改记录 & 发布频道
 

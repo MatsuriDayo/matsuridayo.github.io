@@ -43,7 +43,7 @@ Matsuri 原创的功能，允许把协议支持拆分成插件的形式，大部
 2. 可以在 Android Webview 中运行的 HTML JS 文件，用于提供 UI 、分享连接、配置文件生成等功能。
 
 !!! warning "警告"
-    Xray 插件即将废弃，VLESS 已被弃用并且可能被移除。请考虑使用 Trojan 作为替代品。[link](https://www.v2fly.org/v5/config/proxy/vless.html)
+    Xray 插件已经废弃，不再更新。VLESS 已被弃用并且可能被移除。请考虑使用 Trojan 作为替代品。[link](https://www.v2fly.org/v5/config/proxy/vless.html)
 
 ## 常见问题：插件已安装，但显示“未找到插件”
 
