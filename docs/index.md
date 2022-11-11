@@ -41,11 +41,17 @@ https://t.me/Matsuridayo
     问题反馈请到 GitHub issue 区。
     For feedback, please go to the GitHub issue.
 
-### 赞助开发者 / Donate
+### 捐助 / Donate
+
+欢迎捐赠以支持项目开发。
 
 USDT TRC20
 
-TRhnA7SXE5Sap5gSG3ijxRmdYFiD4KRhPs
+`TRhnA7SXE5Sap5gSG3ijxRmdYFiD4KRhPs`
+
+XMR
+
+`49bwESYQjoRL3xmvTcjZKHEKaiGywjLYVQJMUv79bXonGiyDCs8AzE3KiGW2ytTybBCpWJUvov8SjZZEGg66a4e59GXa6k5`
 
 ### Telegram Group
 
