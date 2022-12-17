@@ -40,7 +40,7 @@ Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
 * sing-box 提供 VPN 转 socks 支持。
 * VPN 模式下建议开启「流量探测」，设置为「探测结果用于路由判断」，有助于匹配域名规则。
 * VPN 模式下可以开启「FakeDNS」加速 DNS 查询
-* 由于上游问题，vpn 模式有可能启动失败。 请再试一次。
+* 在 Windows 系统，由于上游问题，vpn 模式有概率启动失败。如连续多次不能启动，请重启并清理多余的网络接口后再试。
 
 ## 基本设置
 
@@ -85,6 +85,10 @@ Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
 ### v2ray 资源文件路径
 
 允许设置 v2ray 资源文件夹。便于使用额外的规则文件，以及自动更新和管理 geo 资源文件（如使用v2rayN、软件包管理器或升级脚本）。
+
+* v2ray 使用的是 .dat 后缀的 geo 资源文件
+* sing-box 使用的是 .db 后缀的 geo 资源文件
+* Loyalsoldier 版 v2ray dat 下载地址 https://github.com/Loyalsoldier/v2ray-rules-dat
 
 ## 路由设置
 
