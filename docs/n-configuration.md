@@ -16,6 +16,20 @@ Ctrl+F 进入搜索， Esc 退出。
 
 在 `基本设置 - 内核` 切换到 sing-box 以启用。切换前后变化大，不建议来回切换。
 
+如果已有的某个服务器在切换后无法使用，建议删除后手动添加。
+
+使用注意：
+
+1. 简易路由仍然按照 v2ray v4 格式填写，如 `geoip:cn` `domain:google.com`，这类规则 nekobox 会自动翻译为 sing-box 的规则。
+2. 自定义 JSON 配置（路由、出站等）请按照 sing-box 的格式填写。
+3. Hysteria 类型服务器将自动转换为 sing-box 内置的 hysteria 出站。
+如果遇到转换错误，请改用自定义配置（sing-box）类型。
+如果需要使用原版 hysteria 内核，请在 `基本设置 - 内核` 中以其他名称新建内核类型。
+
+## Hook.js
+
+(2.8+) 允许使用 javascript 在外部生成或修改某些配置，面向高级用户，详细请看[技术文档](https://github.com/MatsuriDayo/nekoray/blob/main/docs/HookJS.md)。
+
 ## 协议说明
 
 同 [Matsuri 协议说明](/m-configuration/)
@@ -41,6 +55,7 @@ Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
 * VPN 模式下建议开启「流量探测」，设置为「探测结果用于路由判断」，有助于匹配域名规则。
 * VPN 模式下可以开启「FakeDNS」加速 DNS 查询
 * 在 Windows 系统，由于上游问题，vpn 模式有概率启动失败。如连续多次不能启动，请重启并清理多余的网络接口后再试。
+* 绕过的 IP CIDR 和 进程名，格式为一行一个。
 
 ## 基本设置
 
