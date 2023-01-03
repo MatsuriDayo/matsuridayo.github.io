@@ -51,7 +51,7 @@ Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版
 
 Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
 
-* sing-box 提供 VPN 转 socks 支持。
+* sing-box(nekobox_core) 提供 tun2socks 和接口配置支持。
 * VPN 模式下建议开启「流量探测」，设置为「探测结果用于路由判断」，有助于匹配域名规则。
 * VPN 模式下可以开启「FakeDNS」加速 DNS 查询
 * 在 Windows 系统，由于上游问题，vpn 模式有概率启动失败。如连续多次不能启动，请重启并清理多余的网络接口后再试。
