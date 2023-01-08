@@ -98,11 +98,14 @@
 ### DNS 模块优化
 与 SagerNet 重写 v2ray dns 模块不同。Matsuri 在 v2ray dns 模块上改善了 DoH KeepAlive 等问题，更加稳定。
 
-### Tun2Socket
-这个TUN实现较为节能。另外可以改善部分手机性能不足的情况。
+### Tun 模块优化
+添加了 Tun2Socket，优化了部分实现。节约性能，改善部分手机性能不足的情况。
 
 ### 插件加载
 在某些系统上不再需要自启动权限。
 
-### Hysteria 插件
-去掉了dokodemo转发，改为由hysteria直连服务器，保证性能发挥。
+### Hysteria & TUIC 插件
+去掉了 dokodemo 转发，改为由插件直连服务器，保证 QUIC 协议的性能发挥。
+
+### 分享链接格式
+可以识别更多常见应用生成的分享链接。

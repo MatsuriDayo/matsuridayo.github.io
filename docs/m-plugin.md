@@ -18,20 +18,28 @@ Github Plugin 仓库
 
 ### SagerNet 发布的插件
 
+`io.nekohasekai.sagernet.plugin.*`
+
 目前以下协议可以使用 SagerNet 版插件，请以应用内为准。
 
 - [Trojan-Go Plugin](https://sagernet.org/download/#trojan-go-plugin)
 - [NaïveProxy Plugin](https://sagernet.org/download/#naiveproxy-plugin)
 - [Hysteria Plugin](https://sagernet.org/download/#hysteria-plugin)
+- [TUIC Plugin](https://sagernet.org/download/#tuic-plugin)
 - [Wireguard Plugin](https://github.com/SagerNet/SagerNet/releases/tag/wireguard-plugin-20210424-5)
 
 ### Matsuri 发布的插件
 
+`moe.matsuri.exe.*`
+
 目前以下协议可以使用 Matsuri 版插件，请以应用内为准。
 
-- [Hysteria Plugin](https://github.com/MatsuriDayo/plugins/releases?q=Hysteria) (区别请看FAQ)
+- [Hysteria Plugin](https://github.com/MatsuriDayo/plugins/releases?q=Hysteria)
+- [TUIC Plugin](https://github.com/MatsuriDayo/plugins/releases?q=tuic)
 
 ## 高级插件
+
+`moe.matsuri.plugin.*`
 
 Matsuri 原创的功能，允许把协议支持拆分成插件的形式，大部分情况下本体不需要改动。
 
