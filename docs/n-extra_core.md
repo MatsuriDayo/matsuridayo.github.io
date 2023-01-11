@@ -63,6 +63,10 @@ https://github.com/HyNetwork/hysteria/releases
 1. hysteria:// 分享链接导入
 2. 手写 JSON 配置，参考上面说明
 
+!!! note "关于端口跳跃"
+
+    要设置端口跳跃，请不要使用 nekoray 提供的端口映射。应该在内核中直接设定服务器和端口，毋需设置 "mapping_port"。
+
 ### NaïveProxy
 
 https://github.com/klzgrad/naiveproxy/releases
