@@ -56,6 +56,7 @@ Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
 * VPN 模式下可以开启「FakeDNS」加速 DNS 查询
 * 在 Windows 系统，由于上游问题，vpn 模式有概率启动失败。如连续多次不能启动，请重启并清理多余的网络接口后再试。
 * 绕过的 IP CIDR 和 进程名，格式为一行一个。
+* sing tun 配置模板在 `config/vpn/sing-box-vpn.json` ，可以参考[默认模板](https://github.com/MatsuriDayo/nekoray/blob/main/res/vpn/sing-box-vpn.json)自行修改。
 
 ## 基本设置
 

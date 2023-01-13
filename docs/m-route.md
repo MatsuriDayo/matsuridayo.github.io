@@ -51,6 +51,8 @@ https://www.v2fly.org/config/reverse.html#reverseobject
 * 不支持的 DNS 查询，会被当作 UDP 流量经过代理发送至 8.8.8.8:53
 * 进行 Ping / URL Test 时，始终使用系统 DNS 解析节点的域名。
 * 若启用 FakeDNS 则 远程 DNS 被 FakeDNS 代替，此时不能使用“白名单”等分流方式。
+* 通过 socks / http 入站的请求，无法匹配到 APP 规则。
+* 通过 Android netd 查询的 DNS，无法匹配到 APP 规则。
 
 #### 提示
 
