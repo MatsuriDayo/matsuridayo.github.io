@@ -21,7 +21,7 @@
 * VMESS MD5 身份验证（非 AEAD）已被弃用，并且对于具有 alterId 的此类配置文件大于0，分享时会使用旧式链接
 * 对于像 ALPN 这样的列表选项，格式是每行一个
 * WebSocket浏览器转发不支持自定义 HTTP 域名或 TLS 设置，请保证在「地址」处填写正确的域名，并且服务器证书有效。
-* Packet Encoding / XUDP: 支持 FullCone Nat （需要服务器支持）
+* 包编码: 用于实现 UDP FullCone NAT。有：Packet Encoding (服务端为 v2Ray-core v5.04+)/ XUDP (服务端为 Xray-core v1.3.0+)
 
 #### Trojan
 
