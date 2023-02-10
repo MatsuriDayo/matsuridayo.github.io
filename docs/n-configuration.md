@@ -6,7 +6,8 @@
 
 <img src="/assets/images/nekoray1.jpg" />
 
-Ctrl+F 进入搜索， Esc 退出。
+* Ctrl+F 进入搜索， Esc 退出。
+* 选择节点时按住 Ctrl 可一次性选择多个节点。按住 Shift 选择从当前节点到选中节点之间的全部。
 
 其他快捷键右键菜单已标明。
 
@@ -40,6 +41,7 @@ Ctrl+F 进入搜索， Esc 退出。
 
 - 「Clash格式」一般带有流量信息，本项目支持解析其节点（推荐使用）
 - 「V2rayN格式」一般不带流量信息，本项目支持解析
+- 「Shadowsocks格式」本项目支持解析
 - 「某些苹果应用格式」带有流量信息，本项目不支持
 - 「SSR格式」本项目不支持
 
@@ -52,11 +54,26 @@ Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版
 Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
 
 * sing-box(nekobox_core) 提供 tun2socks 和接口配置支持。
+* IP CIDR 和 进程名，格式如 `10.0.0.0/8` `Telegram.exe` ，一行一个。
+* 程序会读取 sing-box-vpn 配置模板 `config/vpn/sing-box-vpn.json`（如果此文件存在，否则使用默认模板）用于生成 sing-box 设置，可以参考[默认模板](https://github.com/MatsuriDayo/nekoray/blob/main/res/vpn/sing-box-vpn.json)自行修改。
 * VPN 模式下建议开启「流量探测」，设置为「探测结果用于路由判断」，有助于匹配域名规则。
 * VPN 模式下可以开启「FakeDNS」加速 DNS 查询
 * 在 Windows 系统，由于上游问题，vpn 模式有概率启动失败。如连续多次不能启动，请重启并清理多余的网络接口后再试。
-* 绕过的 IP CIDR 和 进程名，格式为一行一个。
-* sing tun 配置模板在 `config/vpn/sing-box-vpn.json` ，可以参考[默认模板](https://github.com/MatsuriDayo/nekoray/blob/main/res/vpn/sing-box-vpn.json)自行修改。
+
+### DNS
+
+目前 DNS 处理还没有完美的方案。如果您遇到 DNS 导致的无法上网等问题，请尝试：
+
+1. 检查两种 DNS 是否可用 `nslookup 代理的域名` & `nslookup 直连的域名` 看结果是否正常。
+2. 检查 DNS 是否被污染，根据情况调整路由和 VPN 规则。
+3. 将直连 DNS 改为 DoH 如 `https+local://223.5.5.5/dns-query`
+4. 设置环境变量 `NKR_VPN_LEGACY_DNS=1` 以启用另一套 localhost DNS 处理方案。
+
+### 白名单模式
+
+无论是黑名单还是白名单，您的流量都将由 nekobox_core (sing-tun) 处理。这不等于某些软件的「进程模式」。
+
+白名单模式下，未匹配到「代理 CIDR」 和 「代理进程名」的流量，将会根据 `sing-box-vpn.json` 内的规则转发至默认上网的网卡(direct)。
 
 ## 基本设置
 

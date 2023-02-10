@@ -36,9 +36,11 @@
 }
 ```
 
-替换串 `%socks_port%` 代表 Hysteria 将监听的端口，这个端口每次启动配置时都会自动生成，如果不使用替换串而直接填写固定端口，则 nekoray 无法获取 Hysteria 所监听的端口，导致无法使用分流等功能。
+替换串 `%socks_port%` 代表 Hysteria 将监听的端口，这个端口每次启动配置时都会自动生成，如果不使用替换串而直接填写固定端口，则 nekoray 不知道 Hysteria 所监听的端口，导致无法使用。
 
-替换串 `127.0.0.1:%mapping_port%` 代表 `地址` `端口` 处填写的服务器端口被映射到本机的端口，这个端口每次启动配置时都会自动生成，如果不使用替换串而直接填写固定地址，则无法使用链式代理等功能，且在VPN模式下，自定义核心不一定知道如何绕过VPN访问网络，可能造成回环无法使用。
+替换串 `127.0.0.1:%mapping_port%` 代表本机 nekoray 将 `服务器端口` 映射到本机的端口（代理链必需），如果不使用替换串而直接填写固定地址，则无法使用链式代理等功能。
+
+在 VPN 模式下，自定义的核心通常不会绕过 VPN 直接访问网络，因此，如果以上配置错误，就会造成回环，无法使用。
 
 其他配置和命令行版本是一致的，nekoray 只是接管了流量的出(mapping_port)和入(socks5_port)，代理协议的实现还是由自定义的核心进行。
 
@@ -56,16 +58,16 @@
 
 ### Hysteria
 
-https://github.com/HyNetwork/hysteria/releases
+https://github.com/apernet/hysteria/releases
 
 使用方法：
 
 1. hysteria:// 分享链接导入
 2. 手写 JSON 配置，参考上面说明
 
-!!! note "关于 TUN 模式"
+!!! note "关于 VPN / TUN 模式"
 
-    在撰写本文档时，hysteria内核还不会绕开 VPN 。因此，需要在 VPN 设置中的"绕过进程"添加 hysteria.exe (windows) 或 hysteria (Linux、macOS)。
+    在撰写本文档时，hysteria内核还不会绕开 VPN 。因此，如果您不使用 "mapping_port" 则需要在 VPN 设置中的"绕过进程"添加 hysteria.exe (windows) 或 hysteria (Linux、macOS)。
 
 !!! note "关于端口跳跃"
 

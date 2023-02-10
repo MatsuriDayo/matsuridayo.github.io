@@ -2,7 +2,7 @@
 
 ## 协议说明
 
-#### Shadowsocks
+### Shadowsocks
 
 !!! note "封锁提示"
 
@@ -10,43 +10,44 @@
 
 * [Shadowsocks是如何被检测和封锁的](https://gfw.report/talks/imc20/zh/)
 * Shadowsocks 流式密码 可以被准确地主动探测、在不需要密码的情况下被审查者解密流量, 且服务端开启 IV 重放过滤器也无法缓解. 了解更多: https://github.com/net4people/bbs/issues/24
+* 截至 2023 年 2 月，以上信息可能已经过期。
 
-#### ShadowsocksR
+### ShadowsocksR
 
 * 拥有 Shadowsocks 的几乎所有问题
 * 由于众所周知的原因，上游 shadowsocksr-libev 自 2017 年开始 **不再维护**
 
-#### VMESS
+### VMESS
 
-* VMESS MD5 身份验证（非 AEAD）已被弃用，并且对于具有 alterId 的此类配置文件大于0，分享时会使用旧式链接
-* 对于像 ALPN 这样的列表选项，格式是每行一个
-* WebSocket浏览器转发不支持自定义 HTTP 域名或 TLS 设置，请保证在「地址」处填写正确的域名，并且服务器证书有效。
+* VMESS MD5 身份验证（非 AEAD）已被弃用，此类配置文件的 alterId 大于 0，使用 Matsuri 分享时会使用旧式链接。
+* 对于像 ALPN 这样的列表选项，格式是每行一个。
+* WebSocket 浏览器转发不支持自定义 HTTP 域名或 TLS 设置，请保证在「地址」处填写正确的域名，并且服务器证书有效。
 * 包编码: 用于实现 UDP FullCone NAT。有：Packet Encoding (服务端为 v2Ray-core v5.04+)/ XUDP (服务端为 Xray-core v1.3.0+)
 
-#### Trojan
+### Trojan
 
-* 本质为 "Simple Socks with UDP over TCP" 详见官方文档
-* 支持 v2ray "专有协议"，如 `WS+TLS` `mux.cool`，与 Trojan-Go 不完全兼容。
+* 本质为 "Simple Socks with UDP over TCP" 详见[原始协议文档](https://trojan-gfw.github.io/trojan/protocol)
+* 现多配合 v2ray "专有协议" 使用，如 `WS+TLS` `mux.cool`，与 Trojan-Go 不完全兼容。
 
-#### VLESS
+### VLESS
 
 * 特性与 v2ray Trojan 重叠，Trojan 的实现和兼容性更好。
 * VLESS 已被弃用并且可能被移除。请考虑使用 Trojan 作为替代品。[link](https://www.v2fly.org/v5/config/proxy/vless.html)
 
-#### Wireguard
+### Wireguard
 
 经过转发的 Wiregurad 性能很差。建议直接使用 Wireguard 官方 App。
 
-#### 专有协议
+### 专有协议
 
 !!! warning "注意"
 
     * 这是一些专有的协议，通常随 VMess Trojan 等协议使用。
-    * 如果服务端与客户端不同，则可能导致无法上网。
+    * 如果服务器与客户端的版本不同，则可能导致无法上网。
 
 传输层:
 
-* v2ray: `streamSettings` (显示为 ws grpc 等)
+* v2ray: `streamSettings` (ws grpc 等)
 * sing-box: `V2Ray Transport`
 
 应用层:
@@ -56,7 +57,7 @@
 * trojan-go: `smux`
 * sing-box: `uot` `multiplex`
 
-#### (TLS) 安全设置
+### (TLS) 安全设置
 
 !!! note "封锁提示"
 
@@ -64,15 +65,25 @@
 
 * 允许不安全连接：启用后安全性相当于明文。有些节点不开这个无法使用，原因是服务器证书配置有误。
 * 证书（链）：应填入证书内容，通常是 PEM 格式。
+* 如果 SNI 留空，且 address 为域名，则使用 address 填充 SNI。
+* 本项目不会使用 ws host 等字段来填写 SNI，这可能会使一些客户端共享的 ws tls 等配置无法使用，请自行检查。
 
-#### Hysteria 多端口
+#### uTLS
+
+V2Ray (Matsuri&NekoRay) 和 sing-box(NekoBox) 支持的范围和指纹如下，请勿与其他软件的 uTLS 配置混淆。
+
+https://www.v2fly.org/v5/config/stream.html#utls
+
+https://sing-box.sagernet.org/configuration/shared/tls/#utls
+
+### Hysteria 多端口 / 端口跳跃
 
 0.5.3+ 支持，使用说明如下
 
 1. 需要使用多端口时，「服务器」按照 `example.com:1145,5144-10240` 格式填写，「服务器端口」随意填写。
 2. 不使用多端口时，「服务器」和「服务器端口」按照原来的方式填写。
 3. 需要安装 Matsuri Hysteria 插件 1.3.0+。
-4. 不兼容链式代理。
+4. 不能作为链式代理的非入口节点。
 
 ## 功能说明
 
@@ -141,7 +152,7 @@ Matsuri 本身的流量是会经过 VPN 处理的。
 
 推荐使用 Tun2Socket，如果速度遇到瓶颈（通常是300M以上），可以尝试更换。
 
-对于能使用 Socks / HTTP 的代理应用，建议手动设置代理，不走 Tun 更省电。
+对于能使用 Socks / HTTP 代理的应用，建议手动为其设置 Socks / HTTP 代理，不走 Tun 更省电。
 
 ### MTU
 
