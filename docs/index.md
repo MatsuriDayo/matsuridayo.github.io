@@ -1,6 +1,6 @@
 本文档有多页，如未看见目录，请点击左上角三条横线/
 
-## Matsuri 茉莉
+## Matsuri
 
 适用于 Android 的 V2Ray 通用代理工具链。
 
@@ -12,7 +12,16 @@ V2Ray / universal proxy toolchain for Android.
 
 [常见问题 / FAQ](/m-faq/)
 
-## NekoRay
+!!! note
+
+    Matsuri 已不活跃，请关注以下类似项目。    
+
+    Matsuri is no longer active, please pay attention to the following similar projects.    
+
+    1. NekoBox for Android
+    2. NekoRay / NekoBox for PC
+
+## NekoRay / NekoBox for PC
 
 基于 Qt 的跨平台代理配置管理器 (后端 v2ray / sing-box)
 
@@ -27,6 +36,18 @@ Support Windows / Linux / macOS amd64 out of the box now.
 [配置说明 / Configuration](/n-configuration/)
 
 [常见问题 / FAQ](/n-faq/)
+
+## NekoBox for Android
+
+适用于 Android 的 sing-box 通用代理工具链。
+
+sing-box / universal proxy toolchain for Android.
+
+[下载 / Download](/download/)
+
+[配置说明 / Configuration](/nb4a-configuration/)
+
+[常见问题 / FAQ](/nb4a-faq/)
 
 ## 更改记录 & 发布频道
 

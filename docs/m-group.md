@@ -19,11 +19,14 @@
 
 部分格式（如某些 iOS 应用自创的格式）由于本身没有文档且标准混乱，其他应用经常无法识别或者识别后信息丢失。遇到此类链接可以尝试用专门的订阅转换器转为 clash 格式再导入。
 
-!!! note "流量显示"
+!!! note
 
     支持 "Subscription-Userinfo" 流量显示，由于「某些机场面板」只给特定的客户端返回流量信息，遇到 Clash 可以显示而本软件不能显示的，请设置 User-Agent: `ClashForAndroid/2.5.9.premium`
 
 #### OOCv1
+
+!!! note
+    很少使用，仅 Matsuri 支持。
 
 https://github.com/Shadowsocks-NET/OpenOnlineConfig
 
@@ -34,6 +37,9 @@ https://github.com/Shadowsocks-NET/OpenOnlineConfig
 * 按组和标签过滤配置文件
 
 #### SIP008
+
+!!! note "流量显示"
+    很少使用，仅 Matsuri 支持。
 
 一种很少使用的 shadowsocks 订阅格式。
 

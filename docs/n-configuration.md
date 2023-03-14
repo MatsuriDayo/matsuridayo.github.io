@@ -1,4 +1,4 @@
-# 配置
+# NekoRay / NekoBox for PC 配置
 
 ## 窗口界面使用
 
@@ -187,13 +187,14 @@ Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
 
 3. 按 配置1 配置2 顺序组成链式代理
 
-### 自定义 JSON 配置
+### 自定义 JSON 配置 (custom outbound JSON)
 
 适用于普通出站。
 
 !!! note "提示"
 
-    JSON 对象会被合并。
+    1. JSON 对象会被合并。
+    2. 对于 NekoBox For Android，需要先保存服务器。否则点击右上角菜单无反应。
 
 示例：NekoBox新建一个socks服务器，填写服务器地址端口，填写自定义 JSON 配置（配置1），实际运行的出站是wireguard（配置2）
 
