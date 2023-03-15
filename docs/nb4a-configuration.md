@@ -55,6 +55,10 @@
 * ss/vmess/vless/trojan: `smux`
 * ss: `uot`
 
+!!! note
+
+    * ws 地址支持 `?ed=2048` 这种 earlydata 形式（与 Xray 兼容）
+
 TLS 更改：
 
 * uTLS
@@ -70,12 +74,6 @@ TLS 更改：
 * 证书（链）：应填入证书内容，通常是 PEM 格式。
 * 如果 SNI 留空，且 address 为域名，则使用 address 填充 SNI。
 * 本项目不会使用 ws host 等字段来填写 SNI，这可能会使一些客户端共享的 ws tls 等配置无法使用，请自行检查。
-
-#### uTLS
-
-sing-box(NekoBox) 支持的范围和指纹如下，请勿与其他软件的 uTLS 配置混淆。
-
-https://sing-box.sagernet.org/configuration/shared/tls/#utls
 
 ## 功能说明
 
@@ -95,11 +93,13 @@ Wireguard .conf 配置文件可以导入。
 
 #### 导出/分享
 
-导出配置：导出软件生成的 v2ray config.json 等配置文件。
+导出配置：导出软件生成的 sing-box config.json 等配置文件。
 
-分享链接：标准 / Matsuri，不同节点分享格式以分享菜单为准。
+分享链接：标准 / NekoBox，不同节点分享格式以分享菜单为准。
 
-Matsuri 格式为程序内部的存储格式，包含的信息最完全，部分与 SagerNet 通用，但跨版本兼容性没有保证。链接为 `sn://xxxxx`
+NekoBox 格式 (`sn://`) 为程序内部的存储格式，包含的信息最完全，但跨版本兼容性没有保证。
+
+请勿尝试导入其他软件的 `sn://` 链接。
 
 ### 代理链
 
