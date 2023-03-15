@@ -1,5 +1,33 @@
 本文档有多页，如未看见目录，请点击左上角三条横线/
 
+## NekoBox for Android
+
+适用于 Android 的 sing-box 通用代理工具链。
+
+sing-box / universal proxy toolchain for Android.
+
+[下载 / Download](/download/)
+
+[配置说明 / Configuration](/nb4a-configuration/)
+
+[常见问题 / FAQ](/nb4a-faq/)
+
+## NekoRay / NekoBox for PC
+
+基于 Qt 的跨平台代理配置管理器 (后端 v2ray / sing-box)
+
+目前支持 Windows / Linux / macOS amd64 开箱即用
+
+Qt based cross-platform GUI proxy configuration manager (backend: v2ray / sing-box)
+
+Support Windows / Linux / macOS amd64 out of the box now.
+
+[下载 / Download](/download/)
+
+[配置说明 / Configuration](/n-configuration/)
+
+[常见问题 / FAQ](/n-faq/)
+
 ## Matsuri
 
 适用于 Android 的 V2Ray 通用代理工具链。
@@ -20,34 +48,6 @@ V2Ray / universal proxy toolchain for Android.
 
     1. NekoBox for Android
     2. NekoRay / NekoBox for PC
-
-## NekoRay / NekoBox for PC
-
-基于 Qt 的跨平台代理配置管理器 (后端 v2ray / sing-box)
-
-目前支持 Windows / Linux / macOS amd64 开箱即用
-
-Qt based cross-platform GUI proxy configuration manager (backend: v2ray / sing-box)
-
-Support Windows / Linux / macOS amd64 out of the box now.
-
-[下载 / Download](/download/)
-
-[配置说明 / Configuration](/n-configuration/)
-
-[常见问题 / FAQ](/n-faq/)
-
-## NekoBox for Android
-
-适用于 Android 的 sing-box 通用代理工具链。
-
-sing-box / universal proxy toolchain for Android.
-
-[下载 / Download](/download/)
-
-[配置说明 / Configuration](/nb4a-configuration/)
-
-[常见问题 / FAQ](/nb4a-faq/)
 
 ## 更改记录 & 发布频道
 
@@ -73,6 +73,8 @@ USDT TRC20
 XMR
 
 `49bwESYQjoRL3xmvTcjZKHEKaiGywjLYVQJMUv79bXonGiyDCs8AzE3KiGW2ytTybBCpWJUvov8SjZZEGg66a4e59GXa6k5`
+
+您也可以通过 Google Play 购买 [NekoBox for Android](https://play.google.com/store/apps/details?id=moe.nb4a) 捐赠。
 
 ### Telegram Group
 

@@ -14,7 +14,7 @@
 
 ### NekoBox for Android
 
-[下载 NB4A](https://github.com/MatsuriDayo/NekoBoxForAndroid/releases)
+[下载 NekoBox for Android](https://github.com/MatsuriDayo/NekoBoxForAndroid/releases)
 
 [Google Play (付费)](https://play.google.com/store/apps/details?id=moe.nb4a)
 
@@ -26,7 +26,7 @@
 
 Linux Windows macOS
 
-[下载 Nekoray](https://github.com/MatsuriDayo/nekoray/releases)
+[下载 NekoRay / NekoBox for PC](https://github.com/MatsuriDayo/nekoray/releases)
 
 [配置说明](/n-configuration/)
 

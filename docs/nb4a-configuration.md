@@ -139,3 +139,9 @@ Matsuri 格式为程序内部的存储格式，包含的信息最完全，部分
 [最大传输单元](https://zh.wikipedia.org/zh-hans/%E6%9C%80%E5%A4%A7%E4%BC%A0%E8%BE%93%E5%8D%95%E5%85%83)
 
 根据 CFA 的实践经验，默认设置为 9000，可节省CPU并提高速度。如果遇到不兼容的软件（表现为 UDP 包丢失），可以调回 1500。
+
+### sing-box Dashboard
+
+本质是一个 Clash Dashboard Web 界面，目前内置了 yacd-meta，也可以点右上角菜单自行更换 URL 以使用其他面板。
+
+需要打开 Clash API 才能使用。
