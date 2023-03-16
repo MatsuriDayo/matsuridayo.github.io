@@ -8,7 +8,21 @@
 
 详情请看： https://sing-box.sagernet.org/configuration/route/rule/
 
-#### 语法
+### 语法
+
+#### 端口 (版本 0.6+)
+
+port / sourcePort 如果有多个请以英文逗号 `,` 分割，端口段用英文冒号 `:` 表示。
+
+示例： `1234,:1024,2000:2999,60000:`
+
+#### IP (版本 0.5+)
+
+ip / source 一行一个。 格式如 `1.2.3.4/8` 或 `geoip:private`
+
+#### 域名 (版本 0.5+)
+
+domain 一行一个，语法如下
 
 - **纯字符串**：当此域名完整匹配目标域名时，该规则生效。例如 `v2ray.com` 匹配 `v2ray.com` 但不匹配 `www.v2ray.com`。
 - **正则表达式**：由 `regexp:` 开始，余下部分是一个正则表达式。当此正则表达式匹配目标域名时，该规则生效。例如 `regexp:\.goo.*\.com$` 匹配 `www.google.com`、`fonts.googleapis.com`，但不匹配 `google.com`。
