@@ -241,4 +241,4 @@ Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
 使用链式代理后，流量将按照自上到下的顺序转发。第一个服务器作为流量入口，最后一个服务器作为流量出口。
 
 !!! note
-    使用 ShadowTLS 时，如果 ShadowTLS 的实现不是 sing-box，则无法使用链式代理连接。请自行在本地开启一个 ShadowTLS 客户端，并将 ShadowTLS 承载的协议地址改为 `127.0.0.1:{ShadowTLS 本地端口}`。
+    使用 ShadowTLS 时，如果 ShadowTLS 使用原版客户端，则无法使用链式代理连接。请自行在本地开启一个 ShadowTLS 客户端，并将 ShadowTLS 承载的协议目标地址改为 `127.0.0.1:{ShadowTLS 本地端口}`。
