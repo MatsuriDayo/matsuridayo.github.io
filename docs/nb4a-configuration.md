@@ -6,6 +6,8 @@
 
 自定义功能，适用于任何类型的服务器，请在「服务器配置」界面点击右上角的三个点。
 
+需要先保存服务器。否则点击右上角菜单无反应。
+
 参考[这里的说明](/n-configuration/#json-custom-outbound-json)
 
 ### 自定义配置
@@ -24,17 +26,20 @@
 
 ### VMESS
 
-* VMESS MD5 身份验证（非 AEAD）已被弃用，此类配置文件的 alterId 大于 0，使用 NB4A 分享时会使用旧式链接。
 * 对于像 ALPN 这样的列表选项，格式是每行一个。
 
 ### Wireguard
 
 * 对于像 本地地址 这样的列表选项，格式是每行一个。
-- 支持 reseved 字段，请填字符串。
+- 支持 reseved 字段，请填 base64 字符串。
 
 ### Hysteria
 
 对于 sing-box 不支持的类型(比如多端口)，需要安装 Matsuri Hysteria 插件 1.3.3+
+
+### TUIC
+
+目前使用的是 [0.8.5 稳定版](https://github.com/EAimTY/tuic/releases/tag/0.8.5)，部分功能「需要服务器支持」的，请使用[这个服务器实现](https://github.com/zephyrchien/tuic)。
 
 #### 多端口 / 端口跳跃
 
@@ -62,7 +67,7 @@
 TLS 更改：
 
 * uTLS
-* Reality (先决条件是开启 uTLS)
+* Reality (先决条件是开启 uTLS，不支持 SpiderX)
 
 ### (TLS) 安全设置
 
@@ -97,9 +102,24 @@ Wireguard .conf 配置文件可以导入。
 
 分享链接：标准 / NekoBox，不同节点分享格式以分享菜单为准。
 
-NekoBox 格式 (`sn://`) 为程序内部的存储格式，包含的信息最完全，但跨版本兼容性没有保证。
+SN Link 格式 (`sn://`) 为程序内部的存储格式，包含的信息最完全，但跨版本兼容性没有保证。
 
-请勿尝试导入其他软件的 `sn://` 链接。
+**请勿尝试导入其他软件（或本软件较旧版本）的 `sn://` 链接和备份信息。**
+
+### 分享链接说明
+
+vmess vless trojan 的分享链接非常混乱，在 NekoBox for Andoird 0.7+，采用如下的分享链接策略。
+
+导入尽量兼容常用软件的格式。
+
+导出（基本与 nekoray v2rayN 等软件的行为兼容）
+
+- VMess 导出的链接为 v2rayN/G 的格式 `vmess://(base64)`
+- VLESS & Trojan 导出的格式参考 https://github.com/XTLS/Xray-core/discussions/716 ，其中：
+  1. 遇到 http 1.1 的传输类型时，设置 `type=tcp&headerType=http` 以及 `host=xxxx`
+  2. 为 VLESS 设置 `encryption=none` `flow=xxx`, Trojan 不设置
+  3. 允许设置 `allowInsecure=1`
+  4. ws earlydata: `ed=2048&eh=xxx`
 
 ### 代理链
 
@@ -112,7 +132,7 @@ NekoBox 格式 (`sn://`) 为程序内部的存储格式，包含的信息最完�
 减少打开应用时 DNS 查询走代理而造成的延迟，但会有一定副作用，比如开关 VPN 造成域名解析失效，某些应用不兼容等。
 
 * FakeDNS 会劫持 DNS 返回 `198.18` 开头的 FakeIP， NekoBox tun 收到目标 IP 为这种类型的请求后，会把它还原为域名。
-* **FakeIP 只支持 TCP 链接，不支持 UDP。**
+* **FakeIP 只支持 TCP 链接，不支持 UDP。** 但这对游戏等场景几乎无影响，因为游戏会通过其他渠道获取服务器的真实IP。
 * 对于「绕过」的流量， FakeDNS 不生效，所以没有以上问题。
 
 ### 多路复用（smux）

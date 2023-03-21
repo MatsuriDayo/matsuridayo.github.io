@@ -193,8 +193,7 @@ Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
 
 !!! note "提示"
 
-    1. JSON 对象会被合并。
-    2. 对于 NekoBox For Android，需要先保存服务器。否则点击右上角菜单无反应。
+    1. JSON 对象会被合并，请看下方例子。
 
 示例：NekoBox新建一个socks服务器，填写服务器地址端口，填写自定义 JSON 配置（配置1），实际运行的出站是wireguard（配置2）
 

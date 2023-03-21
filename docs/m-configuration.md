@@ -1,5 +1,7 @@
 # 配置
 
+这是 Matsuri 的使用文档，对 NekoBox for Android 不适用。
+
 ## 协议说明
 
 ### Shadowsocks
