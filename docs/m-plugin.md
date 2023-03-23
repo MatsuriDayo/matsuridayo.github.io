@@ -14,7 +14,8 @@ Github Plugin 仓库
 
 用法：为你需要的协议安装插件。已安装的插件在「关于」页面显示。
 
-可以设置「首选插件提供者」，当同名称的插件安装了多个版本时，优先使用选定的版本。
+* Matsuri: 可以设置「首选插件提供者」，当同名称的插件安装了多个版本时，优先使用选定的版本。
+* NekoBox For Android: 除了 `Trojan-Go` 和 `NaïveProxy`，其余插件只兼容 `moe.matsuri.*` 版本。
 
 ### SagerNet 发布的插件
 
@@ -24,9 +25,9 @@ Github Plugin 仓库
 
 - [Trojan-Go Plugin](https://sagernet.org/download/#trojan-go-plugin)
 - [NaïveProxy Plugin](https://sagernet.org/download/#naiveproxy-plugin)
-- [Hysteria Plugin](https://sagernet.org/download/#hysteria-plugin)
-- [TUIC Plugin](https://sagernet.org/download/#tuic-plugin)
-- [Wireguard Plugin](https://github.com/SagerNet/SagerNet/releases/tag/wireguard-plugin-20210424-5)
+- [Hysteria Plugin](https://sagernet.org/download/#hysteria-plugin) （不推荐使用）
+- [TUIC Plugin](https://sagernet.org/download/#tuic-plugin) （不推荐使用）
+- [Wireguard Plugin](https://github.com/SagerNet/SagerNet/releases/tag/wireguard-plugin-20210424-5) （已废弃）
 
 ### Matsuri 发布的插件
 

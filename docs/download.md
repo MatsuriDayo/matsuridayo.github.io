@@ -2,16 +2,6 @@
 
 ## 安卓手机
 
-### Matsuri
-
-[下载 Matsuri](https://github.com/MatsuriDayo/Matsuri/releases)
-
-[Google Play](https://play.google.com/store/apps/details?id=moe.matsuri.lite)
-
-[配置说明](/m-configuration/)
-
-[常见问题 / FAQ](/m-faq/)
-
 ### NekoBox for Android
 
 [下载 NekoBox for Android](https://github.com/MatsuriDayo/NekoBoxForAndroid/releases)
@@ -22,11 +12,21 @@
 
 [常见问题 / FAQ](/nb4a-faq/)
 
+### Matsuri
+
+[下载 Matsuri](https://github.com/MatsuriDayo/Matsuri/releases)
+
+[Google Play](https://play.google.com/store/apps/details?id=moe.matsuri.lite)
+
+[配置说明](/m-configuration/)
+
+[常见问题 / FAQ](/m-faq/)
+
 ## 电脑
 
-Linux Windows macOS
+NekoRay / NekoBox for PC （支持 Windows 和 Linux 系统）
 
-[下载 NekoRay / NekoBox for PC](https://github.com/MatsuriDayo/nekoray/releases)
+[下载](https://github.com/MatsuriDayo/nekoray/releases)
 
 [配置说明](/n-configuration/)
 

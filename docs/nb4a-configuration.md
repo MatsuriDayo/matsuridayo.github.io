@@ -30,16 +30,12 @@
 
 ### Wireguard
 
-* 对于像 本地地址 这样的列表选项，格式是每行一个。
+* 对于像 本地地址 这样的列表选项，格式是每行一个。 格式如 `10.0.0.1/24` `2001:db8::1/32`
 - 支持 reseved 字段，请填 base64 字符串。
 
 ### Hysteria
 
 对于 sing-box 不支持的类型(比如多端口)，需要安装 Matsuri Hysteria 插件 1.3.3+
-
-### TUIC
-
-目前使用的是 [0.8.5 稳定版](https://github.com/EAimTY/tuic/releases/tag/0.8.5)，部分功能「需要服务器支持」的，请使用[这个服务器实现](https://github.com/zephyrchien/tuic)。
 
 #### 多端口 / 端口跳跃
 
@@ -47,13 +43,17 @@
 2. 不使用多端口时，「服务器」和「服务器端口」按照原来的方式填写。
 4. 不能作为链式代理的非入口节点。
 
+### TUIC
+
+目前使用的是 [0.8.5 稳定版](https://github.com/EAimTY/tuic/releases/tag/0.8.5)，部分功能「需要服务器支持」的，请使用[这个服务器实现](https://github.com/zephyrchien/tuic)。
+
+
 ### sing-box 专有协议
 
 !!! warning "注意"
 
     * 这是一些专有的协议，通常随 VMess Trojan 等协议使用。
-    * 如果服务器不支持（版本不同），则可能导致无法上网。
-
+    * 如果服务器不支持（通常是因为不是 sing-box 或者版本不同），则可能导致无法上网。
 
 * vmess/vless/trojan: `V2Ray Transport` (http/ws/grpc/quic)
 * vmess/vless: `packetaddr` `xudp`
@@ -92,6 +92,8 @@ TLS 更改：
 
 Wireguard .conf 配置文件可以导入。
 
+sing-box .json 配置文件可以导入（导入为自定义配置）。
+
 包含分享链接的文件可以导入。
 
 如果需要导入多个文件，可以压缩为 zip 文件，程序会尝试解压并识别其中的配置文件。
@@ -100,7 +102,7 @@ Wireguard .conf 配置文件可以导入。
 
 导出配置：导出软件生成的 sing-box config.json 等配置文件。
 
-分享链接：标准 / NekoBox，不同节点分享格式以分享菜单为准。
+分享链接：`标准` / `SN Link`，不同节点分享格式以分享菜单为准。
 
 SN Link 格式 (`sn://`) 为程序内部的存储格式，包含的信息最完全，但跨版本兼容性没有保证。
 
@@ -165,3 +167,9 @@ vmess vless trojan 的分享链接非常混乱，在 NekoBox for Andoird 0.7+，
 本质是一个 Clash Dashboard Web 界面，目前内置了 yacd-meta，也可以点右上角菜单自行更换 URL 以使用其他面板。
 
 需要打开 Clash API 才能使用。
+
+### 分组配置: selector 模式
+
+伪 clash selector 模式，主要优点实现是分组内免重载切换配置。
+
+目前没有很好地 Dashboard 整合，如不能显示配置备注，不能与 NekoBox 所选择的节点同步等。
