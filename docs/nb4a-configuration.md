@@ -30,7 +30,7 @@
 
 ### Wireguard
 
-* 对于像 本地地址 这样的列表选项，格式是每行一个。 格式如 `10.0.0.1/24` `2001:db8::1/32`
+* 本地地址 每行一个。 格式如 `10.0.0.1/24` `2001:db8::1/32`
 - 支持 reseved 字段，请填 base64 字符串。
 
 ### Hysteria
@@ -166,10 +166,11 @@ vmess vless trojan 的分享链接非常混乱，在 NekoBox for Andoird 0.7+，
 
 本质是一个 Clash Dashboard Web 界面，目前内置了 yacd-meta，也可以点右上角菜单自行更换 URL 以使用其他面板。
 
-需要打开 Clash API 才能使用。
+* 需要打开 Clash API 才能使用。
+* 如果显示白屏，请更新 System Webview 或使用支持的浏览器打开 http://127.0.0.1:9090/ui/`
 
 ### 分组配置: selector 模式
 
 伪 clash selector 模式，主要优点实现是分组内免重载切换配置。
 
-目前没有很好地 Dashboard 整合，如不能显示配置备注，不能与 NekoBox 所选择的节点同步等。
+* 目前没有很好地与 Dashboard 整合，不能与 NekoBox 所选择的节点同步。

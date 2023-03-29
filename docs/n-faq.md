@@ -50,9 +50,9 @@
 
 ## 更新 / 替换内核
 
-对于内置的 v2ray(nekoray_core) 和 sing-box(nekobox_core):
+考虑到兼容性和体验一致性问题，本软件架构设计上不使用 `v2ray-core` `sing-box` 命令，因此无法通过下载以上程序实现“更新或替换内核”。对于其他 GUI 项目，这种做法也存在隐患。
 
-考虑到兼容性和体验一致性问题，本软件架构设计上不允许手动更新 / 替换内核。
+`nekoray_core` `nekobox_core` 有能力的可以参考[这个脚本](https://github.com/MatsuriDayo/nekoray/blob/main/libs/build_go.sh)自行编译替换。
 
 ## 卸载 / 清空数据
 
