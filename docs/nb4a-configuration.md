@@ -47,27 +47,30 @@
 
 目前使用的是 [0.8.5 稳定版](https://github.com/EAimTY/tuic/releases/tag/0.8.5)，部分功能「需要服务器支持」的，请使用[这个服务器实现](https://github.com/zephyrchien/tuic)。
 
-
-### sing-box 专有协议
+### sing-box 私有协议
 
 !!! warning "注意"
 
-    * 这是一些专有的协议，通常随 VMess Trojan 等协议使用。
+    * 这是一些私有协议，通常随 VMess Trojan 等协议使用。
     * 如果服务器不支持（通常是因为不是 sing-box 或者版本不同），则可能导致无法上网。
+
+按 sing-box 的出站分：
 
 * vmess/vless/trojan: `V2Ray Transport` (http/ws/grpc/quic)
 * vmess/vless: `packetaddr` `xudp`
 * ss/vmess/vless/trojan: `smux`
 * ss: `uot`
 
-!!! note
-
-    * ws 地址支持 `?ed=2048` 这种 earlydata 形式（与 Xray 兼容）
-
 TLS 更改：
 
 * uTLS
-* Reality (先决条件是开启 uTLS，不支持 SpiderX)
+* Reality
+
+!!! note
+
+    * ws 地址支持 `?ed=2048` 这种 earlydata 形式（与 Xray 兼容）
+    * ws 依赖 ALPN=http/1.1 （也是一种特征），若同时开启 uTLS 则可能导致无法使用。
+    * Reality 先决条件是开启 uTLS，不支持 SpiderX
 
 ### (TLS) 安全设置
 

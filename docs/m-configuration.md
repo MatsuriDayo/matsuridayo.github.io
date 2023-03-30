@@ -40,24 +40,20 @@
 
 经过转发的 Wiregurad 性能很差。建议直接使用 Wireguard 官方 App。
 
-### 专有协议
+### v2ray 私有协议
 
 !!! warning "注意"
 
-    * 这是一些专有的协议，通常随 VMess Trojan 等协议使用。
+    * 这是一些私有协议，通常随 VMess Trojan 等协议使用。
     * 如果服务器与客户端的版本不同，则可能导致无法上网。
 
-传输层:
+按服务器支持的软件分（Matsuri客户端只支持v2ray的）：
 
-* v2ray: `streamSettings` (ws grpc 等)
-* sing-box: `V2Ray Transport`
-
-应用层:
-
+* v2ray/xray: `streamSettings` (ws grpc 等)
 * v2ray: `mux.cool`(详见 mux 说明) `PacketAddr`
 * xray: `xudp`
 * trojan-go: `smux`
-* sing-box: `uot` `multiplex`
+* sing-box: `uot` `multiplex(smux)`
 
 ### (TLS) 安全设置
 
