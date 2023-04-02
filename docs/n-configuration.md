@@ -37,7 +37,7 @@
 
 ## 导入 / 导出 / 订阅 
 
-支持的格式:
+### 支持的格式
 
 - 「Clash格式」一般带有流量信息，本项目支持解析其节点（推荐使用）
 - 「V2rayN格式」一般不带流量信息，本项目支持解析
@@ -45,7 +45,142 @@
 - 「某些苹果应用格式」带有流量信息，本项目不支持
 - 「SSR格式」本项目不支持
 
-Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版本兼容性没有保证。链接为 `nekoray://xxxxx`
+### Neko 格式
+
+Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版本兼容性没有保证。链接为 `nekoray://[protocol]#[base64-json]`。
+
+`protocol`：协议名称。如果是自定义内核，则为 `custom`。
+
+`base64-json`：Nekoray 内置的 json 储存方式经 base64 编码得来。等同于 `nekoray/config/profiles` 中配置的 `bean` 部分。
+
+#### 普通信息
+
+```json
+{
+    "_v": 0,
+    "addr": "The adress of server",
+    "name": "custom name",
+    "username": "Your username",
+    "pass": "THe password of server",
+    "v": 5,
+    "aid": 0,
+    "id": "a65d869f-5be5-4742-b7c4-afd9b19ad5cf",
+    "method": "2022-blake3-aes-128-gcm",
+    "sec": "auto",
+    "certificate": "Your cert",
+    "extra_headers": "Your extra headers",
+    "insecure_concurrency": 4,
+    "protocol": "quic",
+    "sni": "The sni of server",
+    "port": 443,
+    "stream": {
+        "pac_enc": "xudp",
+        "ed_len": 2048,
+        "ed_name": "Sec-WebSocket-Protocol",
+        "host": "Your host name",
+        "path": "/your/path",
+        "insecure": true,
+        "net": "ws",
+        "sec": "tls",
+        "sni": "The sni of server"，
+        "alpn": "h2",
+        "cert": "cert",
+        "utls": "chrome"
+    }
+}
+```
+
+##### 基础
+
+`_v`：分享链接的版本号。
+
+`addr`：服务器地址。
+
+`name`：自定义名称。
+
+`aid`：（VMess）额外 ID。
+
+`id`：（VMess/VLESS）UUID。
+
+`method`：（shadowsocks）加密方式。
+
+`username`：（socks/http/naiveproxy）用户名。
+
+`pass`：（trojan/shadowsocks/naiveproxy）密码。
+
+`v`：（socks）版本号。
+
+`sec`：（VMess）加密方式。
+
+`port`：服务器端口。
+
+`pac_enc`：（VMess/VLESS）包编码。
+
+`certificate`：（naiveproxy）证书内容。
+
+`extra_headers`：（naiveproxy）附加标头。
+
+`insecure_concurrency`：（naiveproxy）不安全并发。
+
+`protocol`：（naiveproxy）协议。
+
+`sni`：（naiveproxy）sni。
+
+##### 传输
+
+`net`：传输方式。
+
+`ed_len`：（ws）EarlyData Length。如果传输方式不为 ws，则值为 1。
+
+`ed_name`：（ws）EarlyData Name。
+
+`host`：（tcp/ws/http）Host。
+
+`path`：（tcp/ws/http/grpc）Path。
+
+`sec`：传输层安全。
+
+`insecure`：（TLS）允许不安全的连接。
+
+`sni`：（TLS）sni。
+
+`alpn`：（TLS）alpn。
+
+`cert`：（TLS）绑定的证书内容。
+
+`utls`：（TLS）uTLS 对应的指纹名。
+
+#### 自定义内核
+
+```json
+{
+    "_v": 0,
+    "addr": "127.0.0.1",
+    "cmd": [
+        "--no-check",
+        "-c",
+        "%config%"
+    ],
+    "core": "hysteria",
+    "cs": "{\n  \"server\": \"127.0.0.1:%mapping_port%\",\n  \"server_name\": \"example.com\",\n  \"obfs\": \"fuck me till the daylight\",\n  \"up_mbps\": 10,\n  \"down_mbps\": 50,\n  \"socks5\": {\n    \"listen\": \"127.0.0.1:%socks_port%\"\n  }\n}",
+    "cs_suffix": "json",
+    "mapping_port": 4444,
+    "port": 1080,
+    "socks_port": 4445
+}
+```
+
+`cmd`：命令行参数。
+
+`core`：自定义内核名。只有名称相同才能导入。
+
+`cs`：自定义配置。
+
+`cs_suffix`：自定义配置文件后缀。
+
+`mapping_port`：mapping_port。
+
+`socks_port`：socks_port。
 
 ## VPN / TUN 设置
 
