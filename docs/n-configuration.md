@@ -82,7 +82,7 @@ Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版
         "insecure": true,
         "net": "ws",
         "sec": "tls",
-        "sni": "The sni of server"，
+        "sni": "The sni of server",
         "alpn": "h2",
         "cert": "cert",
         "utls": "chrome"
