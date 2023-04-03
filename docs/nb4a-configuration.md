@@ -24,7 +24,11 @@
 * 如果服务器是 sing-box 则支持 `smux` `uot`
 * `smux` 与 `uot` 冲突，同时只能开一个
 
-### VMESS
+### HTTP
+
+截至 1.2.2 版本 sing-box HTTP 出站未支持 HTTP/2 CONNECT 代理，此类代理无法使用（表现为 EOF 错误）
+
+### VMess
 
 * 对于像 ALPN 这样的列表选项，格式是每行一个。
 
@@ -46,6 +50,12 @@
 ### TUIC
 
 目前使用的是 [0.8.5 稳定版](https://github.com/EAimTY/tuic/releases/tag/0.8.5)，部分功能「需要服务器支持」的，请使用[这个服务器实现](https://github.com/zephyrchien/tuic)。
+
+### ShadowTLS
+
+通常需要与 ShadowSocks 类型服务器组成链式代理才能上网。顺序为 ShadowTLS -> ShadowSocks
+
+sing-box ShadowTLS 与原版的兼容性未知。
 
 ### sing-box 私有协议
 
@@ -69,14 +79,15 @@ TLS 更改：
 !!! note
 
     * ws 地址支持 `?ed=2048` 这种 earlydata 形式（与 Xray 兼容）
-    * ws 依赖 ALPN=http/1.1 （也是一种特征），若同时开启 uTLS 则可能导致无法使用。
+    * ws+tls 依赖 ALPN=http/1.1 （也是一种特征），若同时开启 uTLS 则可能导致无法使用。
     * Reality 先决条件是开启 uTLS，不支持 SpiderX
+    * sing-box Reality 目前与 Xray-core 兼容性欠佳，建议服务器和客户端使用相同的实现
 
 ### (TLS) 安全设置
 
 !!! note "封锁提示"
 
-    2022 年 10 月开始，TLS Tunnel 易受封锁。详细信息和对策请看 https://github.com/net4people/bbs/issues/129
+    2022 年 10 月开始，TLS Tunnel 易受封锁。
 
 * 允许不安全连接：启用后安全性相当于明文。有些节点不开这个无法使用，原因是服务器证书配置有误。
 * 证书（链）：应填入证书内容，通常是 PEM 格式。
