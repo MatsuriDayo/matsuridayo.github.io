@@ -31,9 +31,8 @@
 
 1. 简易路由仍然按照 v2ray v4 格式填写，如 `geoip:cn` `domain:google.com`，这类规则 nekobox 会自动翻译为 sing-box 的规则。
 2. 自定义 JSON 配置（路由、出站等）请按照 sing-box 的格式填写。
-3. Hysteria 类型服务器将自动转换为 sing-box 内置的 hysteria 出站。
-如果遇到转换错误，请改用自定义配置（sing-box）类型。
-如果需要使用原版 hysteria 内核，请在 `基本设置 - 内核` 中以其他名称新建内核类型。
+3. 2.23版本起，Hysteria 类型服务器将使用外挂的 Hysteria 内核，即行为与 nekoray 相同。
+如果需要使用 sing-box 内核的 Hysteria 出站，请改用 `自定义配置（sing-box）` 类型。
 
 ## Hook.js
 
