@@ -21,18 +21,25 @@
 
 ## NekoBox
 
-(1.11+) NekoBox 是试制的 sing-box GUI 客户端。
+sing-box GUI 电脑客户端。目前包含在 nekoray 程序中。
 
-在 `基本设置 - 内核` 切换到 sing-box 以启用。切换前后变化大，不建议来回切换。
+### GUI 切换
+
+在 `基本设置 - 内核` 切换内核。切换前后变化大，不建议来回切换。
 
 如果已有的某个服务器在切换后无法使用，建议删除后手动添加。
 
-使用注意：
+### NekoBox 使用注意
 
 1. 简易路由仍然按照 v2ray v4 格式填写，如 `geoip:cn` `domain:google.com`，这类规则 nekobox 会自动翻译为 sing-box 的规则。
 2. 自定义 JSON 配置（路由、出站等）请按照 sing-box 的格式填写。
 3. 2.23版本起，Hysteria 类型服务器将使用外挂的 Hysteria 内核，即行为与 nekoray 相同。
 如果需要使用 sing-box 内核的 Hysteria 出站，请改用 `自定义配置（sing-box）` 类型。
+
+### 我该选择哪个内核
+
+* V2Ray 兼容性较好，比较稳定
+* sing-box 支持的协议多，而且在某些情况下性能更好
 
 ## Hook.js
 
