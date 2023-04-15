@@ -1,5 +1,11 @@
 # NB4A FAQ
 
+## NB4A 和 Matsuri 有什么区别？
+
+- NB4A 使用 sing-box 作为内核，而 Matsuri 使用 v2Ray 作为内核。关于两种内核的区别见 [这里](/n-configuration/#_3)。
+
+- Matsuri 已不活跃，开发重点已经向 NB4A 转移。
+
 ## 如何正确反馈问题
 
 如果遇到问题，请通过 GitHub issue 提交完整日志。
