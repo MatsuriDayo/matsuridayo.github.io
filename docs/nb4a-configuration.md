@@ -96,7 +96,15 @@ TLS 更改：
 
 ## 功能说明
 
-### 导入导出节点
+### 导入 / 导出 / 订阅
+
+NekoBox for Android 支持的格式:
+
+- 「Clash格式」一般带有流量信息，本项目支持解析其节点（推荐使用）
+- 「Clash Meta格式」 VLESS & Hysteria（NB4A 1.0.3+ 支持，推荐使用）
+- 「V2rayN格式」一般不带流量信息，本项目支持解析
+- 「Shadowsocks格式」本项目支持解析
+- 「SSR格式」本项目不支持
 
 另见 [分组和订阅](/m-group/)
 

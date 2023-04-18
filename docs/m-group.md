@@ -21,7 +21,7 @@
 
 !!! note
 
-    支持 "Subscription-Userinfo" 流量显示，由于「某些机场面板」只给特定的客户端返回流量信息，遇到 Clash 可以显示而本软件不能显示的，请设置 User-Agent: `ClashForAndroid/2.5.9.premium`
+    支持 "Subscription-Userinfo" 流量显示
 
 #### OOCv1
 

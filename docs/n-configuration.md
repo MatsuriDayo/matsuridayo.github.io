@@ -49,11 +49,12 @@ sing-box GUI 电脑客户端。目前包含在 nekoray 程序中。
 
 同 [Matsuri 协议说明](/m-configuration/)
 
-## 导入 / 导出 / 订阅 
+## 导入 / 导出 / 订阅
 
 支持的格式:
 
 - 「Clash格式」一般带有流量信息，本项目支持解析其节点（推荐使用）
+- 「Clash Meta格式」 VLESS & Hysteria（NekoBox 2.26+ 支持，推荐使用）
 - 「V2rayN格式」一般不带流量信息，本项目支持解析
 - 「Shadowsocks格式」本项目支持解析
 - 「某些苹果应用格式」带有流量信息，本项目不支持
@@ -201,13 +202,11 @@ Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
 
 3. 按 配置1 配置2 顺序组成链式代理
 
-### 自定义 JSON 配置 (custom outbound JSON)
+### 自定义出站 JSON 配置
 
 适用于普通出站。
 
-!!! note "提示"
-
-    1. JSON 对象会被合并，请看下方例子。
+JSON 对象会被合并至出站 Object，请看下方例子。
 
 示例：NekoBox新建一个socks服务器，填写服务器地址端口，填写自定义 JSON 配置（配置1），实际运行的出站是wireguard（配置2）
 
@@ -241,6 +240,20 @@ Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
     "system_interface": false,
     "tag": "proxy",
     "type": "wireguard"
+}
+```
+
+### 自定义配置 JSON 配置
+
+同上，但是 JSON 被合并至配置 Object
+
+示例：sing-box NTP
+
+```json
+{
+    "ntp" : {
+        // ......
+    }
 }
 ```
 
