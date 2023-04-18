@@ -1,6 +1,6 @@
 site_name: MatsuriDayo
 site_url: https://matsuridayo.github.io/
-repo_url: https://github.com/MatsuriDayo/Matsuri
+repo_url: https://github.com/MatsuriDayo/matsuridayo.github.io
 edit_uri: ""
 repo_name: Matsuri
 copyright: CC BY-SA 4.0
@@ -35,3 +35,4 @@ nav:
   - NB4A-配置: nb4a-configuration.md
   - NB4A-路由: nb4a-route.md
   - NB4A-FAQ: nb4a-faq.md
+  - NB4A-白话文-国内外分流: nb4a-bhw-domestic.md
