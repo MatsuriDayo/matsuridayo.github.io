@@ -195,4 +195,5 @@ vmess vless trojan 的分享链接非常混乱，在 NekoBox for Andoird 0.7+，
 
 伪 clash selector 模式，主要优点实现是分组内免重载切换配置。
 
-* 目前没有很好地与 Dashboard 整合，不能与 NekoBox 所选择的节点同步。
+* 开启时，出站的 tag 将生成人类可读的名字。
+* 不建议为包含 **需要插件的服务器** 的分组启用，因为这样会一次性启动所有插件。
