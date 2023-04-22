@@ -158,7 +158,7 @@ vmess vless trojan 的分享链接非常混乱，在 NekoBox for Andoird 0.7+，
 * FakeDNS 会劫持 DNS 返回 `198.18` 开头的 FakeIP， NekoBox tun 收到目标 IP 为这种类型的请求后，会把它还原为域名。
 * **FakeDNS 只支持 TCP 链接，不支持 UDP。** 但这对游戏等场景几乎无影响，因为游戏会通过其他渠道获取服务器的真实IP。
 * 对于「绕过」的流量， FakeDNS 不生效，所以没有以上问题。
-* 在启用 selector 模式时，如果节点之间的物理距离太远，使用旧的 DNS 记录可能会导致无法连接到最近的 CDN，影响网络质量。此时启用 FakeDNS 可将域名解析交给服务器，解决了本问题。
+* 在启用 selector 模式时切换节点，会导致应用使用旧的 DNS 记录，在节点物理距离过大时可能会影响访问速度。
 
 ### 多路复用（smux）
 
