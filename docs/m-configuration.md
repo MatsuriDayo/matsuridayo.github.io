@@ -2,6 +2,8 @@
 
 这是 Matsuri 的使用文档，对 NekoBox for Android 不适用。
 
+本页的某些信息可能已过期，请注意辨别。
+
 ## 协议说明
 
 ### Shadowsocks
@@ -34,7 +36,7 @@
 ### VLESS
 
 * 特性与 v2ray Trojan 重叠，Trojan 的实现和兼容性更好。
-* VLESS 已被弃用并且可能被移除。请考虑使用 Trojan 作为替代品。[link](https://www.v2fly.org/v5/config/proxy/vless.html)
+* VLESS 已被 v2fly 弃用并且可能被移除。请考虑使用 Trojan 作为替代品。[link](https://www.v2fly.org/v5/config/proxy/vless.html)
 
 ### Wireguard
 
