@@ -166,11 +166,17 @@ vmess vless trojan 的分享链接非常混乱，在 NekoBox for Andoird 0.7+，
 - 目前可以为 vmess vless trojan shadowsocks 等协议启用 smux
 - 是否能用取决于服务端，请以节点实际为准。若服务端不支持 smux（约等于不是 sing-box），则开启后无法上网。
 
-### 分应用代理
+### 分应用代理 / 路由
 
-仅对 VPN 模式生效。
+分应用代理仅对 VPN 模式生效。此功能决定某应用的流量是否会由 NekoBox VPN 处理，而「路由」功能决定 NekoBox 如何处理。
 
-此功能决定某应用的流量是否会由 NekoBox VPN 处理，而「路由」功能决定 NekoBox 如何处理。
+更多请看 [路由](/nb4a-route/)
+
+#### 绕过局域网
+
+可以在 IP 层面（绕过局域网） 或 sing-box 路由层面（在 Core 中绕过局域网）绕过，一般开启前者即可。
+
+LineageOS 等系统的 VPN 热点功能与前者冲突，需要开启后者。
 
 ### Tun 实现
 

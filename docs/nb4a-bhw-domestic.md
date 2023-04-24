@@ -36,6 +36,8 @@
 
 <img src="/assets/images/nb4a-bhw-domestic-2.png" />
 
+路由规则的进阶使用请看 [路由](/nb4a-route/)
+
 ## 进阶：DNS
 
 > 域名系统（英语：Domain Name System，缩写：DNS）是互联网的一项服务。
