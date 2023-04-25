@@ -23,6 +23,11 @@
 
 sing-box GUI 电脑客户端。目前包含在 nekoray 程序中。
 
+### 我该选择哪个内核
+
+* V2Ray 兼容性较好，比较稳定
+* sing-box 支持的更多的新协议，而且在某些情况下性能更好
+
 ### GUI 切换
 
 在 `基本设置 - 内核` 切换内核。切换前后变化大，不建议来回切换。
@@ -36,10 +41,17 @@ sing-box GUI 电脑客户端。目前包含在 nekoray 程序中。
 3. 2.23版本起，Hysteria 类型服务器将使用外挂的 Hysteria 内核，即行为与 nekoray 相同。
 如果需要使用 sing-box 内核的 Hysteria 出站，请改用 `自定义配置（sing-box）` 类型。
 
-### 我该选择哪个内核
+### Clash API / sing-box dashboard 说明
 
-* V2Ray 兼容性较好，比较稳定
-* sing-box 支持的更多的新协议，而且在某些情况下性能更好
+功能介绍：方便查看流量和连接信息。可选 Web 实现，界面比较美观。
+
+使用上类似手机 NekoBox sing-box dashboard 但没有自带面板，需要自己下载解压。
+
+1. 在 NekoBox 基本设置 - 核心 - 核心选项 设置 Enable Clash API
+2. 启动代理
+3. 解压 Clash 面板至 nekoray/config/dashboard
+4. 在浏览器打开 http://127.0.0.1:9090
+5. 也可以直接联网使用(跳过3和4步骤)，如直接使用 Yacd-meta: http://yacd.metacubex.one
 
 ## Hook.js
 
@@ -82,7 +94,7 @@ Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
 1. 检查两种 DNS 是否可用 `nslookup 代理的域名` & `nslookup 直连的域名` 看结果是否正常。
 2. 检查 DNS 是否被污染，根据情况调整路由和 VPN 规则。
 3. 将直连 DNS 改为 DoH 如 `https+local://223.5.5.5/dns-query`
-4. 设置环境变量 `NKR_VPN_LEGACY_DNS=1` 以启用另一套 localhost DNS 处理方案。
+4. 调整 核心选项 中有关 DNS 的设置。
 
 ### 白名单模式
 
@@ -130,13 +142,14 @@ Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
 }
 ```
 
-### v2ray 资源文件路径
+### 资源文件路径
 
-允许设置 v2ray 资源文件夹。便于使用额外的规则文件，以及自动更新和管理 geo 资源文件（如使用v2rayN、软件包管理器或升级脚本）。
+允许设置 v2ray / sing-box 资源文件夹。便于使用额外的规则文件，以及自动更新和管理 geo 资源文件（如使用v2rayN、软件包管理器或升级脚本）。
 
 * v2ray 使用的是 .dat 后缀的 geo 资源文件
 * sing-box 使用的是 .db 后缀的 geo 资源文件
 * Loyalsoldier 版 v2ray dat 下载地址 https://github.com/Loyalsoldier/v2ray-rules-dat
+* Loyalsoldier 版 sing-box db 下载地址 https://github.com/soffchen/sing-geoip https://github.com/soffchen/sing-geosite
 
 ## 路由设置
 
@@ -204,8 +217,6 @@ Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
 
 ### 自定义出站 JSON 配置
 
-适用于普通出站。
-
 JSON 对象会被合并至出站 Object，请看下方例子。
 
 示例：NekoBox新建一个socks服务器，填写服务器地址端口，填写自定义 JSON 配置（配置1），实际运行的出站是wireguard（配置2）
@@ -251,9 +262,26 @@ JSON 对象会被合并至出站 Object，请看下方例子。
 
 ```json
 {
-    "ntp" : {
+    "ntp": {
         // ......
     }
+}
+```
+
+合并结果：
+
+```json
+{
+    "ntp": {
+        // 你填写的
+    },
+    "inbounds": [
+        // GUI 生成的
+    ],
+    "outbounds": [
+        // GUI 生成的
+    ],
+    // GUI 生成的 ...
 }
 ```
 

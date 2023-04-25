@@ -8,7 +8,7 @@
 
 需要先保存服务器。否则点击右上角菜单无反应。
 
-参考[这里的说明](/n-configuration/#json-custom-outbound-json)
+参考[这里的说明](/n-configuration/#json)
 
 ### 自定义配置
 
@@ -195,7 +195,7 @@ LineageOS 等系统的 VPN 热点功能与前者冲突，需要开启后者。
 本质是一个 Clash Dashboard Web 界面，目前内置了 yacd-meta，也可以点右上角菜单自行更换 URL 以使用其他面板。
 
 * 需要打开 Clash API 才能使用。
-* 如果显示白屏，请更新 System Webview 或使用支持的浏览器打开 http://127.0.0.1:9090/ui/`
+* 如果显示白屏，请更新 System Webview 或使用支持的浏览器打开 http://127.0.0.1:9090/ui/
 
 ### 分组配置: selector 模式
 

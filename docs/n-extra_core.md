@@ -64,6 +64,8 @@ https://github.com/apernet/hysteria/releases
 
 1. hysteria:// 分享链接导入
 2. 手写 JSON 配置，参考上面说明
+3. (仅 NekoBox，使用内建实现) 使用自定义出站，填写 sing-box hysteria outbound 配置
+4. (仅 NekoBox，使用内建实现) 导入 Clash Meta 格式订阅
 
 !!! note "关于 VPN / TUN 模式"
 
