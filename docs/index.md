@@ -1,32 +1,26 @@
 本文档有多页，如未看见目录，请点击左上角三条横线/
 
+## 软件介绍
+
+1. NekoRay / NekoBox 软件 "按原样" 提供，不提供任何形式的明示或暗示的保证。
+3. 如果你不想学习原理，你可以用默认配置或FAQ中提供的配置运行，一般不会有问题。
+4. 如果愿意学习其中的原理，优化使用体验，请仔细阅读本文档和上游项目(v2ray/sing-box)的文档。
+
 ## NekoBox for Android
 
 适用于 Android 的 sing-box 通用代理工具链。
 
 sing-box / universal proxy toolchain for Android.
 
-[下载 / Download](/download/)
-
-[配置说明 / Configuration](/nb4a-configuration/)
-
-[常见问题 / FAQ](/nb4a-faq/)
+[详情 / Detail](/download/#nekobox-for-android)
 
 ## NekoRay / NekoBox for PC
 
 基于 Qt 的跨平台代理配置管理器 (后端 v2ray / sing-box)
 
-目前支持 Windows / Linux / macOS amd64 开箱即用
-
 Qt based cross-platform GUI proxy configuration manager (backend: v2ray / sing-box)
 
-Support Windows / Linux / macOS amd64 out of the box now.
-
-[下载 / Download](/download/)
-
-[配置说明 / Configuration](/n-configuration/)
-
-[常见问题 / FAQ](/n-faq/)
+[详情 / Detail](/download/#nekoray-nekobox-for-pc)
 
 ## Matsuri
 
@@ -34,11 +28,7 @@ Support Windows / Linux / macOS amd64 out of the box now.
 
 V2Ray / universal proxy toolchain for Android.
 
-[下载 / Download](/download/)
-
-[配置说明 / Configuration](/m-configuration/)
-
-[常见问题 / FAQ](/m-faq/)
+[详情 / Detail](/download/#matsuri)
 
 !!! note
 
@@ -59,7 +49,7 @@ https://t.me/Matsuridayo
 
 !!! warning
 
-    问题反馈请到 GitHub issue 区。
+    问题反馈请到 GitHub issue 区。请勿滥用邮箱和群组。
     For feedback, please go to the GitHub issue.
 
 ### 捐助 / Donate

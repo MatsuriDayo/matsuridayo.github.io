@@ -8,7 +8,7 @@
 
 [Google Play (付费)](https://play.google.com/store/apps/details?id=moe.nb4a)
 
-[配置说明](/nb4a-configuration/)
+[配置说明 / Configuration](/nb4a-configuration/)
 
 [常见问题 / FAQ](/nb4a-faq/)
 
@@ -18,17 +18,17 @@
 
 [Google Play](https://play.google.com/store/apps/details?id=moe.matsuri.lite)
 
-[配置说明](/m-configuration/)
+[配置说明 / Configuration](/m-configuration/)
 
 [常见问题 / FAQ](/m-faq/)
 
 ## 电脑
 
-NekoRay / NekoBox for PC （支持 Windows 和 Linux 系统）
+### NekoRay / NekoBox for PC
 
-[下载](https://github.com/MatsuriDayo/nekoray/releases)
+[下载 / Download](https://github.com/MatsuriDayo/nekoray/releases)
 
-[配置说明](/n-configuration/)
+[配置说明 / Configuration](/n-configuration/)
 
 [常见问题 / FAQ](/n-faq/)
 

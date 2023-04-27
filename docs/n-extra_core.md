@@ -62,18 +62,9 @@ https://github.com/apernet/hysteria/releases
 
 使用方法：
 
-1. hysteria:// 分享链接导入
+1. 导入 `Clash Meta` `hystera://` 格式
 2. 手写 JSON 配置，参考上面说明
-3. (仅 NekoBox，使用内建实现) 使用自定义出站，填写 sing-box hysteria outbound 配置
-4. (仅 NekoBox，使用内建实现) 导入 Clash Meta 格式订阅
-
-!!! note "关于 VPN / TUN 模式"
-
-    在撰写本文档时，hysteria内核还不会绕开 VPN 。因此，如果您不使用 "mapping_port" 则需要在 VPN 设置中的"绕过进程"添加 hysteria.exe (windows) 或 hysteria (Linux、macOS)。
-
-!!! note "关于端口跳跃"
-
-    要设置端口跳跃，请不要使用 nekoray 提供的端口映射。应该在内核中直接设定服务器和端口，毋需设置 "mapping_port"。
+3. (2.27+) 图形化填写配置
 
 ### NaïveProxy
 
