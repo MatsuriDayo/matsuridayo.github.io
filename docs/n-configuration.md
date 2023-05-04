@@ -38,7 +38,7 @@ sing-box GUI 电脑客户端。目前包含在 nekoray 程序中。
 
 1. 简易路由仍然按照 v2ray v4 格式填写，如 `geoip:cn` `domain:google.com`，这类规则 nekobox 会自动翻译为 sing-box 的规则。
 2. 自定义 JSON 配置（路由、出站等）请按照 sing-box 的格式填写。
-3. 2.23版本起，Hysteria 类型服务器将使用外挂的 Hysteria 内核，即行为与 nekoray 相同。
+3. 2.27版本起，Hysteria GUI 配置将使用 sing-box 内核(如果配置类型支持)。
 
 ### Clash API / sing-box dashboard 说明
 

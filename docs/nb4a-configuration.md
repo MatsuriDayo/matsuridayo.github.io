@@ -180,9 +180,14 @@ LineageOS 等系统的 VPN 热点功能与前者冲突，需要开启后者。
 
 ### Tun 实现
 
-由 sing-box 实现，目前有 `gVisor` `System` 两种。
+主要用于实现 Tun TCP 数据流重组，对应配置中的 `stack` 项。
 
-对于能使用 Socks / HTTP 代理的应用，建议手动为其设置 Socks / HTTP 代理，不走 Tun 更省电。
+* 由 sing-box 实现，目前有 `gVisor` `System` 两种。
+* System 一般比 gVisor 省电
+
+### 追加 HTTP 代理
+
+对于能使用 Socks / HTTP 代理的应用，建议手动为其设置 Socks / HTTP 代理，或开启 `追加 HTTP 代理到 VPN` 选项，不走 Tun 更省电。
 
 ### MTU
 
