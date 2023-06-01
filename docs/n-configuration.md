@@ -23,14 +23,14 @@
 
 sing-box GUI 电脑客户端。目前包含在 nekoray 程序中。
 
-### 我该选择哪个内核
+### 我该选择哪个核心
 
 * V2Ray 兼容性较好，比较稳定
 * sing-box 支持的更多的新协议，而且在某些情况下性能更好
 
 ### GUI 切换
 
-在 `基本设置 - 内核` 切换内核。切换前后变化大，不建议来回切换。
+在 `基本设置 - 核心` 切换核心。切换前后变化大，不建议来回切换。
 
 如果已有的某个服务器在切换后无法使用，建议删除后手动添加。
 
@@ -38,27 +38,24 @@ sing-box GUI 电脑客户端。目前包含在 nekoray 程序中。
 
 1. 简易路由仍然按照 v2ray v4 格式填写，如 `geoip:cn` `domain:google.com`，这类规则 nekobox 会自动翻译为 sing-box 的规则。
 2. 自定义 JSON 配置（路由、出站等）请按照 sing-box 的格式填写。
-3. 2.27版本起，Hysteria GUI 配置将使用 sing-box 内核(如果配置类型支持)。
+3. 2.27版本起，Hysteria GUI 配置将使用 sing-box 核心(如果配置类型支持)。
 
 ### Clash API / sing-box dashboard 说明
 
 功能介绍：方便查看流量和连接信息。可选 Web 实现，界面比较美观。
 
-使用上类似手机 NekoBox sing-box dashboard 但没有自带面板，需要自己下载解压。
+使用上类似手机 NekoBox sing-box dashboard 但有以下区别：
+
+* 没有自带面板，需要自己下载解压，或者联网使用
+* 没有 selector 功能，不能显示所有节点
+
+启用方式：
 
 1. 在 NekoBox 基本设置 - 核心 - 核心选项 设置 Enable Clash API
 2. 启动代理
 3. 解压 Clash 面板至 nekoray/config/dashboard
 4. 在浏览器打开 http://127.0.0.1:9090
 5. 也可以直接联网使用(跳过3和4步骤)，如直接使用 Yacd-meta: http://yacd.metacubex.one
-
-## Hook.js
-
-(2.8+) 允许使用 javascript 在外部生成或修改某些配置，面向高级用户，详细请看[技术文档](https://github.com/MatsuriDayo/nekoray/blob/main/docs/HookJS.md)。
-
-## 协议说明
-
-同 [Matsuri 协议说明](/m-configuration/)
 
 ## 导入 / 导出 / 订阅
 
@@ -77,29 +74,18 @@ Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版
 
 (1.1+) VPN / TUN 模式可以代理整个系统的流量，适合某些软件“不听话”不走代理的情况。
 
-Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
+目前支持在 Windows / Linux 自动配置 VPN (包括 tun 接口和路由规则等)
 
 * sing-box(nekobox_core) 提供 tun2socks 和接口配置支持。
 * IP CIDR 和 进程名，格式如 `10.0.0.0/8` `Telegram.exe` ，一行一个。
-* 程序会读取 sing-box-vpn 配置模板 `config/vpn/sing-box-vpn.json`（如果此文件存在，否则使用默认模板）用于生成 sing-box 设置，可以参考[默认模板](https://github.com/MatsuriDayo/nekoray/blob/main/res/vpn/sing-box-vpn.json)自行修改。
+* (仅限外部 Tun) 程序会读取 sing-box-vpn 配置模板 `config/vpn/sing-box-vpn.json`（如果此文件存在，否则使用默认模板）用于生成 sing-box 设置，可以参考[默认模板](https://github.com/MatsuriDayo/nekoray/blob/main/res/vpn/sing-box-vpn.json)自行修改。
 * VPN 模式下建议开启「流量探测」，设置为「探测结果用于路由判断」，有助于匹配域名规则。
 * VPN 模式下可以开启「FakeDNS」加速 DNS 查询
 * 在 Windows 系统，由于上游问题，vpn 模式有概率启动失败。如连续多次不能启动，请重启并清理多余的网络接口后再试。
 
-### DNS
-
-目前 DNS 处理还没有完美的方案。如果您遇到 DNS 导致的无法上网等问题，请尝试：
-
-1. 检查两种 DNS 是否可用 `nslookup 代理的域名` & `nslookup 直连的域名` 看结果是否正常。
-2. 检查 DNS 是否被污染，根据情况调整路由和 VPN 规则。
-3. 将直连 DNS 改为 DoH 如 `https+local://223.5.5.5/dns-query`
-4. 调整 核心选项 中有关 DNS 的设置。
-
 ### 白名单模式
 
-无论是黑名单还是白名单，您的流量都将由 nekobox_core (sing-tun) 处理。这不等于某些软件的「进程模式」。
-
-白名单模式下，未匹配到「代理 CIDR」 和 「代理进程名」的流量，将会根据 `sing-box-vpn.json` 内的规则转发至默认上网的网卡(direct)。
+无论是黑名单（默认代理，列表内直连）还是白名单（默认直连，列表内代理），您的流量都将由 nekobox_core (sing-tun) 处理。这不等于某些软件的「进程模式」。
 
 ## 基本设置
 
@@ -157,6 +143,17 @@ Nekoray 目前支持在 Windows / Linux / macOS 自动配置 VPN
 * 内置了 `全局` `绕过局域网和大陆` 两种规则
 * 以 # 开头的行不生效
 * 不支持 `多节点分流` `负载均衡` 这类用法，若有需求请换其他软件或自寻办法。
+* 简易路由的匹配顺序是 `block` -> `remote` -> `direct`
+* 自定义路由的顺序是 `自定义（全局`） -> `自定义` -> `简易路由`
+
+### DNS
+
+目前 DNS 处理还没有完美的方案。如果您遇到 DNS 导致的无法上网等问题，请尝试：
+
+1. 检查两种 DNS 是否可用 `nslookup 代理的域名` & `nslookup 直连的域名` 看结果是否正常。
+2. 检查 DNS 是否被污染，根据情况调整路由和 VPN 规则。
+3. 将直连 DNS 改为 DoH 如 `https+local://223.5.5.5/dns-query`
+4. 调整 核心选项 中有关 DNS 的设置。
 
 ### 自定义路由规则
 
@@ -296,3 +293,7 @@ JSON 对象会被合并至出站 Object，请看下方例子。
 
 !!! note
     使用 ShadowTLS 时，如果 ShadowTLS 使用原版客户端，则无法使用链式代理连接。请自行在本地开启一个 ShadowTLS 客户端，并将 ShadowTLS 承载的协议目标地址改为 `127.0.0.1:{ShadowTLS 本地端口}`。
+
+## Hook.js
+
+(2.8+) 允许使用 javascript 在外部生成或修改某些配置，面向高级用户，详细请看[技术文档](https://github.com/MatsuriDayo/nekoray/blob/main/docs/HookJS.md)。

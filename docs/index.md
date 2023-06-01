@@ -1,11 +1,5 @@
 本文档有多页，如未看见目录，请点击左上角三条横线/
 
-## 软件介绍
-
-1. NekoRay / NekoBox 软件 "按原样" 提供，不提供任何形式的明示或暗示的保证。
-3. 如果你不想学习原理，你可以用默认配置或FAQ中提供的配置运行，一般不会有问题。
-4. 如果愿意学习其中的原理，优化使用体验，请仔细阅读本文档和上游项目(v2ray/sing-box)的文档。
-
 ## NekoBox for Android
 
 适用于 Android 的 sing-box 通用代理工具链。
@@ -49,7 +43,8 @@ https://t.me/Matsuridayo
 
 !!! warning
 
-    问题反馈请到 GitHub issue 区。请勿滥用邮箱和群组。
+    问题反馈请到 GitHub issue 区。请勿滥用邮箱和群组，**否则一律不回或封禁**。
+    
     For feedback, please go to the GitHub issue.
 
 ### 捐助 / Donate

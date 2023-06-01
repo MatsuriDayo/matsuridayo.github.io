@@ -21,8 +21,8 @@
 
 ### Shadowsocks
 
-* 如果服务器是 sing-box 则支持 `smux` `uot`
-* `smux` 与 `uot` 冲突，同时只能开一个
+* 如果服务器是 sing-box 则支持 `multiplex` `uot`
+* `multiplex` 与 `uot` 冲突，同时只能开一个
 
 ### HTTP
 
@@ -68,22 +68,14 @@ sing-box ShadowTLS 与原版的兼容性未知。
 
 * vmess/vless/trojan: `V2Ray Transport` (http/ws/grpc/quic)
 * vmess/vless: `packetaddr` `xudp`
-* ss/vmess/vless/trojan: `smux`
+* ss/vmess/vless/trojan: `multiplex`
 * ss: `uot`
-
-TLS 更改：
-
-* uTLS
-* Reality
 
 !!! note
 
     * ws 地址支持 `?ed=2048` 这种 earlydata 形式（与 Xray 兼容）
     * ws+tls 依赖 ALPN=http/1.1 （也是一种特征），若同时开启 uTLS 则可能导致无法使用。
-    * Reality 先决条件是开启 uTLS，不支持 SpiderX
-    * sing-box Reality 目前与 Xray-core 兼容性欠佳，建议服务器和客户端使用相同的实现
-
-### (TLS) 安全设置
+### TLS 安全设置
 
 !!! note "封锁提示"
 
@@ -93,6 +85,15 @@ TLS 更改：
 * 证书（链）：应填入证书内容，通常是 PEM 格式。
 * 如果 SNI 留空，且 address 为域名，则使用 address 填充 SNI。
 * 本项目不会使用 ws host 等字段来填写 SNI，这可能会使一些客户端共享的 ws tls 等配置无法使用，请自行检查。
+
+### TLS 伪装设置
+
+* uTLS
+* Reality (先决条件是开启 uTLS，不支持 SpiderX，ShortId 可留空)
+
+!!! note
+
+    * sing-box Reality 目前与 Xray-core 兼容性欠佳，建议服务器和客户端使用相同的实现。
 
 ## 功能说明
 
@@ -159,12 +160,12 @@ vmess vless trojan 的分享链接非常混乱，在 NekoBox for Andoird 0.7+，
 * **FakeIP 只支持 TCP 链接，不支持 UDP。** 但这对游戏等场景几乎无影响，因为游戏会通过其他渠道获取服务器的真实IP。
 * 对于「绕过」的流量， FakeDNS 不生效，所以没有以上问题。
 
-### 多路复用（smux）
+### 多路复用（multiplex）
 
 减少新建连接时因为各种握手而导致的延迟，但对下载等场景会有反效果。
 
-- 目前可以为 vmess vless trojan shadowsocks 等协议启用 smux
-- 是否能用取决于服务端，请以节点实际为准。若服务端不支持 smux（约等于不是 sing-box），则开启后无法上网。
+- 目前可以为 vmess vless trojan shadowsocks 等协议启用 multiplex
+- 是否能用取决于服务端，请以节点实际为准。若服务端不支持 multiplex（约等于不是 sing-box），则开启后无法上网。
 
 ### 分应用代理 / 路由
 

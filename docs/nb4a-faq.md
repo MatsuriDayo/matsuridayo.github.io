@@ -2,7 +2,7 @@
 
 ## NB4A 和 Matsuri 有什么区别？
 
-- NB4A 使用 sing-box 作为内核，而 Matsuri 使用 V2Ray (v2fly v5) 作为内核。关于两种内核的区别参考 [nekoray 说明](/n-configuration/#nekobox)。
+- NB4A 使用 sing-box 作为核心，而 Matsuri 使用 V2Ray (v2fly v5) 作为核心。关于两种核心的区别参考 [nekoray 说明](/n-configuration/#nekobox)。
 - Matsuri 已不活跃，开发重点已经向 NB4A 转移。
 
 ## 如何正确反馈问题
@@ -35,6 +35,14 @@
 
 请在 「路由」 添加一条 port `0:65535` -> `bypass` 的规则，置于底部。
 
-## 可以导入 SagerNet Matsuri 的备份文件吗
+## "可以导入 SagerNet Matsuri 的备份文件吗"
 
 不可以。不支持导入其他软件的 sn:// 链接和备份存档。
+
+## "同样的节点无法使用，但在 v2rayN 等客户端可以"
+
+请不要提出此类无意义问题，这里列出最常见的情况：
+
+1. 检查配置导入时，是否缺失了某些字段
+2. 检查 SNI 是否填写正确（v2rayN 会使用 host 填充 SNI）
+3. 可能是 sing-box 核心兼容性问题，请尝试使用基于 v2ray 核心的 Matsuri

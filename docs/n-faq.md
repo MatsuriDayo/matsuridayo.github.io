@@ -48,9 +48,9 @@
 
 升级包使用方法：把下载到的 zip 包命名为 `nekoray.zip` 放在 `nekoray` 目录下，关闭主程序，运行 `updater` 即可完成升级。
 
-## 更新 / 替换内核
+## 更新 / 替换核心
 
-考虑到兼容性和体验一致性问题，本软件架构设计上不使用 `v2ray-core` `sing-box` 命令，因此无法通过下载以上程序实现“更新或替换内核”。对于其他 GUI 项目，这种做法也存在隐患。
+考虑到兼容性和体验一致性问题，本软件架构设计上不使用 `v2ray-core` `sing-box` 命令，因此无法通过下载以上程序实现“更新或替换核心”。对于其他 GUI 项目，这种做法也存在隐患。
 
 `nekoray_core` `nekobox_core` 有能力的可以参考[这个脚本](https://github.com/MatsuriDayo/nekoray/blob/main/libs/build_go.sh)自行编译替换。
 
@@ -61,3 +61,9 @@
 清空数据删除 nekoray/config 目录。
 
 macOS 或 使用包管理器安装的，请删除 appdata/nekoray 目录。
+
+## macOS 支持
+
+旧版本有 macOS 编译，后来取消了。因为长期没人维护，导致编译困难，新系统上的 BUG 很多。
+
+如果您需要在 macOS 使用此软件，且有能力维护，欢迎提交 Pull Request 适配。
