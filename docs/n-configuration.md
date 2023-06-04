@@ -76,12 +76,19 @@ Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版
 
 目前支持在 Windows / Linux 自动配置 VPN (包括 tun 接口和路由规则等)
 
-* sing-box(nekobox_core) 提供 tun2socks 和接口配置支持。
 * IP CIDR 和 进程名，格式如 `10.0.0.0/8` `Telegram.exe` ，一行一个。
 * (仅限外部 Tun) 程序会读取 sing-box-vpn 配置模板 `config/vpn/sing-box-vpn.json`（如果此文件存在，否则使用默认模板）用于生成 sing-box 设置，可以参考[默认模板](https://github.com/MatsuriDayo/nekoray/blob/main/res/vpn/sing-box-vpn.json)自行修改。
 * VPN 模式下建议开启「流量探测」，设置为「探测结果用于路由判断」，有助于匹配域名规则。
 * VPN 模式下可以开启「FakeDNS」加速 DNS 查询
 * 在 Windows 系统，由于上游问题，vpn 模式有概率启动失败。如连续多次不能启动，请重启并清理多余的网络接口后再试。
+
+### 内部 Tun
+
+关闭 内部 Tun （外挂模式）： 外挂 nekobox_core 执行 "虚拟网卡转 socks 功能"。 NekoRay 只能使用这种模式。
+
+开启 内部 Tun （内置模式）： 只开启一个 nekobox_core，虚拟网卡 直接作为入站，不需要转 socks。 NekoBox 默认使用此模式。
+
+隐藏控制台：外挂模式下，隐藏 Windows 系统的控制台窗口。
 
 ### 白名单模式
 
