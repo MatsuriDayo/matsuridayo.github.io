@@ -49,7 +49,13 @@
 
 ### TUIC
 
+#### v4 协议
+
 目前使用的是 [0.8.5 稳定版](https://github.com/EAimTY/tuic/releases/tag/0.8.5)，部分功能「需要服务器支持」的，请使用[这个服务器实现](https://github.com/zephyrchien/tuic)。
+
+#### v5 协议
+
+1.1.3+ 支持 TUIC v5，需安装 TUIC(v5) 插件。服务器暂时没有特别要求，使用原版即可。
 
 ### ShadowTLS
 

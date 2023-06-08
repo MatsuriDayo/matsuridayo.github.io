@@ -36,7 +36,8 @@ Github Plugin 仓库
 目前以下协议可以使用 Matsuri 版插件，请以应用内为准。
 
 - [Hysteria Plugin](https://github.com/MatsuriDayo/plugins/releases?q=Hysteria)
-- [TUIC Plugin](https://github.com/MatsuriDayo/plugins/releases?q=tuic)
+- [TUIC(v4) Plugin](https://github.com/MatsuriDayo/plugins/releases/tag/tuic-0.8.5-2)
+- [TUIC(v5) Plugin](https://github.com/MatsuriDayo/plugins/releases?q=tuic)
 
 ## 高级插件
 
