@@ -1,4 +1,4 @@
-# 插件
+# Matsuri & NB4A 插件
 
 Github Plugin 仓库
 

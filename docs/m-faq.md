@@ -1,5 +1,9 @@
 # Matsuri FAQ
 
+这是 Matsuri 的 FAQ，对 NekoBox for Android 不适用。
+
+本页的某些信息可能已过期，请注意辨别。
+
 ## 插件已安装，但显示“未找到插件”
 
 解决方法请看 [插件](/m-plugin/)

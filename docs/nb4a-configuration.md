@@ -16,8 +16,9 @@
 
 如果填写完整配置，则需注意：
 
-- tag 等属性需要与 GUI 生成的配置保持一致 (如 `proxy` `bypass`)， GUI 路由配置等功能失效
+- outbound tag 等属性需要与 GUI 生成的配置保持一致 (如 `proxy` `bypass`)， GUI 路由配置等功能失效
 - VPN 相关配置完全由 GUI 控制， tun inbound 只需保持 IP 一致即可 (172.19.0.1/28)
+- 如果有需要，请使用 `underlying://0.0.0.0` 代替 `local` DNS 服务器。
 
 ### Shadowsocks
 
@@ -26,7 +27,10 @@
 
 ### HTTP
 
-截至 1.2.2 版本 sing-box HTTP 出站未支持 HTTP/2 CONNECT 代理，此类代理无法使用（表现为 EOF 错误）
+部分情况下与 v2ray 等服务器存在兼容性问题。
+
+* 截至 2023 年 6 月 sing-box HTTP 出站未支持 HTTP/2 CONNECT (HTTP+TLS) 代理，此类代理无法使用（表现为 EOF 错误）
+* 截至 2023 年 6 月 sing-box 未支持 v2ray "TCP Header 伪装 HTTP" (VMESS+TCP+HTTP+TLS) 类型代理，此类代理无法使用（表现为 EOF 错误）
 
 ### VMess
 
@@ -35,7 +39,7 @@
 ### Wireguard
 
 * 本地地址 每行一个。 格式如 `10.0.0.1/24` `2001:db8::1/32`
-- 支持 reseved 字段，请填 base64 字符串。
+* 支持 reseved 字段，请填 base64 字符串。
 
 ### Hysteria
 
@@ -45,7 +49,7 @@
 
 1. 需要使用多端口时，「服务器」按照 `example.com:1145,5144-10240` 格式填写，「服务器端口」随意填写。
 2. 不使用多端口时，「服务器」和「服务器端口」按照原来的方式填写。
-4. 不能作为链式代理的非入口节点。
+3. 不能作为链式代理的非入口节点。
 
 ### TUIC
 
@@ -56,6 +60,11 @@
 #### v5 协议
 
 1.1.3+ 支持 TUIC v5，需安装 TUIC(v5) 插件。服务器暂时没有特别要求，使用原版即可。
+
+由于 TUIC 内核和 SN TUIC GUI 的设计原因，使用上与 Clash Meta 等软件有以下区别：
+
+* 当没有指定 SNI 时，不支持使用 IP 作为服务器地址。
+* 当指定 SNI 时，不支持使用域名作为服务器地址。
 
 ### ShadowTLS
 
@@ -80,7 +89,6 @@ sing-box ShadowTLS 与原版的兼容性未知。
 !!! note
 
     * ws 地址支持 `?ed=2048` 这种 earlydata 形式（与 Xray 兼容）
-    * ws+tls 依赖 ALPN=http/1.1 （也是一种特征），若同时开启 uTLS 则可能导致无法使用。
 
 ### TLS 安全设置
 
@@ -90,8 +98,8 @@ sing-box ShadowTLS 与原版的兼容性未知。
 
 * 允许不安全连接：启用后安全性相当于明文。有些节点不开这个无法使用，原因是服务器证书配置有误。
 * 证书（链）：应填入证书内容，通常是 PEM 格式。
-* 如果 SNI 留空，且 address 为域名，则使用 address 填充 SNI。
-* 本项目不会使用 ws host 等字段来填写 SNI，这可能会使一些客户端共享的 ws tls 等配置无法使用，请自行检查。
+* 如果 SNI 留空，且 服务器地址 为域名，则使用 服务器地址 填充 SNI。(v2ray & sing-box 行为)
+* 本项目不会使用 ws host 等字段填充 SNI，这可能会使一些客户端（V2RayNG）共享的 ws tls 等配置无法使用，请自行检查。
 
 ### TLS 伪装设置
 
@@ -109,9 +117,10 @@ sing-box ShadowTLS 与原版的兼容性未知。
 NekoBox for Android 支持的格式:
 
 - 「Clash格式」一般带有流量信息，本项目支持解析其节点（推荐使用）
-- 「Clash Meta格式」 VLESS & Hysteria（NB4A 1.0.3+ 支持，推荐使用）
+- 「Clash Meta格式」 VLESS & Hysteria & TUIC（NB4A 1.1.4+ 支持，推荐使用）
 - 「V2rayN格式」一般不带流量信息，本项目支持解析
 - 「Shadowsocks格式」本项目支持解析
+- 「某些苹果应用格式」本项目不支持
 - 「SSR格式」本项目不支持
 
 另见 [分组和订阅](/m-group/)
@@ -151,7 +160,7 @@ vmess vless trojan 的分享链接非常混乱，在 NekoBox for Andoird 0.7+，
   1. 遇到 http 1.1 的传输类型时，设置 `type=tcp&headerType=http` 以及 `host=xxxx`
   2. 为 VLESS 设置 `encryption=none` `flow=xxx`, Trojan 不设置
   3. 允许设置 `allowInsecure=1`
-  4. ws earlydata: `ed=2048&eh=xxx`
+  4. v2fly ws earlydata: `ed=2048&eh=xxx`
 
 ### 代理链
 
