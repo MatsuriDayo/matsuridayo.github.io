@@ -2,11 +2,11 @@ site_name: MatsuriDayo
 site_url: https://matsuridayo.github.io/
 repo_url: https://github.com/MatsuriDayo/matsuridayo.github.io
 edit_uri: ""
-repo_name: Matsuri
+repo_name: 文档
 copyright: CC BY-SA 4.0
 theme:
   name: material
-  logo: https://avatars.githubusercontent.com/u/95122236?s=200&v=4
+  logo: https://matsuridayo.github.io/assets/images/matsuri1.jpg
   palette:
     - scheme: default
       primary: indigo
@@ -22,7 +22,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
 nav:
-  - 首页: index.md
+  - 首页: index_docs.md
   - 下载: download.md
   - Matsuri-配置: m-configuration.md
   - Matsuri-分组: m-group.md
