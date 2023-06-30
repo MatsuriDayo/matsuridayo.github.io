@@ -32,6 +32,7 @@ nav:
   - Nekoray-配置: n-configuration.md
   - Nekoray-自定义核心: n-extra_core.md
   - Nekoray-FAQ: n-faq.md
+  - Linux 免密码启动 Tun: n-linux-net-admin.md
   - NB4A-配置: nb4a-configuration.md
   - NB4A-路由: nb4a-route.md
   - NB4A-FAQ: nb4a-faq.md
