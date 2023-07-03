@@ -14,6 +14,10 @@
 
 `sudo setcap cap_net_admin=ep /path/to/nekobox_core`
 
+!!! note "提示"
+
+    当您更新 nekoray 后，可能需要重新进行这一步。
+
 ## 第二步
 
 此步骤替换 pkexec 为自己的 wrapper 脚本，因为目前 NekoBox 没有适配其他提权方式。

@@ -18,7 +18,6 @@
 
 - outbound tag 等属性需要与 GUI 生成的配置保持一致 (如 `proxy` `bypass`)， GUI 路由配置等功能失效
 - VPN 相关配置完全由 GUI 控制， tun inbound 只需保持 IP 一致即可 (172.19.0.1/28)
-- 如果有需要，请使用 `underlying://0.0.0.0` 代替 `local` DNS 服务器。
 
 ### Shadowsocks
 
@@ -63,7 +62,6 @@
 
 由于 TUIC 内核和 SN TUIC GUI 的设计原因，使用上与 Clash Meta 等软件有以下区别：
 
-* 当没有指定 SNI 时，不支持使用 IP 作为服务器地址。
 * 当指定 SNI 时，不支持使用域名作为服务器地址。
 
 ### ShadowTLS
@@ -182,6 +180,12 @@ vmess vless trojan 的分享链接非常混乱，在 NekoBox for Andoird 0.7+，
 
 - 目前可以为 vmess vless trojan shadowsocks 等协议启用 multiplex
 - 是否能用取决于服务端，请以节点实际为准。若服务端不支持 multiplex（约等于不是 sing-box），则开启后无法上网。
+
+#### padding
+
+(1.1.5)+ 客户端开启 padding 可以缓解 TLS in TLS 包长度分布特征。
+
+请在 mux 协议中勾选 `padding` 一项，服务器版本要求 sing-box 1.3.0+
 
 ### 分应用代理 / 路由
 
