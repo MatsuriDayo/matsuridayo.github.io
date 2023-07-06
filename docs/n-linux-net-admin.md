@@ -27,13 +27,13 @@
 ```shell
 #!/bin/sh
 
-if [[ $1 == "--help" ]]; then
+if [ $1 = "--help" ]; then
   exit
 fi
 
 TO_EXEC="$@"
 
-if [[ $1 == "--keep-cwd" ]]; then
+if [ $1 = "--keep-cwd" ]; then
   TO_EXEC="${@:2}"
 fi
 
