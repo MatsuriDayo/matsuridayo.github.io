@@ -79,6 +79,6 @@ nekoha_matsuri(at)protonmail(dot)com
 
 !!! warning ""
 
-    所有广告与项目无关，请自行甄别。
+    所有广告与项目无关，请自行甄别。部分页面可能无法在中国国内访问。
 
-https://matsuricom.github.io/
+https://matsuricom.pages.dev
