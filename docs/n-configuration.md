@@ -1,13 +1,5 @@
 # NekoRay / NekoBox for PC 配置
 
-## 启动参数
-
-通过命令行启动时，可以添加一些参数。
-
-`-many` 无视同目录正在运行的实例，强行开启新的实例。
-
-`-appdata` 开启后配置文件会放在共享目录，无法多开和自动升级。
-
 ## 窗口界面使用
 
 如图所示
@@ -65,8 +57,13 @@ sing-box GUI 电脑客户端。目前包含在 nekoray 程序中。
 - 「Clash Meta格式」 VLESS & Hysteria（NekoBox 2.26+ 支持，推荐使用）
 - 「V2rayN格式」一般不带流量信息，本项目支持解析
 - 「Shadowsocks格式」本项目支持解析
-- 「某些苹果应用格式」本项目不支持
-- 「SSR格式」本项目不支持
+
+不支持的格式：
+
+- 「某些苹果应用自创的格式」
+- 「SSR格式」
+- 「SIP008/OOCv1」
+- 各种较少使用/不标准的格式
 
 Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版本兼容性没有保证。链接为 `nekoray://xxxxx`
 
@@ -84,9 +81,9 @@ Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版
 
 ### 内部 Tun
 
-关闭 内部 Tun （外挂模式）： 外挂 nekobox_core 执行 "虚拟网卡转 socks 功能"。 NekoRay 只能使用这种模式。
+关闭 内部 Tun （外挂模式）： 启动 Tun 时，启动 nekobox_core 执行 "虚拟网卡转 socks 功能"。 NekoRay 只能使用这种模式。
 
-开启 内部 Tun （内置模式）： 只开启一个 nekobox_core，虚拟网卡 直接作为入站，不需要转 socks。 NekoBox 默认使用此模式。
+开启 内部 Tun （内置模式）： 无需额外启动 nekobox_core，只需要一个 core 进程，虚拟网卡直接作为入站，不需要转 socks，提高 Tun 工作效率。 NekoBox 默认使用此模式。
 
 隐藏控制台：外挂模式下，隐藏 Windows 系统的控制台窗口。
 
@@ -151,7 +148,7 @@ Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版
 * 以 # 开头的行不生效
 * 不支持 `多节点分流` `负载均衡` 这类用法，若有需求请换其他软件或自寻办法。
 * 简易路由的匹配顺序是 `block` -> `remote` -> `direct`
-* 自定义路由的顺序是 `自定义（全局`） -> `自定义` -> `简易路由`
+* 自定义路由的顺序是 `自定义（全局）` -> `自定义` -> `简易路由`
 
 ### DNS
 
@@ -302,3 +299,7 @@ JSON 对象会被合并至出站 Object，请看下方例子。
 ## Hook.js
 
 (2.8+) 允许使用 javascript 在外部生成或修改某些配置，面向高级用户，详细请看[技术文档](https://github.com/MatsuriDayo/nekoray/blob/main/docs/HookJS.md)。
+
+## 运行参数
+
+https://github.com/MatsuriDayo/nekoray#%E8%BF%90%E8%A1%8C%E5%8F%82%E6%95%B0

@@ -1,5 +1,7 @@
 # NB4A 配置
 
+这是 NekoBox for Android 的详细说明书，跟随软件更新，**阅读前请保证您使用的是最新版**。
+
 ## 协议说明
 
 ### 自定义 JSON
@@ -118,8 +120,13 @@ NekoBox for Android 支持的格式:
 - 「Clash Meta格式」 VLESS & Hysteria & TUIC（NB4A 1.1.4+ 支持，推荐使用）
 - 「V2rayN格式」一般不带流量信息，本项目支持解析
 - 「Shadowsocks格式」本项目支持解析
-- 「某些苹果应用格式」本项目不支持
-- 「SSR格式」本项目不支持
+
+NekoBox for Android 不支持的格式：
+
+- 「某些苹果应用自创的格式」
+- 「SSR格式」
+- 「SIP008/OOCv1」
+- 各种较少使用/不标准的格式
 
 另见 [分组和订阅](/m-group/)
 
@@ -155,6 +162,7 @@ vmess vless trojan 的分享链接非常混乱，在 NekoBox for Andoird 0.7+，
 
 - VMess 导出的链接为 v2rayN/G 的格式 `vmess://(base64)`
 - VLESS & Trojan 导出的格式参考 https://github.com/XTLS/Xray-core/discussions/716 ，其中：
+
   1. 遇到 http 1.1 的传输类型时，设置 `type=tcp&headerType=http` 以及 `host=xxxx`
   2. 为 VLESS 设置 `encryption=none` `flow=xxx`, Trojan 不设置
   3. 允许设置 `allowInsecure=1`
@@ -230,7 +238,7 @@ LineageOS 等系统的 VPN 热点功能与前者冲突，需要开启后者。
 
 * 开启时，出站的 tag 将生成人类可读的名字。
 * 不建议为包含 **需要插件的服务器** 的分组启用，因为这样会一次性启动所有插件。
-* 切换节点时不会清除旧的 DNS 记录，在节点物理距离过大时可能会影响访问速度。
+* 切换节点时会重置连接，但不会清除旧的 DNS 记录，在节点物理距离过大时可能会影响访问速度。
 
 ### Root CA 侧加载
 
