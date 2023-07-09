@@ -14,29 +14,21 @@ Github Plugin 仓库
 
 用法：为你需要的协议安装插件。已安装的插件在「关于」页面显示。
 
-* Matsuri: 可以设置「首选插件提供者」，当同名称的插件安装了多个版本时，优先使用选定的版本。
-* NekoBox For Android: 除了 `Trojan-Go` 和 `NaïveProxy`，其余插件只兼容 `moe.matsuri.*` 版本。
+目前除了 `Trojan-Go` 和 `NaïveProxy`，其余插件只兼容 `moe.matsuri.*` 版本（具体请以应用内能否正常识别运行为准）
 
 ### SagerNet 发布的插件
 
 `io.nekohasekai.sagernet.plugin.*`
 
-目前以下协议可以使用 SagerNet 版插件，请以应用内为准。
-
-- [Trojan-Go Plugin](https://sagernet.org/download/#trojan-go-plugin)
-- [NaïveProxy Plugin](https://sagernet.org/download/#naiveproxy-plugin)
-- [Hysteria Plugin](https://sagernet.org/download/#hysteria-plugin) （不推荐使用）
-- [TUIC Plugin](https://sagernet.org/download/#tuic-plugin) （不推荐使用）
-- [Wireguard Plugin](https://github.com/SagerNet/SagerNet/releases/tag/wireguard-plugin-20210424-5) （已废弃）
+- [Trojan-Go Plugin](https://github.com/SagerNet/SagerNet/releases/tag/trojan-go-plugin-0.10.6) （已是最后一版）
+- [NaïveProxy Plugin](https://github.com/SagerNet/SagerNet/releases?q=naive)
 
 ### Matsuri 发布的插件
 
 `moe.matsuri.exe.*`
 
-目前以下协议可以使用 Matsuri 版插件，请以应用内为准。
-
 - [Hysteria Plugin](https://github.com/MatsuriDayo/plugins/releases?q=Hysteria)
-- [TUIC(v4) Plugin](https://github.com/MatsuriDayo/plugins/releases/tag/tuic-0.8.5-2)
+- [TUIC(v4) Plugin](https://github.com/MatsuriDayo/plugins/releases/tag/tuic-0.8.5-2) （已是最后一版）
 - [TUIC(v5) Plugin](https://github.com/MatsuriDayo/plugins/releases?q=tuic)
 
 ## 高级插件
@@ -53,7 +45,7 @@ Matsuri 原创的功能，允许把协议支持拆分成插件的形式，大部
 2. 可以在 Android Webview 中运行的 HTML JS 文件，用于提供 UI 、分享连接、配置文件生成等功能。
 
 !!! warning "警告"
-    Matsuri + Xray / sing-box plugin 等组合已经废弃。替代方案为 NekoBox For Android
+    Matsuri + Xray / sing-box plugin 等组合暂时废弃。替代方案为 NekoBox For Android
 
 ## 常见问题：插件已安装，但显示“未找到插件”
 
