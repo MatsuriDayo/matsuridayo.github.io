@@ -174,14 +174,6 @@ vmess vless trojan 的分享链接非常混乱，在 NekoBox for Andoird 0.7+，
 * 流量顺序是从上到下（最后一个配置为流量的出口）
 * 列表中的配置可以长按拖动，向左滑动删除
 
-### FakeDns
-
-减少打开应用时 DNS 查询走代理而造成的延迟，但会有一定副作用，比如开关 VPN 造成域名解析失效，某些应用不兼容等。
-
-* FakeDNS 会劫持 DNS 返回 `198.18` 开头的 FakeIP， NekoBox tun 收到目标 IP 为这种类型的请求后，会把它还原为域名。
-* **FakeIP 只支持 TCP 链接，不支持 UDP。** 但这对游戏等场景几乎无影响，因为游戏会通过其他渠道获取服务器的真实IP。
-* 对于「绕过」的流量， FakeDNS 不生效，所以没有以上问题。
-
 ### 多路复用（multiplex）
 
 减少新建连接时因为各种握手而导致的延迟，但对下载等场景会有反效果。
@@ -199,13 +191,27 @@ vmess vless trojan 的分享链接非常混乱，在 NekoBox for Andoird 0.7+，
 
 分应用代理仅对 VPN 模式生效。此功能决定某应用的流量是否会由 NekoBox VPN 处理，而「路由」功能决定 NekoBox 如何处理。
 
-更多请看 [路由](/nb4a-route/)
+更多请看 [路由与 DNS](/nb4a-route/)
 
 #### 绕过局域网
 
 可以在 IP 层面（绕过局域网） 或 sing-box 路由层面（在 Core 中绕过局域网）绕过，一般开启前者即可。
 
 LineageOS 等系统的 VPN 热点功能与前者冲突，需要开启后者。
+
+### DNS
+
+可以使用的 DNS 服务器类型请参考[这里](https://sing-box.sagernet.org/configuration/dns/server/#address) （DHCP & FakeIP 除外）
+
+详细的 DNS 配置说明请看 [路由与 DNS](/nb4a-route/)
+
+#### FakeDns
+
+减少打开应用时 DNS 查询走代理而造成的延迟，但会有一定副作用，比如开关 VPN 造成域名解析失效，某些应用不兼容等。
+
+* FakeDNS 会劫持 DNS 返回 `198.18` 开头的 FakeIP， NekoBox tun 收到目标 IP 为这种类型的请求后，会把它还原为域名。
+* **FakeIP 只支持 TCP 链接，不支持 UDP。** 但这对游戏等场景几乎无影响，因为游戏会通过其他渠道获取服务器的真实IP。
+* 对于「绕过」的流量， FakeDNS 不生效，所以没有以上问题。
 
 ### Tun 实现
 
