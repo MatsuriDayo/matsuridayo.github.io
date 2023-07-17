@@ -75,9 +75,9 @@ Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版
 
 * IP CIDR 和 进程名，格式如 `10.0.0.0/8` `Telegram.exe` ，一行一个。
 * (仅限外部 Tun) 程序会读取 sing-box-vpn 配置模板 `config/vpn/sing-box-vpn.json`（如果此文件存在，否则使用默认模板）用于生成 sing-box 设置，可以参考[默认模板](https://github.com/MatsuriDayo/nekoray/blob/main/res/vpn/sing-box-vpn.json)自行修改。
-* VPN 模式下建议开启「流量探测」，设置为「探测结果用于路由判断」，有助于匹配域名规则。
-* VPN 模式下可以开启「FakeDNS」加速 DNS 查询
-* 在 Windows 系统，由于上游问题，vpn 模式有概率启动失败。如连续多次不能启动，请重启并清理多余的网络接口后再试。
+* Tun 模式下建议开启「流量探测」，设置为「探测结果用于路由判断」，有助于匹配域名规则。
+* Tun 模式下可以开启「FakeDNS」加速 DNS 查询
+* 在 Windows 系统，由于上游问题，Tun 模式有概率启动失败。如连续多次不能启动，请重启并清理多余的网络接口后再试。
 
 ### 内部 Tun
 

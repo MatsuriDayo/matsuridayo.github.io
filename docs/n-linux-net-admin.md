@@ -1,6 +1,6 @@
 # 为 NekoBox Linux 设置无感 Tun 提升
 
-免输入密码使用 VPN / Tun 模式。
+免输入密码使用 Tun 模式。
 
 ## TL;DR
 
@@ -46,7 +46,7 @@ $TO_EXEC
 2. 设置执行权限 `chmod 0755 /opt/nekoray/pkexec`
 3. 设置环境变量 `export PATH=/opt/nekoray:$PATH`
 4. 运行 `pkexec --help` 若无任何输出和报错，则前面步骤成功。
-5. 使用此终端启动 NekoBox，应该可以正常使用 VPN 模式，且无需输入密码。
+5. 使用此终端启动 NekoBox，应该可以正常使用 Tun 模式，且无需输入密码。
 
 ## 保存快捷方式和开机启动
 
