@@ -17,7 +17,7 @@ sing-box GUI 电脑客户端。目前包含在 nekoray 程序中。
 
 ### 我该选择哪个核心
 
-* V2Ray 兼容性较好，比较稳定
+* Xray 使用广泛，兼容性较好
 * sing-box 支持的更多的新协议，而且在某些情况下性能更好
 
 ### GUI 切换
@@ -28,7 +28,7 @@ sing-box GUI 电脑客户端。目前包含在 nekoray 程序中。
 
 ### NekoBox 使用注意
 
-1. 简易路由仍然按照 v2ray v4 格式填写，如 `geoip:cn` `domain:google.com`，这类规则 nekobox 会自动翻译为 sing-box 的规则。
+1. 简易路由按照 v2ray 传统格式填写，如 `geoip:cn` `domain:google.com`，这类规则 nekobox 会自动翻译为 sing-box 的规则。
 2. 自定义 JSON 配置（路由、出站等）请按照 sing-box 的格式填写。
 3. 2.27版本起，Hysteria GUI 配置将使用 sing-box 核心(如果配置类型支持)。
 
@@ -105,11 +105,11 @@ Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版
 
 ### 自定义入站
 
-[v2ray入站语法](https://www.v2fly.org/config/inbounds.html#inbounds)
+[Xray入站语法](https://xtls.github.io/config/inbound.html)
 
 [sing-box入站语法](https://sing-box.sagernet.org/configuration/inbound/)
 
-示例 (v2ray dokodemo-door)
+示例 (Xray dokodemo-door)
 
 ```json
 {
@@ -133,9 +133,9 @@ Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版
 
 ### 资源文件路径
 
-允许设置 v2ray / sing-box 资源文件夹。便于使用额外的规则文件，以及自动更新和管理 geo 资源文件（如使用v2rayN、软件包管理器或升级脚本）。
+允许设置 Xray / sing-box 资源文件夹。便于使用额外的规则文件，以及自动更新和管理 geo 资源文件（如使用v2rayN、软件包管理器或升级脚本）。
 
-* v2ray 使用的是 .dat 后缀的 geo 资源文件
+* Xray 使用的是 .dat 后缀的 geo 资源文件
 * sing-box 使用的是 .db 后缀的 geo 资源文件
 * Loyalsoldier 版 v2ray dat 下载地址 https://github.com/Loyalsoldier/v2ray-rules-dat
 * Loyalsoldier 版 sing-box db 下载地址 https://github.com/soffchen/sing-geoip https://github.com/soffchen/sing-geosite
@@ -152,16 +152,38 @@ Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版
 
 ### DNS
 
-目前 DNS 处理还没有完美的方案。如果您遇到 DNS 导致的无法上网等问题，请尝试：
+#### 域名策略
+
+如果你需要“准确的域名分流”（不包含在 geosite 的小众域名，解析域名的 IP 进行再次匹配），请开启 IPIfNonMatch 域名策略。
+
+#### 远程 DNS
+
+* 只在 Tun Mode 或开启了 "入站域名策略" 时会被使用，其他方式请求的域名将按原样发送到服务器。
+* 开启 FakeDNS 功能以避免 Tun Mode 下的解析，直接发送域名到服务器。
+
+#### 直连 DNS
+
+直连 DNS 用以解析 `服务器地址` 和 `绕过` 域名。
+
+检查当前直连 DNS 是否可用：
+
+1. 设置 loglevel 为 debug，关闭 Tun 等造成干扰日志的功能。
+2. 启动一个「服务器地址是域名」的配置。
+3. 点击左下角进行延迟测试。
+4. 如果测试有延迟，则表示当前节点 和 直连 DNS 均可用。
+5. 如果测试失败，但日志中输出了该域名对应的 IP，则表示直连 DNS 可用，节点不可用。
+6. 如果日志中没有该域名对应的 IP，则表示直连 DNS 不可用。
+
+如果您遇到 DNS 导致的无法上网等问题，请尝试：
 
 1. 将直连 DNS 改为可用的 DNS 如 `localhost` （默认值）/ `https+local://223.5.5.5/dns-query` / `223.5.5.5`
 2. 调整 核心选项 中有关 DNS 的设置
 
 ### 自定义路由规则
 
-路由规则的语法请看 [v2ray路由语法](https://www.v2fly.org/config/routing.html#ruleobject) 或 [sing-box路由语法](https://sing-box.sagernet.org/configuration/route/rule/)
+路由规则的语法请看 [Xray路由语法](https://xtls.github.io/config/routing.html#ruleobject) 或 [sing-box路由语法](https://sing-box.sagernet.org/configuration/route/rule/)
 
-自定义路由示例 (v2ray block QUIC)
+自定义路由示例 (Xray block QUIC)
 
 ```json
 {
@@ -182,9 +204,9 @@ Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版
 
 ### 自定义出站
 
-(2.1+) 通过编写出站 JSON，可以在 sing-box 中使用 wireguard ssh shadowtls 和在 v2ray 中使用 mKCP 等配置。
+(2.1+) 通过编写出站 JSON，可以在 sing-box 中使用 wireguard ssh shadowtls 和在 Xray 中使用 mKCP 等配置。
 
-[v2ray出站语法](https://www.v2fly.org/config/outbounds.html) 目前 v2ray JSON 配置使用的是 v4 版本。
+[Xray出站语法](https://xtls.github.io/config/outbound.html) 
 
 [sing-box出站语法](https://sing-box.sagernet.org/configuration/outbound/)
 
