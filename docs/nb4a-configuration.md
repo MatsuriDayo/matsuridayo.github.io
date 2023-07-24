@@ -205,6 +205,12 @@ LineageOS 等系统的 VPN 热点功能与前者冲突，需要开启后者。
 
 详细的 DNS 配置说明请看 [路由与 DNS](/nb4a-route/)
 
+!!! note
+
+    * 直连 DNS 可以填写 `local` 使用本机的 DNS（一般由运营商提供），速度一般比默认的 `https://223.5.5.5/dns-query` (阿里公共DNS) 快。
+    * For some Iran users, you may unable to use the default DoH 223.5.5.5 which is blocked in some ISPs. You can try using `local` first.
+    * For some Iran users, you may consider prefer using DoH instead of local DNS, because of the DNS poisoning & MITM attack.
+
 #### FakeDns
 
 减少打开应用时 DNS 查询走代理而造成的延迟，但会有一定副作用，比如开关 VPN 造成域名解析失效，某些应用不兼容等。
