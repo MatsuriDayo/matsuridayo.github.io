@@ -74,10 +74,10 @@ Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版
 目前支持在 Windows / Linux 自动配置 VPN (包括 tun 接口和路由规则等)
 
 * IP CIDR 和 进程名，格式如 `10.0.0.0/8` `Telegram.exe` ，一行一个。
-* (仅限外部 Tun) 程序会读取 sing-box-vpn 配置模板 `config/vpn/sing-box-vpn.json`（如果此文件存在，否则使用默认模板）用于生成 sing-box 设置，可以参考[默认模板](https://github.com/MatsuriDayo/nekoray/blob/main/res/vpn/sing-box-vpn.json)自行修改。
 * Tun 模式下建议开启「流量探测」，设置为「探测结果用于路由判断」，有助于匹配域名规则。
 * Tun 模式下可以开启「FakeDNS」加速 DNS 查询
 * 在 Windows 系统，由于上游问题，Tun 模式有概率启动失败。如连续多次不能启动，请重启并清理多余的网络接口后再试。
+* (仅限外挂模式) 程序会读取配置模板 `config/vpn/sing-box-vpn.json`（如果此文件存在，否则使用默认模板）用于生成 sing-box 设置，可以参考[默认模板](https://github.com/MatsuriDayo/nekoray/blob/main/res/vpn/sing-box-vpn.json)自行修改。
 
 ### 内部 Tun
 
@@ -154,11 +154,13 @@ Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版
 
 #### 域名策略
 
-如果你需要“准确的域名分流”（不包含在 geosite 的小众域名，解析域名的 IP 进行再次匹配），请开启 IPIfNonMatch 域名策略。
+如果你需要“准确的域名分流”（遇到不包含在 geosite 的小众域名，解析成 IP 进行再次匹配），请开启 IPIfNonMatch 域名策略。
+
+现在这种分流模式只在 Xray 核心有，开启后可能增加延迟。
 
 #### 远程 DNS
 
-* 只在 Tun Mode 或开启了 "入站域名策略" 时会被使用，其他方式请求的域名将按原样发送到服务器。
+* 只在 Tun Mode 或开启了 "入站域名策略" 时会被使用，其他方式(如系统代理)请求的域名将按原样发送到服务器。
 * 开启 FakeDNS 功能以避免 Tun Mode 下的解析，直接发送域名到服务器。
 
 #### 直连 DNS
@@ -324,4 +326,4 @@ JSON 对象会被合并至出站 Object，请看下方例子。
 
 ## 运行参数
 
-https://github.com/MatsuriDayo/nekoray#%E8%BF%90%E8%A1%8C%E5%8F%82%E6%95%B0
+https://github.com/MatsuriDayo/nekoray/blob/main/docs/RunFlags.md
