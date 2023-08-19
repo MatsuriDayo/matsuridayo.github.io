@@ -20,7 +20,7 @@ Github Plugin 仓库
 
 `io.nekohasekai.sagernet.plugin.*`
 
-- [Trojan-Go Plugin](https://github.com/SagerNet/SagerNet/releases/tag/trojan-go-plugin-0.10.6) （已是最后一版）
+- [Trojan-Go Plugin](https://github.com/SagerNet/SagerNet/releases/tag/trojan-go-plugin-0.10.6) （上游不再更新）
 - [NaïveProxy Plugin](https://github.com/SagerNet/SagerNet/releases?q=naive)
 
 ### Matsuri 发布的插件
@@ -28,8 +28,8 @@ Github Plugin 仓库
 `moe.matsuri.exe.*`
 
 - [Hysteria Plugin](https://github.com/MatsuriDayo/plugins/releases?q=Hysteria)
-- [TUIC(v4) Plugin](https://github.com/MatsuriDayo/plugins/releases/tag/tuic-0.8.5-2) （已是最后一版）
-- [TUIC(v5) Plugin](https://github.com/MatsuriDayo/plugins/releases?q=tuic)
+- [TUIC(v4) Plugin](https://github.com/MatsuriDayo/plugins/releases/tag/tuic-0.8.5-2) （上游不再更新）
+- [TUIC(v5) Plugin](https://github.com/MatsuriDayo/plugins/releases?q=tuic) （1.2.0 版本后不再使用）
 
 ## 高级插件
 

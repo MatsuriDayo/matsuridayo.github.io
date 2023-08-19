@@ -57,6 +57,7 @@ sing-box GUI 电脑客户端。目前包含在 nekoray 程序中。
 - 「Clash Meta格式」 VLESS & Hysteria（NekoBox 2.26+ 支持，推荐使用）
 - 「V2rayN格式」一般不带流量信息，本项目支持解析
 - 「Shadowsocks格式」本项目支持解析
+- 一些通用的分享链接及其 Base64 编码后的格式
 
 不支持的格式：
 

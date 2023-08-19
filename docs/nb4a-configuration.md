@@ -127,6 +127,7 @@ NekoBox for Android 支持的格式:
 - 「Clash Meta格式」 VLESS & Hysteria & TUIC（NB4A 1.1.4+ 支持，推荐使用）
 - 「V2rayN格式」一般不带流量信息，本项目支持解析
 - 「Shadowsocks格式」本项目支持解析
+- 一些通用的分享链接及其 Base64 编码后的格式
 
 NekoBox for Android 不支持的格式：
 
