@@ -73,6 +73,8 @@
 
 1.2.0+ 支持无需插件的 TUIC，由 sing-box 实现，没有上面所述的限制。
 
+如果需要使用 `udp_over_stream` 一项（场景：可能对某些软件的实时UDP视频串流有帮助），请使用 sing-box 作为 TUIC 服务器。
+
 ### ShadowTLS
 
 通常需要与 ShadowSocks 类型服务器组成链式代理才能上网。顺序为 ShadowTLS -> ShadowSocks
@@ -215,8 +217,7 @@ LineageOS 等系统的 VPN 热点功能与前者冲突，需要开启后者。
 
 !!! note
 
-    * 直连 DNS 可以填写 `local` 使用本机的 DNS（一般由运营商提供），速度一般比默认的 `https://223.5.5.5/dns-query` (阿里公共DNS) 快。
-    * For some Iran users, you may unable to use the default DoH 223.5.5.5 which is blocked in some ISPs. You can try using `local` first.
+    * 直连 DNS 建议填写 `local` 使用本机的 DNS（一般由运营商提供），如果有问题再换其他 DNS 服务器。支持的 DNS 服务器类型有 `udp(直接填ip)` `https` `tls` `quic` `h3` 等。
     * For some Iran users, you may consider prefer using DoH instead of local DNS, because of the DNS poisoning & MITM attack.
 
 #### FakeDns
@@ -239,6 +240,8 @@ LineageOS 等系统的 VPN 热点功能与前者冲突，需要开启后者。
 
 对于能使用 Socks / HTTP 代理的应用，建议手动为其设置 Socks / HTTP 代理，或开启 `追加 HTTP 代理到 VPN` 选项，不走 Tun 更省电。
 
+这种用法存在的问题请看[白话文-国内外分流](/nb4a-bhw-domestic) 进阶：DNS 部分
+
 ### MTU
 
 [最大传输单元](https://zh.wikipedia.org/zh-hans/%E6%9C%80%E5%A4%A7%E4%BC%A0%E8%BE%93%E5%8D%95%E5%85%83)
@@ -260,6 +263,7 @@ LineageOS 等系统的 VPN 热点功能与前者冲突，需要开启后者。
 * 开启时，出站的 tag 将生成人类可读的名字。
 * 不建议为包含 **需要插件的服务器** 的分组启用，因为这样会一次性启动所有插件。
 * 切换节点时会重置连接，但不会清除旧的 DNS 记录，在节点物理距离过大时可能会影响访问速度。
+* 开启时，"重启代理" 按钮无效。
 
 ### Root CA 侧加载
 
@@ -271,3 +275,13 @@ LineageOS 等系统的 VPN 热点功能与前者冲突，需要开启后者。
 2. 重启，程序启动时将自动加载这个文件中的证书（替换system证书）
 
 检验方法：开启 loglevel ，在日志中可查看是否加载成功。
+
+### NAT 类型测试
+
+此工具基于 go-stun 修改，进行 RFC3489 RFC5389 两种测试。
+
+额外添加：针对 VMess VLESS 协议的 "Fake FullCone" (远端 IP 不变化) 检测。
+
+检测结果仅供参考，结果可能因网络丢包等原因不准确。
+
+Windows 电脑上可以使用此软件进行 NAT 类型测试： https://github.com/HMBSbige/NatTypeTester
