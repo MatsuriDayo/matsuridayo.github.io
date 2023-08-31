@@ -38,7 +38,7 @@
 |----|----|
 |32位设备|不可用|
 |Win7以下|不可用|
-|Win7 ~ Win8.1| 请下载 Qt5.15 版本 (windows7-x64.zip)，此包随时可能被移除。|
+|Win7 ~ Win8.1| 最后一版 [windows7-x64.zip](https://github.com/MatsuriDayo/nekoray/releases/download/3.17/nekoray-3.17-2023-08-17-windows7-x64.zip)|
 |Win10及以上| 请下载 Qt6 版本 (windows64.zip) |
 
 ### Linux 系统兼容性
