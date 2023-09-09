@@ -50,7 +50,9 @@ DNS 一直是代理中非常麻烦的部分...
 
 ### DNS 服务器
 
-直连 DNS 建议填写 `local` 使用本机的 DNS（一般由运营商提供），如果有问题再换其他 DNS 服务器。支持的 DNS 服务器类型有 `udp(直接填ip)` `https` `tls` `quic` `h3` 等。
+直连 DNS 建议填写 `local` 使用本机的 DNS（一般由运营商提供），如果有问题再换其他 DNS 服务器。
+
+[支持的 DNS 服务器类型](https://sing-box.sagernet.org/zh/configuration/dns/server/#address)
 
 ### DNS 路由
 
@@ -67,11 +69,12 @@ DNS 一直是代理中非常麻烦的部分...
 
 **DNS 问题似乎没有最优解，各种方案各有优劣，请结合自身情况选择。**
 
-!!! note "NekoBox 的 DNS 实践(开启绕过中国)"
+!!! note "NekoBox 的 DNS 实践 (开启绕过中国)"
 
-    比较依赖 geosite 域名列表，有远程 DNS 延迟（缓存可以缓解），只要查询到的是国内 IP 后续访问就会走直连。
+    1. 系统进行 DNS 查询时，会由 NekoBox 进行处理。如果域名匹配到 geosite:CN 则使用直连 DNS，后续流量走直连。（若关闭 DNS 路由则直接进入下一步）
+    2. 如果网站比较小众，geosite 未匹配到，则使用远程 DNS 查询（有缓存，缓解延迟问题），只要查询到的是国内 IP 后续访问就会走直连。
 
-!!! note "NekoBox 的 DNS 实践(开启绕过中国 + 开启 FakeDNS 或 HTTP 代理)"
+!!! note "NekoBox 的 DNS 实践 (开启绕过中国 + 开启 FakeDNS 或 HTTP 代理)"
 
     高度依赖 geosite 域名列表，延迟最低，但无法识别国内小众网站，这类网站会走代理。
 

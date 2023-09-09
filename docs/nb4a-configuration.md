@@ -42,7 +42,7 @@
 * 本地地址 每行一个。 格式如 `10.0.0.1/24` `2001:db8::1/32`
 * 支持 reseved 字段，请填 base64 字符串。
 
-### Hysteria
+### Hysteria1
 
 对于 sing-box 不支持的类型(比如 wechat-video)，需要安装 Matsuri Hysteria 插件 1.3.3+
 
@@ -52,6 +52,10 @@
 2. (1.2.0新格式) 服务器和端口分开填写，端口可以填写字符串，格式： `11451`（单端口）/  `114-514,1919`（多端口）。旧配置自动升级，但不可再写旧的格式。
 3. 不使用多端口时，「服务器」和「服务器端口」按照原来的方式填写。
 4. 不能作为链式代理的非入口节点。
+
+### Hysteria2
+
+Hysteria2 使用 sing-box 内置实现，暂不支持使用端口跳跃。
 
 ### TUIC
 
@@ -217,7 +221,7 @@ LineageOS 等系统的 VPN 热点功能与前者冲突，需要开启后者。
 
 !!! note
 
-    * 直连 DNS 建议填写 `local` 使用本机的 DNS（一般由运营商提供），如果有问题再换其他 DNS 服务器。支持的 DNS 服务器类型有 `udp(直接填ip)` `https` `tls` `quic` `h3` 等。
+    * 直连 DNS 建议填写 `local` 使用本机的 DNS（一般由运营商提供），如果有问题再换其他 DNS 服务器。[支持的 DNS 服务器类型](https://sing-box.sagernet.org/zh/configuration/dns/server/#address)
     * For some Iran users, you may consider prefer using DoH instead of local DNS, because of the DNS poisoning & MITM attack.
 
 #### FakeDns
@@ -233,8 +237,9 @@ LineageOS 等系统的 VPN 热点功能与前者冲突，需要开启后者。
 
 主要用于实现 Tun TCP 数据流重组，对应配置中的 `stack` 项。
 
-* 由 sing-box 实现，目前有 `gVisor` `System` 两种。
-* System 一般比 gVisor 省电
+* 由 sing-box 实现，目前有 `gVisor` `System` `Mixed`
+* 对于 TCP 为主的流量，使用 System 一般比 gVisor 省电
+* 1.2.x 版本起默认使用 Mixed (SystemTCP + gVisorUDP)
 
 ### 追加 HTTP 代理
 
