@@ -47,9 +47,13 @@ https://t.me/Matsuridayo
     
     For feedback, please go to the GitHub issue.
 
-### 捐助 / Donate
+## 捐助 / Donate
 
-欢迎捐赠以支持项目开发。
+如果这个项目对您有帮助，可以通过捐赠的方式帮助我们维持这个项目。
+
+捐赠满等额 50 USD 可以在「[捐赠榜](https://mtrdnt.pages.dev/donation_list)」显示头像，如果您未被添加到这里，欢迎联系我们补充。
+
+Donations of 50 USD or more can display your avatar on the [Donation List](https://mtrdnt.pages.dev/donation_list). If you are not added here, please contact us to add it.
 
 USDT TRC20
 
@@ -59,7 +63,8 @@ XMR
 
 `49bwESYQjoRL3xmvTcjZKHEKaiGywjLYVQJMUv79bXonGiyDCs8AzE3KiGW2ytTybBCpWJUvov8SjZZEGg66a4e59GXa6k5`
 
-您也可以通过 Google Play 购买 [NekoBox for Android](https://play.google.com/store/apps/details?id=moe.nb4a) 捐赠。
+* 您也可以通过 [Google Play](https://play.google.com/store/apps/details?id=moe.nb4a) 购买捐赠，另有支付宝微信购买方式，见 TG 频道置顶。
+* Donating via [Google Play](https://play.google.com/store/apps/details?id=moe.nb4a), using credit cards.
 
 ### Telegram Group
 
@@ -69,16 +74,16 @@ https://t.me/nekoray_group
 
 ### Email
 
-接广告，接合作
+接广告投放（如果是机场，请由机场主亲自洽谈），接编程项目合作。
 
-nekoha_matsuri(at)protonmail(dot)com
+请勿发送无意义邮件（比如功能请求），**此类邮件一律不回或拉黑发送者**。
+
+`nekoha_matsuri@protonmail.com`
 
 ### 推广页
 
-包含机场推荐。
-
 !!! warning ""
 
-    所有广告与项目无关，请自行甄别。部分页面可能无法在中国国内访问。
+    包含机场推荐，所有广告与本项目无关，请自行甄别。部分页面可能无法在中国国内访问，请自备梯子。
 
 https://matsuricom.pages.dev
