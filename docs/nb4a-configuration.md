@@ -59,23 +59,11 @@ Hysteria2 使用 sing-box 内置实现，暂不支持使用端口跳跃。
 
 ### TUIC
 
-#### v4 协议
-
-需要安装插件，不再更新，建议弃用。
-
-目前使用的是 [0.8.5 稳定版](https://github.com/EAimTY/tuic/releases/tag/0.8.5)，部分功能「需要服务器支持」的，请使用[这个服务器实现](https://github.com/zephyrchien/tuic)。
-
-#### v5 协议 (1.2.0之前)
-
-1.1.3+ 支持 TUIC v5，需安装 TUIC(v5) 插件。服务器暂时没有特别要求，使用原版即可。
-
-由于 TUIC 内核和 SN TUIC GUI 的设计原因，使用上与 Clash Meta 等软件有以下区别：
-
-* 当指定 SNI 时，不支持使用域名作为服务器地址。
+因为一些用户报告了被 GFW 封锁，以及使用与维护方面的不便，Tuic v4 v5 Plugin (基于 https://github.com/EAimTY/tuic) 客户端已在 1.2.4 版本被彻底废弃。
 
 #### v5 协议 (1.2.0之后)
 
-1.2.0+ 支持无需插件的 TUIC，由 sing-box 实现，没有上面所述的限制。
+1.2.0+ 支持无需插件的 TUIC，由 sing-box 实现。
 
 如果需要使用 `udp_over_stream` 一项（场景：可能对某些软件的实时UDP视频串流有帮助），请使用 sing-box 作为 TUIC 服务器。
 
