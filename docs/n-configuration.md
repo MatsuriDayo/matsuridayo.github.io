@@ -225,11 +225,11 @@ Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版
 {
   "type": "shadowtls",
   "tag": "shadowtls-out",
-  "server": "127.0.0.1",
-  "server_port": 4443,
+  "server": "127.0.0.1", // 你的服务器地址
+  "server_port": 4443, // 你的服务器端口
   "tls": {
     "enabled": true,
-    "server_name": "google.com"
+    "server_name": "microsoft.com" // 伪装域名
   }
 }
 ```

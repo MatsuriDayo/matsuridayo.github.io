@@ -221,12 +221,13 @@ LineageOS 等系统的 VPN 热点功能与前者冲突，需要开启后者。
 * 对于 1.1.8 及之后的版本， FakeIP + UDP 会抹去远端地址信息，造成类似 v2ray 假 full cone 的效果。
 * 对于「绕过」的流量， FakeDNS 不生效，所以没有以上问题。
 
-### Tun 实现
+### Tun 实现 / Stack
 
 主要用于实现 Tun TCP 数据流重组，对应配置中的 `stack` 项。
 
 * 由 sing-box 实现，目前有 `gVisor` `System` `Mixed`
-* 对于 TCP 为主的流量，使用 System 一般比 gVisor 省电
+* System 复用内核的 TCP 协议栈。对于 TCP 为主的流量，使用 System 一般比 gVisor 省电
+* gVisor 为纯用户空间实现，兼容性更好
 * 1.2.x 版本起默认使用 Mixed (SystemTCP + gVisorUDP)
 
 ### 追加 HTTP 代理
