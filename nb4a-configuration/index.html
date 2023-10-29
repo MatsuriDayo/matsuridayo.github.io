@@ -1,0 +1,1451 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://matsuridayo.github.io/nb4a-configuration/">
+      
+      
+        <link rel="prev" href="../n-faq/">
+      
+      
+        <link rel="next" href="../nb4a-route/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
+    
+    
+      
+        <title>NB4A-配置 - MatsuriDayo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nb4a" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MatsuriDayo" class="md-header__button md-logo" aria-label="MatsuriDayo" data-md-component="logo">
+      
+  <img src="https://matsuridayo.github.io/assets/images/matsuri1.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MatsuriDayo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NB4A-配置
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MatsuriDayo/matsuridayo.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    文档
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MatsuriDayo" class="md-nav__button md-logo" aria-label="MatsuriDayo" data-md-component="logo">
+      
+  <img src="https://matsuridayo.github.io/assets/images/matsuri1.jpg" alt="logo">
+
+    </a>
+    MatsuriDayo
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MatsuriDayo/matsuridayo.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    文档
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index_docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    首页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    下载
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matsuri-配置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m-group/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matsuri-分组
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m-route/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matsuri-路由
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m-plugin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matsuri-插件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matsuri-FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../n-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nekoray-配置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../n-extra_core/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nekoray-自定义核心
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../n-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nekoray-FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    NB4A-配置
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    NB4A-配置
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    协议说明
+  </a>
+  
+    <nav class="md-nav" aria-label="协议说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    自定义 JSON
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    自定义配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shadowsocks" class="md-nav__link">
+    Shadowsocks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    HTTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vmess" class="md-nav__link">
+    VMess
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wireguard" class="md-nav__link">
+    Wireguard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hysteria1" class="md-nav__link">
+    Hysteria1
+  </a>
+  
+    <nav class="md-nav" aria-label="Hysteria1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    多端口 / 端口跳跃
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hysteria2" class="md-nav__link">
+    Hysteria2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuic" class="md-nav__link">
+    TUIC
+  </a>
+  
+    <nav class="md-nav" aria-label="TUIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v5-120" class="md-nav__link">
+    v5 协议 (1.2.0之后)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shadowtls" class="md-nav__link">
+    ShadowTLS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sing-box" class="md-nav__link">
+    sing-box 私有协议
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tls" class="md-nav__link">
+    TLS 安全设置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tls_1" class="md-nav__link">
+    TLS 伪装设置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    功能说明
+  </a>
+  
+    <nav class="md-nav" aria-label="功能说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    导入 / 导出 / 订阅
+  </a>
+  
+    <nav class="md-nav" aria-label="导入 / 导出 / 订阅">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    导入
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    导出/分享
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    分享链接说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    代理链
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplex" class="md-nav__link">
+    多路复用（multiplex）
+  </a>
+  
+    <nav class="md-nav" aria-label="多路复用（multiplex）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#padding" class="md-nav__link">
+    padding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    分应用代理 / 路由
+  </a>
+  
+    <nav class="md-nav" aria-label="分应用代理 / 路由">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    绕过局域网
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    DNS
+  </a>
+  
+    <nav class="md-nav" aria-label="DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fakedns" class="md-nav__link">
+    FakeDns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tun-stack" class="md-nav__link">
+    Tun 实现 / Stack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http_1" class="md-nav__link">
+    追加 HTTP 代理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mtu" class="md-nav__link">
+    MTU
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sing-box-dashboard" class="md-nav__link">
+    sing-box Dashboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selector" class="md-nav__link">
+    分组配置: selector 模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-ca" class="md-nav__link">
+    Root CA 侧加载
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nat" class="md-nav__link">
+    NAT 类型测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nb4a-route/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NB4A-路由
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nb4a-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NB4A-FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nb4a-bhw-domestic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NB4A-白话文-国内外分流
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    协议说明
+  </a>
+  
+    <nav class="md-nav" aria-label="协议说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    自定义 JSON
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    自定义配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shadowsocks" class="md-nav__link">
+    Shadowsocks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    HTTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vmess" class="md-nav__link">
+    VMess
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wireguard" class="md-nav__link">
+    Wireguard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hysteria1" class="md-nav__link">
+    Hysteria1
+  </a>
+  
+    <nav class="md-nav" aria-label="Hysteria1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    多端口 / 端口跳跃
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hysteria2" class="md-nav__link">
+    Hysteria2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuic" class="md-nav__link">
+    TUIC
+  </a>
+  
+    <nav class="md-nav" aria-label="TUIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v5-120" class="md-nav__link">
+    v5 协议 (1.2.0之后)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shadowtls" class="md-nav__link">
+    ShadowTLS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sing-box" class="md-nav__link">
+    sing-box 私有协议
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tls" class="md-nav__link">
+    TLS 安全设置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tls_1" class="md-nav__link">
+    TLS 伪装设置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    功能说明
+  </a>
+  
+    <nav class="md-nav" aria-label="功能说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    导入 / 导出 / 订阅
+  </a>
+  
+    <nav class="md-nav" aria-label="导入 / 导出 / 订阅">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    导入
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    导出/分享
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    分享链接说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    代理链
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplex" class="md-nav__link">
+    多路复用（multiplex）
+  </a>
+  
+    <nav class="md-nav" aria-label="多路复用（multiplex）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#padding" class="md-nav__link">
+    padding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    分应用代理 / 路由
+  </a>
+  
+    <nav class="md-nav" aria-label="分应用代理 / 路由">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    绕过局域网
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    DNS
+  </a>
+  
+    <nav class="md-nav" aria-label="DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fakedns" class="md-nav__link">
+    FakeDns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tun-stack" class="md-nav__link">
+    Tun 实现 / Stack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http_1" class="md-nav__link">
+    追加 HTTP 代理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mtu" class="md-nav__link">
+    MTU
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sing-box-dashboard" class="md-nav__link">
+    sing-box Dashboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selector" class="md-nav__link">
+    分组配置: selector 模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-ca" class="md-nav__link">
+    Root CA 侧加载
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nat" class="md-nav__link">
+    NAT 类型测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="nb4a">NB4A 配置</h1>
+<p>这是 NekoBox for Android 的详细说明书，跟随软件更新，<strong>阅读前请保证您使用的是最新版</strong>。</p>
+<h2 id="_1">协议说明</h2>
+<h3 id="json">自定义 JSON</h3>
+<p>自定义功能，适用于任何类型的服务器，请在「服务器配置」界面点击右上角的三个点。</p>
+<p>需要先保存服务器。否则点击右上角菜单无反应。</p>
+<p>参考<a href="/n-configuration/#json">这里的说明</a></p>
+<h3 id="_2">自定义配置</h3>
+<p>可以填写完整配置，也可以填写一个 outbound</p>
+<p>如果填写完整配置，则需注意：</p>
+<ul>
+<li>outbound tag 等属性需要与 GUI 生成的配置保持一致 (如 <code>proxy</code> <code>bypass</code>)， GUI 路由配置等功能失效</li>
+<li>VPN 相关配置完全由 GUI 控制， tun inbound 只需保持 IP 一致即可 (172.19.0.1/28)</li>
+</ul>
+<h3 id="shadowsocks">Shadowsocks</h3>
+<ul>
+<li>如果服务器是 sing-box 则支持 <code>multiplex</code> <code>uot</code></li>
+<li><code>multiplex</code> 与 <code>uot</code> 冲突，同时只能开一个</li>
+</ul>
+<h3 id="http">HTTP</h3>
+<p>部分情况下与 v2ray 等服务器存在兼容性问题。</p>
+<ul>
+<li>截至 2023 年 6 月 sing-box HTTP 出站未支持 HTTP/2 CONNECT (HTTP+TLS) 代理，此类代理无法使用（表现为 EOF 错误）</li>
+<li>截至 2023 年 6 月 sing-box 未支持 v2ray "TCP Header 伪装 HTTP" (VMESS+TCP+HTTP+TLS) 类型代理，此类代理无法使用（表现为 EOF 错误）</li>
+</ul>
+<h3 id="vmess">VMess</h3>
+<ul>
+<li>对于像 ALPN 这样的列表选项，格式是每行一个。1.1.7 版本后也可以用 <code>,</code> 分割。</li>
+</ul>
+<h3 id="wireguard">Wireguard</h3>
+<ul>
+<li>本地地址 每行一个。 格式如 <code>10.0.0.1/24</code> <code>2001:db8::1/32</code></li>
+<li>支持 reseved 字段，请填 base64 字符串。</li>
+</ul>
+<h3 id="hysteria1">Hysteria1</h3>
+<p>对于 sing-box 不支持的类型(比如 wechat-video)，需要安装 Matsuri Hysteria 插件 1.3.3+</p>
+<h4 id="_3">多端口 / 端口跳跃</h4>
+<ol>
+<li>(1.2.0之前的旧格式) 需要使用多端口时，「服务器」按照 <code>example.com:1145,5144-10240</code> 格式填写，「服务器端口」随意填写。</li>
+<li>(1.2.0新格式) 服务器和端口分开填写，端口可以填写字符串，格式： <code>11451</code>（单端口）/  <code>114-514,1919</code>（多端口）。旧配置自动升级，但不可再写旧的格式。</li>
+<li>不使用多端口时，「服务器」和「服务器端口」按照原来的方式填写。</li>
+<li>不能作为链式代理的非入口节点。</li>
+</ol>
+<h3 id="hysteria2">Hysteria2</h3>
+<p>Hysteria2 使用 sing-box 内置实现，暂不支持使用端口跳跃。</p>
+<h3 id="tuic">TUIC</h3>
+<p>因为一些用户报告了被 GFW 封锁，以及使用与维护方面的不便，Tuic v4 v5 Plugin (基于 <a href="https://github.com/EAimTY/tuic">https://github.com/EAimTY/tuic</a>) 客户端已在 1.2.4 版本被彻底废弃。</p>
+<h4 id="v5-120">v5 协议 (1.2.0之后)</h4>
+<p>1.2.0+ 支持无需插件的 TUIC，由 sing-box 实现。</p>
+<p>如果需要使用 <code>udp_over_stream</code> 一项（场景：可能对某些软件的实时UDP视频串流有帮助），请使用 sing-box 作为 TUIC 服务器。</p>
+<h3 id="shadowtls">ShadowTLS</h3>
+<p>通常需要与 ShadowSocks 类型服务器组成链式代理才能上网。顺序为 ShadowTLS -&gt; ShadowSocks</p>
+<p>sing-box ShadowTLS 与原版的兼容性未知。</p>
+<h3 id="sing-box">sing-box 私有协议</h3>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<ul>
+<li>这是一些私有协议，通常随 VMess Trojan 等协议使用。</li>
+<li>如果服务器不支持（通常是因为不是 sing-box 或者版本不同），则可能导致无法上网。</li>
+</ul>
+</div>
+<p>按 sing-box 的出站分：</p>
+<ul>
+<li>vmess/vless/trojan: <code>V2Ray Transport</code> (http/ws/grpc/quic)</li>
+<li>vmess/vless: <code>packetaddr</code> <code>xudp</code></li>
+<li>ss/vmess/vless/trojan: <code>multiplex</code></li>
+<li>ss: <code>uot</code></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>ws 地址支持 <code>?ed=2048</code> 这种 earlydata 形式（与 Xray 兼容）</li>
+</ul>
+</div>
+<h3 id="tls">TLS 安全设置</h3>
+<div class="admonition note">
+<p class="admonition-title">封锁提示</p>
+<p>2022 年 10 月开始，TLS Tunnel 易受封锁。</p>
+</div>
+<ul>
+<li>允许不安全连接：启用后安全性相当于明文。有些节点不开这个无法使用，原因是服务器证书配置有误。</li>
+<li>证书（链）：应填入证书内容，通常是 PEM 格式。</li>
+<li>如果 SNI 留空，且 服务器地址 为域名，则使用 服务器地址 填充 SNI。(v2ray &amp; sing-box 行为)</li>
+<li>本项目不会使用 ws host 等字段填充 SNI，这可能会使一些客户端（V2RayNG）共享的 ws tls 等配置无法使用，请自行检查。</li>
+</ul>
+<h3 id="tls_1">TLS 伪装设置</h3>
+<ul>
+<li>uTLS</li>
+<li>Reality (先决条件是开启 uTLS，不支持 SpiderX，ShortId 可留空)</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>sing-box Reality 目前与 Xray-core 兼容性欠佳，建议服务器和客户端使用相同的实现。</li>
+</ul>
+</div>
+<h2 id="_4">功能说明</h2>
+<h3 id="_5">导入 / 导出 / 订阅</h3>
+<p>NekoBox for Android 支持的格式:</p>
+<ul>
+<li>「Clash格式」一般带有流量信息，本项目支持解析其节点（推荐使用）</li>
+<li>「Clash Meta格式」 VLESS &amp; Hysteria &amp; TUIC（NB4A 1.1.4+ 支持，推荐使用）</li>
+<li>「V2rayN格式」一般不带流量信息，本项目支持解析</li>
+<li>「Shadowsocks格式」本项目支持解析</li>
+<li>一些通用的分享链接及其 Base64 编码后的格式</li>
+</ul>
+<p>NekoBox for Android 不支持的格式：</p>
+<ul>
+<li>「某些苹果应用自创的格式」</li>
+<li>「SSR格式」</li>
+<li>「SIP008/OOCv1」</li>
+<li>各种较少使用/不标准的格式</li>
+</ul>
+<p>另见 <a href="/m-group/">分组和订阅</a></p>
+<h4 id="_6">导入</h4>
+<p>目前支持从链接导入和从文件导入。程序会自动识别链接。</p>
+<p>Wireguard .conf 配置文件可以导入。</p>
+<p>sing-box .json 配置文件可以导入（导入为自定义配置）。</p>
+<p>包含分享链接的文件可以导入。</p>
+<p>如果需要导入多个文件，可以压缩为 zip 文件，程序会尝试解压并识别其中的配置文件。</p>
+<h4 id="_7">导出/分享</h4>
+<p>导出配置：导出软件生成的 sing-box config.json 等配置文件。</p>
+<p>分享链接：<code>标准</code> / <code>SN Link</code>，不同节点分享格式以分享菜单为准。</p>
+<p>SN Link 格式 (<code>sn://</code>) 为程序内部的存储格式，包含的信息最完全，但跨版本兼容性没有保证。</p>
+<p><strong>请勿尝试导入其他软件（或本软件较旧版本）的 <code>sn://</code> 链接和备份信息。</strong></p>
+<h3 id="_8">分享链接说明</h3>
+<p>vmess vless trojan 的分享链接非常混乱，在 NekoBox for Andoird 0.7+，采用如下的分享链接策略。</p>
+<p>导入尽量兼容常用软件的格式。</p>
+<p>导出（基本与 nekoray v2rayN 等软件的行为兼容）</p>
+<ul>
+<li>VMess 导出的链接为 v2rayN/G 的格式 <code>vmess://(base64)</code></li>
+<li>
+<p>VLESS &amp; Trojan 导出的格式参考 <a href="https://github.com/XTLS/Xray-core/discussions/716">https://github.com/XTLS/Xray-core/discussions/716</a> ，其中：</p>
+</li>
+<li>
+<p>遇到 http 1.1 的传输类型时，设置 <code>type=tcp&amp;headerType=http</code> 以及 <code>host=xxxx</code></p>
+</li>
+<li>为 VLESS 设置 <code>encryption=none</code> <code>flow=xxx</code>, Trojan 不设置</li>
+<li>允许设置 <code>allowInsecure=1</code></li>
+<li>v2fly ws earlydata: <code>ed=2048&amp;eh=xxx</code></li>
+</ul>
+<h3 id="_9">代理链</h3>
+<ul>
+<li>代理链由客户端实现，所以会有一些性能损失</li>
+<li>流量顺序是从上到下（最后一个配置为流量的出口）</li>
+<li>列表中的配置可以长按拖动，向左滑动删除</li>
+</ul>
+<h3 id="multiplex">多路复用（multiplex）</h3>
+<p>减少新建连接时因为各种握手而导致的延迟，但对下载等场景会有反效果。</p>
+<ul>
+<li>目前可以为 vmess vless trojan shadowsocks 等协议启用 multiplex</li>
+<li>是否能用取决于服务端，请以节点实际为准。若服务端不支持 multiplex（约等于不是 sing-box），则开启后无法上网。</li>
+</ul>
+<h4 id="padding">padding</h4>
+<p>(1.1.5)+ 客户端开启 padding 可以缓解 TLS in TLS 包长度分布特征。</p>
+<p>请在 mux 协议中勾选 <code>padding</code> 一项，服务器版本要求 sing-box 1.3.0+</p>
+<h3 id="_10">分应用代理 / 路由</h3>
+<p>分应用代理仅对 VPN 模式生效。此功能决定某应用的流量是否会由 NekoBox VPN 处理，而「路由」功能决定 NekoBox 如何处理。</p>
+<p>更多请看 <a href="/nb4a-route/">路由与 DNS</a></p>
+<h4 id="_11">绕过局域网</h4>
+<p>可以在 IP 层面（绕过局域网） 或 sing-box 路由层面（在 Core 中绕过局域网）绕过，一般开启前者即可。</p>
+<p>LineageOS 等系统的 VPN 热点功能与前者冲突，需要开启后者。</p>
+<h3 id="dns">DNS</h3>
+<p>可以使用的 DNS 服务器类型请参考<a href="https://sing-box.sagernet.org/configuration/dns/server/#address">这里</a> （DHCP &amp; FakeIP 除外）</p>
+<p>详细的 DNS 配置说明请看 <a href="/nb4a-route/">路由与 DNS</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>直连 DNS 建议填写 <code>local</code> 使用本机的 DNS（一般由运营商提供），如果有问题再换其他 DNS 服务器。<a href="https://sing-box.sagernet.org/zh/configuration/dns/server/#address">支持的 DNS 服务器类型</a></li>
+<li>For some Iran users, you may consider prefer using DoH instead of local DNS, because of the DNS poisoning &amp; MITM attack.</li>
+</ul>
+</div>
+<h4 id="fakedns">FakeDns</h4>
+<p>减少打开应用时 DNS 查询走代理而造成的延迟，但会有一定副作用，比如开关 VPN 造成域名解析失效，某些应用不兼容等。</p>
+<ul>
+<li>FakeDNS 会劫持 DNS 返回 <code>198.18</code> 开头的 FakeIP， NekoBox tun 收到目标 IP 为这种类型的请求后，会把它还原为域名。</li>
+<li>对于 1.1.8 之前的版本， FakeIP 下无法代理 UDP 流量。</li>
+<li>对于 1.1.8 及之后的版本， FakeIP + UDP 会抹去远端地址信息，造成类似 v2ray 假 full cone 的效果。</li>
+<li>对于「绕过」的流量， FakeDNS 不生效，所以没有以上问题。</li>
+</ul>
+<h3 id="tun-stack">Tun 实现 / Stack</h3>
+<p>主要用于实现 Tun TCP 数据流重组，对应配置中的 <code>stack</code> 项。</p>
+<ul>
+<li>由 sing-box 实现，目前有 <code>gVisor</code> <code>System</code> <code>Mixed</code></li>
+<li>System 复用内核的 TCP 协议栈。对于 TCP 为主的流量，使用 System 一般比 gVisor 省电</li>
+<li>gVisor 为纯用户空间实现，兼容性更好</li>
+<li>1.2.x 版本起默认使用 Mixed (SystemTCP + gVisorUDP)</li>
+</ul>
+<h3 id="http_1">追加 HTTP 代理</h3>
+<p>对于能使用 Socks / HTTP 代理的应用，建议手动为其设置 Socks / HTTP 代理，或开启 <code>追加 HTTP 代理到 VPN</code> 选项，不走 Tun 更省电。</p>
+<p>这种用法存在的问题请看<a href="/nb4a-bhw-domestic">白话文-国内外分流</a> 进阶：DNS 部分</p>
+<h3 id="mtu">MTU</h3>
+<p><a href="https://zh.wikipedia.org/zh-hans/%E6%9C%80%E5%A4%A7%E4%BC%A0%E8%BE%93%E5%8D%95%E5%85%83">最大传输单元</a></p>
+<p>根据 CFA 的实践经验，默认设置为 9000，可节省CPU并提高速度。如果遇到不兼容的软件（表现为 UDP 包丢失），可以调回 1500。</p>
+<h3 id="sing-box-dashboard">sing-box Dashboard</h3>
+<p>本质是一个 Clash Dashboard Web 界面，目前内置了 yacd-meta，也可以点右上角菜单自行更换 URL 以使用其他面板。</p>
+<ul>
+<li>需要打开 Clash API 才能使用。</li>
+<li>可以和 selector 分组配合使用，以获得更好的效果。</li>
+<li>如果显示白屏，请更新 System Webview 或使用支持的浏览器打开 <a href="http://127.0.0.1:9090/ui/">http://127.0.0.1:9090/ui/</a></li>
+</ul>
+<h3 id="selector">分组配置: selector 模式</h3>
+<p>伪 clash selector 模式，主要优点实现是分组内免重载切换配置。</p>
+<ul>
+<li>开启时，出站的 tag 将生成人类可读的名字。</li>
+<li>不建议为包含 <strong>需要插件的服务器</strong> 的分组启用，因为这样会一次性启动所有插件。</li>
+<li>切换节点时会重置连接，但不会清除旧的 DNS 记录，在节点物理距离过大时可能会影响访问速度。</li>
+<li>开启时，"重启代理" 按钮无效。</li>
+</ul>
+<h3 id="root-ca">Root CA 侧加载</h3>
+<p>1.1.2+支持，用以应对低版本安卓设备不认可已过期的DST Root CA X3证书且系统CA没有ISRG Root X1的情况。</p>
+<p>侧加载步骤：</p>
+<ol>
+<li>把 CA 证书文件，放到 <code>/sdcard/Android/data/moe.nb4a/files/ca.pem</code></li>
+<li>重启，程序启动时将自动加载这个文件中的证书（替换system证书）</li>
+</ol>
+<p>检验方法：开启 loglevel ，在日志中可查看是否加载成功。</p>
+<h3 id="nat">NAT 类型测试</h3>
+<p>此工具基于 go-stun 修改，进行 RFC3489 RFC5389 两种测试。</p>
+<p>额外添加：针对 VMess VLESS 协议的 "Fake FullCone" (远端 IP 不变化) 检测。</p>
+<p>检测结果仅供参考，结果可能因网络丢包等原因不准确。</p>
+<p>Windows 电脑上可以使用此软件进行 NAT 类型测试： <a href="https://github.com/HMBSbige/NatTypeTester">https://github.com/HMBSbige/NatTypeTester</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC BY-SA 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+    
+  </body>
+</html>

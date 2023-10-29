@@ -1,0 +1,1367 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://matsuridayo.github.io/n-configuration/">
+      
+      
+        <link rel="prev" href="../m-faq/">
+      
+      
+        <link rel="next" href="../n-extra_core/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
+    
+    
+      
+        <title>Nekoray-配置 - MatsuriDayo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nekoray-nekobox-for-pc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MatsuriDayo" class="md-header__button md-logo" aria-label="MatsuriDayo" data-md-component="logo">
+      
+  <img src="https://matsuridayo.github.io/assets/images/matsuri1.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MatsuriDayo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Nekoray-配置
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MatsuriDayo/matsuridayo.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    文档
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MatsuriDayo" class="md-nav__button md-logo" aria-label="MatsuriDayo" data-md-component="logo">
+      
+  <img src="https://matsuridayo.github.io/assets/images/matsuri1.jpg" alt="logo">
+
+    </a>
+    MatsuriDayo
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MatsuriDayo/matsuridayo.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    文档
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index_docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    首页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    下载
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matsuri-配置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m-group/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matsuri-分组
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m-route/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matsuri-路由
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m-plugin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matsuri-插件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matsuri-FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Nekoray-配置
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Nekoray-配置
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    窗口界面使用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nekobox" class="md-nav__link">
+    NekoBox
+  </a>
+  
+    <nav class="md-nav" aria-label="NekoBox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    我该选择哪个核心
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gui" class="md-nav__link">
+    GUI 切换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nekobox_1" class="md-nav__link">
+    NekoBox 使用注意
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clash-api-sing-box-dashboard" class="md-nav__link">
+    Clash API / sing-box dashboard 说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    导入 / 导出 / 订阅
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vpn-tun" class="md-nav__link">
+    VPN / TUN 设置
+  </a>
+  
+    <nav class="md-nav" aria-label="VPN / TUN 设置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tun" class="md-nav__link">
+    内部 Tun
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    白名单模式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    基本设置
+  </a>
+  
+    <nav class="md-nav" aria-label="基本设置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    URL 测试
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    自定义入站
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    资源文件路径
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    路由设置
+  </a>
+  
+    <nav class="md-nav" aria-label="路由设置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    简易路由
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    DNS
+  </a>
+  
+    <nav class="md-nav" aria-label="DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    域名策略
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns_1" class="md-nav__link">
+    远程 DNS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns_2" class="md-nav__link">
+    直连 DNS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    自定义路由规则
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    出站 / 服务器
+  </a>
+  
+    <nav class="md-nav" aria-label="出站 / 服务器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    自定义出站
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    自定义出站 JSON 配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json_1" class="md-nav__link">
+    自定义配置 JSON 配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    链式代理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hookjs" class="md-nav__link">
+    Hook.js
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    运行参数
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../n-extra_core/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nekoray-自定义核心
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../n-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nekoray-FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nb4a-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NB4A-配置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nb4a-route/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NB4A-路由
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nb4a-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NB4A-FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nb4a-bhw-domestic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NB4A-白话文-国内外分流
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    窗口界面使用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nekobox" class="md-nav__link">
+    NekoBox
+  </a>
+  
+    <nav class="md-nav" aria-label="NekoBox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    我该选择哪个核心
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gui" class="md-nav__link">
+    GUI 切换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nekobox_1" class="md-nav__link">
+    NekoBox 使用注意
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clash-api-sing-box-dashboard" class="md-nav__link">
+    Clash API / sing-box dashboard 说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    导入 / 导出 / 订阅
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vpn-tun" class="md-nav__link">
+    VPN / TUN 设置
+  </a>
+  
+    <nav class="md-nav" aria-label="VPN / TUN 设置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tun" class="md-nav__link">
+    内部 Tun
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    白名单模式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    基本设置
+  </a>
+  
+    <nav class="md-nav" aria-label="基本设置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    URL 测试
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    自定义入站
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    资源文件路径
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    路由设置
+  </a>
+  
+    <nav class="md-nav" aria-label="路由设置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    简易路由
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    DNS
+  </a>
+  
+    <nav class="md-nav" aria-label="DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    域名策略
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns_1" class="md-nav__link">
+    远程 DNS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns_2" class="md-nav__link">
+    直连 DNS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    自定义路由规则
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    出站 / 服务器
+  </a>
+  
+    <nav class="md-nav" aria-label="出站 / 服务器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    自定义出站
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    自定义出站 JSON 配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json_1" class="md-nav__link">
+    自定义配置 JSON 配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    链式代理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hookjs" class="md-nav__link">
+    Hook.js
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    运行参数
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="nekoray-nekobox-for-pc">NekoRay / NekoBox for PC 配置</h1>
+<h2 id="_1">窗口界面使用</h2>
+<p>如图所示</p>
+<p><img src="/assets/images/nekoray1.jpg" /></p>
+<ul>
+<li>Ctrl+F 进入搜索， Esc 退出。</li>
+<li>选择节点时按住 Ctrl 可一次性选择多个节点。按住 Shift 选择从当前节点到选中节点之间的全部。</li>
+</ul>
+<p>其他快捷键右键菜单已标明。</p>
+<h2 id="nekobox">NekoBox</h2>
+<p>sing-box GUI 电脑客户端。目前包含在 nekoray 程序中。</p>
+<h3 id="_2">我该选择哪个核心</h3>
+<ul>
+<li>Xray 使用广泛，兼容性较好</li>
+<li>sing-box 支持的更多的新协议，而且在某些情况下性能更好</li>
+</ul>
+<h3 id="gui">GUI 切换</h3>
+<p>在 <code>基本设置 - 核心</code> 切换核心。切换前后变化大，不建议来回切换。</p>
+<p>如果已有的某个服务器在切换后无法使用，建议删除后手动添加。</p>
+<h3 id="nekobox_1">NekoBox 使用注意</h3>
+<ol>
+<li>简易路由按照 v2ray 传统格式填写，如 <code>geoip:cn</code> <code>domain:google.com</code>，这类规则 nekobox 会自动翻译为 sing-box 的规则。</li>
+<li>自定义 JSON 配置（路由、出站等）请按照 sing-box 的格式填写。</li>
+<li>2.27版本起，Hysteria GUI 配置将使用 sing-box 核心(如果配置类型支持)。</li>
+</ol>
+<h3 id="clash-api-sing-box-dashboard">Clash API / sing-box dashboard 说明</h3>
+<p>功能介绍：方便查看流量和连接信息。可选 Web 实现，界面比较美观。</p>
+<p>使用上类似手机 NekoBox sing-box dashboard 但有以下区别：</p>
+<ul>
+<li>没有自带面板，需要自己下载解压，或者联网使用</li>
+<li>没有 selector 功能，不能显示所有节点</li>
+</ul>
+<p>启用方式：</p>
+<ol>
+<li>在 NekoBox 基本设置 - 核心 - 核心选项 设置 Enable Clash API</li>
+<li>启动代理</li>
+<li>解压 Clash 面板至 nekoray/config/dashboard</li>
+<li>在浏览器打开 <a href="http://127.0.0.1:9090">http://127.0.0.1:9090</a></li>
+<li>也可以直接联网使用(跳过3和4步骤)，如直接使用 Yacd-meta: <a href="http://yacd.metacubex.one">http://yacd.metacubex.one</a></li>
+</ol>
+<h2 id="_3">导入 / 导出 / 订阅</h2>
+<p>支持的格式:</p>
+<ul>
+<li>「Clash格式」一般带有流量信息，本项目支持解析其节点（推荐使用）</li>
+<li>「Clash Meta格式」 VLESS &amp; Hysteria（NekoBox 2.26+ 支持，推荐使用）</li>
+<li>「V2rayN格式」一般不带流量信息，本项目支持解析</li>
+<li>「Shadowsocks格式」本项目支持解析</li>
+<li>一些通用的分享链接及其 Base64 编码后的格式</li>
+</ul>
+<p>不支持的格式：</p>
+<ul>
+<li>「某些苹果应用自创的格式」</li>
+<li>「SSR格式」</li>
+<li>「SIP008/OOCv1」</li>
+<li>各种较少使用/不标准的格式</li>
+</ul>
+<p>Neko 格式为程序内部的存储格式，包含的信息最完全，但跨版本兼容性没有保证。链接为 <code>nekoray://xxxxx</code></p>
+<h2 id="vpn-tun">VPN / TUN 设置</h2>
+<p>(1.1+) VPN / TUN 模式可以代理整个系统的流量，适合某些软件“不听话”不走代理的情况。</p>
+<p>目前支持在 Windows / Linux 自动配置 VPN (包括 tun 接口和路由规则等)</p>
+<ul>
+<li>IP CIDR 和 进程名，格式如 <code>10.0.0.0/8</code> <code>Telegram.exe</code> ，一行一个。</li>
+<li>Tun 模式下建议开启「流量探测」，设置为「探测结果用于路由判断」，有助于匹配域名规则。</li>
+<li>Tun 模式下可以开启「FakeDNS」加速 DNS 查询</li>
+<li>在 Windows 系统，由于上游问题，Tun 模式有概率启动失败。如连续多次不能启动，请重启并清理多余的网络接口后再试。</li>
+<li>(仅限外挂模式) 程序会读取配置模板 <code>config/vpn/sing-box-vpn.json</code>（如果此文件存在，否则使用默认模板）用于生成 sing-box 设置，可以参考<a href="https://github.com/MatsuriDayo/nekoray/blob/main/res/vpn/sing-box-vpn.json">默认模板</a>自行修改。</li>
+</ul>
+<h3 id="tun">内部 Tun</h3>
+<p>关闭 内部 Tun （外挂模式）： 启动 Tun 时，启动 nekobox_core 执行 "虚拟网卡转 socks 功能"。 NekoRay 只能使用这种模式。</p>
+<p>开启 内部 Tun （内置模式）： 无需额外启动 nekobox_core，只需要一个 core 进程，虚拟网卡直接作为入站，不需要转 socks，提高 Tun 工作效率。 NekoBox 默认使用此模式。</p>
+<p>隐藏控制台：外挂模式下，隐藏 Windows 系统的控制台窗口。</p>
+<h3 id="_4">白名单模式</h3>
+<p>无论是黑名单（默认代理，列表内直连）还是白名单（默认直连，列表内代理），您的流量都将由 nekobox_core (sing-tun) 处理。这不等于某些软件的「进程模式」。</p>
+<h2 id="_5">基本设置</h2>
+<h3 id="url">URL 测试</h3>
+<p>支持 http 或 https 协议</p>
+<p>与 Matsuri 一致，如果开头为 <code>true</code> 则表示测试真延迟 RTT，否则测试握手延迟。</p>
+<p>真延迟 <code>truehttps://cp.cloudflare.com/</code></p>
+<p>握手延迟 <code>https://cp.cloudflare.com/</code></p>
+<h3 id="_6">自定义入站</h3>
+<p><a href="https://xtls.github.io/config/inbound.html">Xray入站语法</a></p>
+<p><a href="https://sing-box.sagernet.org/configuration/inbound/">sing-box入站语法</a></p>
+<p>示例 (Xray dokodemo-door)</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;inbounds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;listen&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">14514</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;protocol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dokodemo-door&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;settings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;www.google.com&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;followRedirect&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;network&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">443</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;timeout&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;map-www.google.com-443-to-14514&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="_7">资源文件路径</h3>
+<p>允许设置 Xray / sing-box 资源文件夹。便于使用额外的规则文件，以及自动更新和管理 geo 资源文件（如使用v2rayN、软件包管理器或升级脚本）。</p>
+<ul>
+<li>Xray 使用的是 .dat 后缀的 geo 资源文件</li>
+<li>sing-box 使用的是 .db 后缀的 geo 资源文件</li>
+<li>Loyalsoldier 版 v2ray dat 下载地址 <a href="https://github.com/Loyalsoldier/v2ray-rules-dat">https://github.com/Loyalsoldier/v2ray-rules-dat</a></li>
+<li>Loyalsoldier 版 sing-box db 下载地址 <a href="https://github.com/soffchen/sing-geoip">https://github.com/soffchen/sing-geoip</a> <a href="https://github.com/soffchen/sing-geosite">https://github.com/soffchen/sing-geosite</a></li>
+</ul>
+<h2 id="_8">路由设置</h2>
+<h3 id="_9">简易路由</h3>
+<ul>
+<li>内置了 <code>全局</code> <code>绕过局域网和大陆</code> 两种规则</li>
+<li>以 # 开头的行不生效</li>
+<li>不支持 <code>多节点分流</code> <code>负载均衡</code> 这类用法，若有需求请换其他软件或自寻办法。</li>
+<li>简易路由的匹配顺序是 <code>block</code> -&gt; <code>remote</code> -&gt; <code>direct</code></li>
+<li>自定义路由的顺序是 <code>自定义（全局）</code> -&gt; <code>自定义</code> -&gt; <code>简易路由</code></li>
+</ul>
+<h3 id="dns">DNS</h3>
+<h4 id="_10">域名策略</h4>
+<p>如果你需要“准确的域名分流”（遇到不包含在 geosite 的小众域名，解析成 IP 进行再次匹配），请开启 IPIfNonMatch 域名策略。</p>
+<p>现在这种分流模式只在 Xray 核心有，开启后可能增加延迟。</p>
+<h4 id="dns_1">远程 DNS</h4>
+<ul>
+<li>只在 Tun Mode 或开启了 "入站域名策略" 时会被使用，其他方式(如系统代理)请求的域名将按原样发送到服务器。</li>
+<li>开启 FakeDNS 功能以避免 Tun Mode 下的解析，直接发送域名到服务器。</li>
+</ul>
+<h4 id="dns_2">直连 DNS</h4>
+<p>直连 DNS 用以解析 <code>服务器地址</code> 和 <code>绕过</code> 域名。</p>
+<p>检查当前直连 DNS 是否可用：</p>
+<ol>
+<li>设置 loglevel 为 debug，关闭 Tun 等造成干扰日志的功能。</li>
+<li>启动一个「服务器地址是域名」的配置。</li>
+<li>点击左下角进行延迟测试。</li>
+<li>如果测试有延迟，则表示当前节点 和 直连 DNS 均可用。</li>
+<li>如果测试失败，但日志中输出了该域名对应的 IP，则表示直连 DNS 可用，节点不可用。</li>
+<li>如果日志中没有该域名对应的 IP，则表示直连 DNS 不可用。</li>
+</ol>
+<p>如果您遇到 DNS 导致的无法上网等问题，请尝试：</p>
+<ol>
+<li>将直连 DNS 改为可用的 DNS 如 <code>localhost</code> （本机DNS）/ <code>https://223.5.5.5/dns-query</code> / <code>223.5.5.5</code></li>
+<li>调整 核心选项 中有关 DNS 的设置</li>
+</ol>
+<h3 id="_11">自定义路由规则</h3>
+<p>路由规则的语法请看 <a href="https://xtls.github.io/config/routing.html#ruleobject">Xray路由语法</a> 或 <a href="https://sing-box.sagernet.org/configuration/route/rule/">sing-box路由语法</a></p>
+<p>自定义路由示例 (Xray block QUIC)</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;rules&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;network&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;udp&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;outboundTag&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;block&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;443&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;field&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="_12">出站 / 服务器</h2>
+<p>一般情况下， GUI 显示的一个服务器配置对应后端的一个出站 (Outbound Object)</p>
+<h3 id="_13">自定义出站</h3>
+<p>(2.1+) 通过编写出站 JSON，可以在 sing-box 中使用 wireguard ssh shadowtls 和在 Xray 中使用 mKCP 等配置。</p>
+<p><a href="https://xtls.github.io/config/outbound.html">Xray出站语法</a> </p>
+<p><a href="https://sing-box.sagernet.org/configuration/outbound/">sing-box出站语法</a></p>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>应填写一个 Outbound Object，而非整个配置文件。直接复制已有的 config.json 是错误的。</p>
+</div>
+<p>示例： 在 NekoBox 中使用 ShadowTLS 服务器。</p>
+<ol>
+<li>新建一个自定义出站（配置1）</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shadowtls&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shadowtls-out&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// 你的服务器地址</span>
+<span class="w">  </span><span class="nt">&quot;server_port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4443</span><span class="p">,</span><span class="w"> </span><span class="c1">// 你的服务器端口</span>
+<span class="w">  </span><span class="nt">&quot;tls&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;server_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;microsoft.com&quot;</span><span class="w"> </span><span class="c1">// 伪装域名</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>
+<p>新建一个 Shadowsocks 出站（配置2）</p>
+</li>
+<li>
+<p>按 配置1 配置2 顺序组成链式代理</p>
+</li>
+</ol>
+<h3 id="json">自定义出站 JSON 配置</h3>
+<p>JSON 对象会被合并至出站 Object，请看下方例子。</p>
+<p>示例：NekoBox新建一个socks服务器，填写服务器地址端口，填写自定义 JSON 配置（配置1），实际运行的出站是wireguard（配置2）</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 配置1</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wireguard&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;system_interface&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;interface_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wg0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;local_address&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;10.0.0.2/32&quot;</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;private_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YNXtAzepDqRv9H52osJVDQnznT5AM11eCK3ESpwSt04=&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;peer_public_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Z1XXLsKYkYxuiYjJIkRvtIKFepCYHTgON+GwPq7SOV4=&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;pre_shared_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;31aIhAPwktDGpH4JDhA8GNvjFXEf/a6+UaQRyOAiyfM=&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;mtu&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1408</span>
+<span class="p">}</span>
+<span class="c1">// 配置2</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;domain_strategy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;interface_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wg0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;local_address&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;10.0.0.2/32&quot;</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;mtu&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1408</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;peer_public_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Z1XXLsKYkYxuiYjJIkRvtIKFepCYHTgON+GwPq7SOV4=&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;pre_shared_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;31aIhAPwktDGpH4JDhA8GNvjFXEf/a6+UaQRyOAiyfM=&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;private_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YNXtAzepDqRv9H52osJVDQnznT5AM11eCK3ESpwSt04=&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;服务器地址&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;server_port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12345</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;system_interface&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;proxy&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wireguard&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="json_1">自定义配置 JSON 配置</h3>
+<p>同上，但是 JSON 被合并至配置 Object</p>
+<p>示例：sing-box NTP</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;ntp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// ......</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>合并结果：</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;ntp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// 你填写的</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;inbounds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="c1">// GUI 生成的</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;outbounds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="c1">// GUI 生成的</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="c1">// GUI 生成的 ...</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="_14">链式代理</h3>
+<p>右键 -&gt; 手动输入配置 -&gt; 类型选择为 "链式代理"。</p>
+<p>点击 "选择配置" 后，开始选择自己需要的服务器。按 <code>enter</code> 或 双击 使用这个服务器，按 <code>Esc</code> 退出。</p>
+<p>单击 "交换" 按钮更换服务器，单击 "垃圾桶" 按钮删除服务器。</p>
+<p>使用链式代理后，流量将按照自上到下的顺序转发。第一个服务器作为流量入口，最后一个服务器作为流量出口。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>使用 ShadowTLS 时，如果 ShadowTLS 使用原版客户端，则无法使用链式代理连接。请自行在本地开启一个 ShadowTLS 客户端，并将 ShadowTLS 承载的协议目标地址改为 <code>127.0.0.1:{ShadowTLS 本地端口}</code>。</p>
+</div>
+<h2 id="hookjs">Hook.js</h2>
+<p>(2.8+) 允许使用 javascript 在外部生成或修改某些配置，面向高级用户，详细请看<a href="https://github.com/MatsuriDayo/nekoray/blob/main/docs/HookJS.md">技术文档</a>。</p>
+<h2 id="_15">运行参数</h2>
+<p><a href="https://github.com/MatsuriDayo/nekoray/blob/main/docs/RunFlags.md">https://github.com/MatsuriDayo/nekoray/blob/main/docs/RunFlags.md</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC BY-SA 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+    
+  </body>
+</html>

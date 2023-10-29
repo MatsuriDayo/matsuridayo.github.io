@@ -1,0 +1,889 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://matsuridayo.github.io/nb4a-route/">
+      
+      
+        <link rel="prev" href="../nb4a-configuration/">
+      
+      
+        <link rel="next" href="../nb4a-faq/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
+    
+    
+      
+        <title>NB4A-路由 - MatsuriDayo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nb4a-dns" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MatsuriDayo" class="md-header__button md-logo" aria-label="MatsuriDayo" data-md-component="logo">
+      
+  <img src="https://matsuridayo.github.io/assets/images/matsuri1.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MatsuriDayo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NB4A-路由
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MatsuriDayo/matsuridayo.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    文档
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MatsuriDayo" class="md-nav__button md-logo" aria-label="MatsuriDayo" data-md-component="logo">
+      
+  <img src="https://matsuridayo.github.io/assets/images/matsuri1.jpg" alt="logo">
+
+    </a>
+    MatsuriDayo
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MatsuriDayo/matsuridayo.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    文档
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index_docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    首页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    下载
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matsuri-配置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m-group/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matsuri-分组
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m-route/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matsuri-路由
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m-plugin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matsuri-插件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matsuri-FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../n-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nekoray-配置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../n-extra_core/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nekoray-自定义核心
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../n-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nekoray-FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nb4a-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NB4A-配置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    NB4A-路由
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    NB4A-路由
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    用法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    语法
+  </a>
+  
+    <nav class="md-nav" aria-label="语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#06" class="md-nav__link">
+    端口 (版本 0.6+)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-05" class="md-nav__link">
+    IP (版本 0.5+)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05" class="md-nav__link">
+    域名 (版本 0.5+)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    DNS 行为
+  </a>
+  
+    <nav class="md-nav" aria-label="DNS 行为">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns_1" class="md-nav__link">
+    关闭「DNS路由」时
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns_2" class="md-nav__link">
+    开启「DNS路由」时
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    例外
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nb4a-116" class="md-nav__link">
+    NB4A 1.1.6 域名策略
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    提示
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nb4a-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NB4A-FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nb4a-bhw-domestic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NB4A-白话文-国内外分流
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    用法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    语法
+  </a>
+  
+    <nav class="md-nav" aria-label="语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#06" class="md-nav__link">
+    端口 (版本 0.6+)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-05" class="md-nav__link">
+    IP (版本 0.5+)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05" class="md-nav__link">
+    域名 (版本 0.5+)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    DNS 行为
+  </a>
+  
+    <nav class="md-nav" aria-label="DNS 行为">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns_1" class="md-nav__link">
+    关闭「DNS路由」时
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns_2" class="md-nav__link">
+    开启「DNS路由」时
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    例外
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nb4a-116" class="md-nav__link">
+    NB4A 1.1.6 域名策略
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    提示
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="nb4a-dns">NB4A 路由与 DNS</h1>
+<p>根据指定的规则将流量发送到不同的出口。</p>
+<h3 id="_1">用法</h3>
+<p>不同规则 <strong>从上到下</strong> 匹配，规则内的条件为「并」的关系。</p>
+<p>详情请看： <a href="https://sing-box.sagernet.org/configuration/route/rule/">https://sing-box.sagernet.org/configuration/route/rule/</a></p>
+<h3 id="_2">语法</h3>
+<h4 id="06">端口 (版本 0.6+)</h4>
+<p>port / sourcePort 如果有多个请以英文逗号 <code>,</code> 分割，端口段用英文冒号 <code>:</code> 表示。</p>
+<p>示例： <code>1234,:1024,2000:2999,60000:</code></p>
+<h4 id="ip-05">IP (版本 0.5+)</h4>
+<p>ip / source 一行一个。 格式如 <code>1.2.3.4/8</code> 或 <code>geoip:private</code></p>
+<h4 id="05">域名 (版本 0.5+)</h4>
+<p>domain 一行一个，语法如下</p>
+<ul>
+<li><strong>纯字符串</strong>：当此域名完整匹配目标域名时，该规则生效。例如 <code>v2ray.com</code> 匹配 <code>v2ray.com</code> 但不匹配 <code>www.v2ray.com</code>。</li>
+<li><strong>正则表达式</strong>：由 <code>regexp:</code> 开始，余下部分是一个正则表达式。当此正则表达式匹配目标域名时，该规则生效。例如 <code>regexp:\.goo.*\.com$</code> 匹配 <code>www.google.com</code>、<code>fonts.googleapis.com</code>，但不匹配 <code>google.com</code>。</li>
+<li><strong>子域名 (推荐)</strong>：由 <code>domain:</code> 开始，余下部分是一个域名。当此域名是目标域名或其子域名时，该规则生效。例如 <code>domain:v2ray.com</code> 匹配 <code>www.v2ray.com</code>、<code>v2ray.com</code>，但不匹配 <code>xv2ray.com</code>。</li>
+<li><strong>子串</strong>：由 <code>keyword:</code> 开始，余下部分是一个字符串。当此字符串匹配目标域名中任意部分，该规则生效。比如 <code>keyword:sina.com</code> 可以匹配 <code>sina.com</code>、<code>sina.com.cn</code>、<code>www.sina.com</code> 和 <code>www.sina.company</code>，但不匹配 <code>sina.cn</code>。</li>
+<li><strong>预定义域名列表</strong>：由 <code>geosite:</code> 开头，余下部分是一个名称，如 <code>geosite:google</code> 或者 <code>geosite:cn</code>。名称及域名列表参考 <a href="https://www.v2fly.org/config/routing.html#%E9%A2%84%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%88%97%E8%A1%A8">预定义域名列表</a>。</li>
+</ul>
+<h3 id="dns">DNS 行为</h3>
+<p>直连DNS：一般用于解析国内域名</p>
+<p>远程DNS：一般用于解析国外域名</p>
+<h4 id="dns_1">关闭「DNS路由」时</h4>
+<p>所有 DNS 将发送到「远程DNS」进行解析。</p>
+<h4 id="dns_2">开启「DNS路由」时</h4>
+<p>以下 DNS 请求会被发到「直连DNS」进行解析。</p>
+<ul>
+<li>路由规则中 outbound 为 「绕过」 的域名 （如默认规则中的 geosite:cn） </li>
+<li>路由规则中 outbound 为 「绕过」 的应用 </li>
+</ul>
+<p>以下 DNS 请求会被发到「远程DNS」进行解析。</p>
+<ul>
+<li>未匹配到上面规则的域名</li>
+<li>路由规则中 outbound 为 「代理」 的域名</li>
+<li>路由规则中 outbound 为 「代理」 的应用</li>
+</ul>
+<h4 id="_3">例外</h4>
+<ul>
+<li>当代理节点的地址为域名时，该域名的 DNS 请求会被发到「直连DNS」进行解析。</li>
+<li>当远程 DNS 为域名时，该域名的 DNS 请求会被发到「直连DNS」进行解析。</li>
+<li>不支持的 DNS 查询，会被当作 UDP 流量经过代理发送至 8.8.8.8:53</li>
+<li>进行 Ping / URL Test 时，始终使用系统 DNS 解析节点的域名。</li>
+<li>通过 Android netd 查询的 DNS，无法匹配到 APP 规则。</li>
+</ul>
+<h4 id="nb4a-116">NB4A 1.1.6 域名策略</h4>
+<p>三种域名策略，举例：</p>
+<ol>
+<li>打开 VPN 访问 Google，适用 <code>域名策略（远程）</code></li>
+<li>打开 VPN 并开启绕过中国规则，访问百度，适用 <code>域名策略（直连）</code></li>
+<li>当节点服务器地址是域名，进行解析服务器 IP 时适用 <code>域名策略（服务器地址）</code></li>
+</ol>
+<p>默认使用的 <code>auto</code> ，其行为如下：</p>
+<ol>
+<li>auto 不是 sing-box 内置的域名查询策略，而是 NekoBox 根据配置信息生成，最终决定使用<a href="https://sing-box.sagernet.org/configuration/dns/server/#strategy">这几种策略</a>的一种。</li>
+<li><code>域名策略（远程）</code> / <code>域名策略（直连）</code> 会根据 IPv6 模式选择策略，如关闭 IPv6，此时自动选择 <code>ipv4_only</code>。</li>
+<li><code>域名策略（服务器地址）</code> 默认为 <code>空白</code>。</li>
+</ol>
+<h3 id="_4">提示</h3>
+<ul>
+<li>建议在 <code>设置 - 分应用代理</code> 绕过「中国产 app」，而不是使用路由规则。</li>
+<li>建议开启 <code>Block QUIC 规则</code> 加速网站访问</li>
+<li>使用「国际版 app」 如 tiktok 时，如果打不开，可以尝试为其添加「代理」的规则。</li>
+<li>由于 Google 服务器奇怪的行为，如果节点被 Google 标识为「中国」，可能导致无法下载 Google Play 资源。</li>
+<li>如果为 VPN 设置 HTTP 代理，建议打开 <code>在 Core 中绕过 LAN</code> 以在浏览器中访问局域网站点。</li>
+<li>请尽量关闭系统设置中的 「安全 DNS」（或称 「私人 DNS」），否则可能会导致 DNS 查询回环等问题。</li>
+<li>如果开启了 IPv6， sing-box 本身对 DNS 的处理默认是 ipv4 优先的，而在 "v2ray 系客户端" 是 ipv6 优先。</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC BY-SA 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+    
+  </body>
+</html>
