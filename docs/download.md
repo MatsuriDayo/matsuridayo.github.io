@@ -26,7 +26,9 @@
 
 电脑端 (xray/sing-box 核心，图形配置)： `v2rayn`
 
-电脑端（sing-box 核心，托管配置）: `GUI.for.SingBox`
+电脑端 (sing-box 核心，图形配置)： `Throne`
+
+iOS 端 (clash meta 核心，图形配置)： `ClashMi`
 
 ## 电脑
 

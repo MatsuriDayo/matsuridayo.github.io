@@ -10,17 +10,17 @@
 
 ### 语法
 
-#### 端口 (版本 0.6+)
+#### 目标端口与源端口
 
-port / sourcePort 如果有多个请以英文逗号 `,` 分割，端口段用英文冒号 `:` 表示。
+dst port / src port 如果有多个请以英文逗号 `,` 分割，端口段用英文冒号 `:` 表示。
 
 示例： `1234,:1024,2000:2999,60000:`
 
-#### IP (版本 0.5+)
+#### 目标 IP 与源 IP
 
-ip / source 一行一个。 格式如 `1.2.3.4/8` 或 `geoip:private`
+dst ip / src ip 一行一个。 格式如 `1.2.3.4/8` 或 `geoip:private`
 
-#### 域名 (版本 0.5+)
+#### 域名
 
 domain 一行一个，语法如下
 
@@ -29,6 +29,23 @@ domain 一行一个，语法如下
 - **子域名 (推荐)**：由 `domain:` 开始，余下部分是一个域名。（1.3.3 版本起可以省略 `domain:`）当此域名是目标域名或其子域名时，该规则生效。例如 `domain:v2ray.com` 匹配 `www.v2ray.com`、`v2ray.com`，但不匹配 `xv2ray.com`。
 - **子串**：由 `keyword:` 开始，余下部分是一个字符串。当此字符串匹配目标域名中任意部分，该规则生效。比如 `keyword:sina.com` 可以匹配 `sina.com`、`sina.com.cn`、`www.sina.com` 和 `www.sina.company`，但不匹配 `sina.cn`。
 - **预定义域名列表**：由 `geosite:` 开头，余下部分是一个名称，如 `geosite:google` 或者 `geosite:cn`。名称及域名列表参考 [预定义域名列表](https://www.v2fly.org/config/routing.html#%E9%A2%84%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%88%97%E8%A1%A8)。
+
+如果直接填写域名，则默认使用 `子域名` 匹配规则。
+
+#### 自定义配置
+
+填写单个 sing-box rule 例如：
+
+```json
+{
+  "inbound": [
+    "mixed-in"
+  ],
+  "outbound": "direct"
+}
+```
+
+[详细说明](https://sing-box.sagernet.org/configuration/route/rule/)
 
 ### DNS 行为
 
