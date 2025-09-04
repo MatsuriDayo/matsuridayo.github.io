@@ -25,7 +25,7 @@ Github Plugin 仓库
 `io.nekohasekai.sagernet.plugin.*`
 
 - [Naive Plugin](https://github.com/klzgrad/naiveproxy/releases)
-- [Hysteria Plugin](https://github.com/MatsuriDayo/plugins/releases?q=Hysteria)
+- [Hysteria Plugin](https://github.com/MatsuriDayo/plugins/releases?q=Hysteria) **不再维护**
 
 ## 常见问题：插件已安装，但显示“未找到插件”
 

@@ -50,6 +50,8 @@ NekoBox for Android 支持的格式:
 - 「Sing-box格式」 1.3.8 版本以后可以解析出站节点
 - 一些通用的分享链接及其 Base64 编码后的格式
 
+1.4.0 起支持扫码导入订阅和读取订阅 `content-disposition` 中的名字，并加强了直连时获取 https 订阅的能力（最多通过三种方式获取）。
+
 NekoBox for Android 不支持的格式：
 
 - 「SSR格式」
@@ -146,6 +148,10 @@ LineageOS 等系统的 VPN 热点功能与前者冲突，需要开启后者。
 * gVisor 为纯用户空间实现，兼容性更好
 * 1.2.x 版本起默认使用 Mixed (SystemTCP + gVisorUDP)
 
+!!! note "过时"
+
+    随着 sing-box 更新，以上内容可能已经过时。1.4.0 版本起默认使用 `gVisor`。
+
 ### 追加 HTTP 代理
 
 对于能使用 Socks / HTTP 代理的应用，建议手动为其设置 Socks / HTTP 代理，或开启 `追加 HTTP 代理到 VPN` 选项，不走 Tun 更省电。
@@ -223,6 +229,8 @@ Windows 电脑上可以使用此软件进行 NAT 类型测试： https://github.
 ### Hysteria
 
 #### Hysteria1
+
+**不再维护的功能**
 
 对于 sing-box 不支持的类型(比如 wechat-video)，需要安装 Matsuri Hysteria 插件 1.3.3+
 
