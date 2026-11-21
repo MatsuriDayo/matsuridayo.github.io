@@ -1,5 +1,7 @@
 本文档有多页，如未看见目录，请点击左上角三条横线/
 
+项目[已经归档](./project-archive.md)，不再维护。
+
 ## NekoBox for Android
 
 适用于 Android 的 sing-box 通用代理工具链。
@@ -22,34 +24,23 @@ Changelog & Telegram channel
 
 https://t.me/Matsuridayo
 
-## 联系 / Get in touch
-
-!!! warning
-
-    问题反馈请到 GitHub issue 区。
-    
-    For feedback, please go to the GitHub issue.
-
 ## 捐助 / Donate
 
-如果这个项目对您有帮助，可以通过捐赠的方式帮助我们维持这个项目。
+??? 已归档
+    捐赠满等额 50 USD 可以在「[捐赠榜](https://mtrdnt.pages.dev/donation_list)」显示头像，如果您未被添加到这里，欢迎联系我们补充。
 
-捐赠满等额 50 USD 可以在「[捐赠榜](https://mtrdnt.pages.dev/donation_list)」显示头像，如果您未被添加到这里，欢迎联系我们补充。
+    Donations of 50 USD or more can display your avatar on the [Donation List](https://mtrdnt.pages.dev/donation_list). If you are not added here, please contact us to add it.
 
-Donations of 50 USD or more can display your avatar on the [Donation List](https://mtrdnt.pages.dev/donation_list). If you are not added here, please contact us to add it.
+    USDT TRC20
 
-USDT TRC20
+    `TRhnA7SXE5Sap5gSG3ijxRmdYFiD4KRhPs`
 
-`TRhnA7SXE5Sap5gSG3ijxRmdYFiD4KRhPs`
+    XMR
 
-XMR
-
-`49bwESYQjoRL3xmvTcjZKHEKaiGywjLYVQJMUv79bXonGiyDCs8AzE3KiGW2ytTybBCpWJUvov8SjZZEGg66a4e59GXa6k5`
+    `49bwESYQjoRL3xmvTcjZKHEKaiGywjLYVQJMUv79bXonGiyDCs8AzE3KiGW2ytTybBCpWJUvov8SjZZEGg66a4e59GXa6k5`
 
 ### Telegram Group
 
 使用交流
 
 https://t.me/nekoray_group
-
-商务合作可以在群里说，随缘回复。

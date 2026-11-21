@@ -23,6 +23,7 @@ markdown_extensions:
   - pymdownx.superfences
 nav:
   - 首页: index.md
+  - 项目归档说明: project-archive.md
   - 下载: download.md
   - Android-配置: nb4a-configuration.md
   - Android-路由: nb4a-route.md
